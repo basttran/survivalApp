@@ -12,6 +12,7 @@ const plantSchema = new Schema({
   genus: {type: String},
   // 
   // distribution: {type: Image || Link || Matrix || Zipcode}, // See about that later, but maps can be found, ideally we could get GIS data and do whatever we want
+  // wether or not the plant has an application in a given domain
   medecine: {type: Boolean}, 
   hygiene: { type: Boolean},  
   food:  { type: Boolean}, 
@@ -22,10 +23,19 @@ const plantSchema = new Schema({
 });
 
 const applicationSchema = new Schema({
-  
+  purpose: { type: String},
   part: {type: String, enum: ["leave","shoot","root","bark","wood","nuts","seed","fruit"]},
-  usage: {type: String},
+  procedure: {type: String},
 });
+
+const user = new Schema({
+  username: {type: String},
+  mail: {type: String},
+  comments: {type: Object}
+});
+
+
+
 
 
 
