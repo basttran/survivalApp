@@ -4,12 +4,12 @@ const plantSchema = new Schema({
   // The taxonomic data are easily scraped and may prove helpful for the user to deepen is research with other resources
   species: { type: String, required: true, unique: true }, // Binom latin.
   aliases: { type: [String]}, // Other names
-  division: {type: String},
-  class: {type: String},
-  subclass: {type: String},
-  order: {type: String},
-  family: {type: String},
-  genus: {type: String},
+  // division: {type: String},
+  // class: {type: String},
+  // subclass: {type: String},
+  // order: {type: String},
+  // family: {type: String},
+  // genus: {type: String},
   // 
   // distribution: {type: Image || Link || Matrix || Zipcode}, // See about that later, but maps can be found, ideally we could get GIS data and do whatever we want
   // wether or not the plant has an application in a given domain
@@ -23,8 +23,9 @@ const plantSchema = new Schema({
 });
 
 const applicationSchema = new Schema({
-  purpose: { type: String},
+  plant: {type: String},
   part: {type: String, enum: ["leave","shoot","root","bark","wood","nuts","seed","fruit"]},
+  purpose: { type: String},
   procedure: {type: String},
 });
 
