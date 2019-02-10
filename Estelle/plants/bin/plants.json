@@ -3,6 +3,7 @@
     "name": "Bunny Ears Cactus",
     "scientificName": "Opuntia microdasys",
     "commonNames": "Bunny Ears, Bunny Ears Cactus, Bunny Cactus, Polka Dot Cactus, Bunny-ears Prickly-pear, Angel’s Wings, Golden-Bristle, Golden-Bristle Cactus",
+    "place": "indoor",
     "description": "Originally from Mexico, the bunny ears cactus is named after its appearance. It has two pads that are bunny ear shaped. They are covered with glochids or brown prickles and should be handled with care. The bunny ears cactus grows to two or three feet, making it the perfect house plant. It produces white flowers and purple fruits in the summer if exposed to enough light.",
     "scientificClassification": [
       { "Family": "Cactaceae" },
@@ -12,12 +13,18 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "white"
+    "flowerColor": "white",
+    "plantGrowsUp": [{ "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
   },
   {
     "name": "Chin Cactus",
     "scientificName": "Gymnocalycium mihanovichii",
     "commonNames": "Chin Cactus, Plaid Cactus",
+    "place": "indoor",
     "description": "Popularly known as the chin cactus, the gymnocalycium is a South American species of cactus, originally from Paraguay. It’s name means “naked kalyx” in Greek which refers to the lack of hair or spines on the flower buds. Depending on the variety, some chin cacti seek shade while others thrive in sunlight.",
     "scientificClassification": [
       {
@@ -29,12 +36,18 @@
     ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "white, pink, red, yallow"
+    "flowerColor": "white, pink, red, yellow",
+    "plantGrowsUp": [{ "tall": "12″ (30.5 cm)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by grafting and offsets",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
   },
   {
     "name": "Saguaro Cactus",
     "scientificName": "Carnegiea gigantea",
     "commonNames": "Saguaro, Saguaro Cactus, Sahuaro, Giant Cactus, Sage of the Desert",
+    "place": "indoor, outdoor",
     "description": "The Saguaro cactus can grow to forty feet, but it grows slowly. This means it can be used as an indoor plant for years before you need to move it outdoors. It has a barrel-shaped body, giving it the classic cactus appearance. Native to the Sonoran Desert, this plant requires a lot of light. If kept as an indoor plant, be sure to place it in direct sunlight.",
     "scientificClassification": [
       {
@@ -44,8 +57,205 @@
         "Genus": "Carnegiea"
       }
     ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "white"
+  },
+  {
+    "name": "Old Lady Cactus",
+    "scientificName": "Mammillaria hahniana",
+    "commonNames": "Old Lady Cactus",
+    "place": "indoor",
+    "description": "The old lady cactus is a type of pincushion cactus in the mammillaria family, which has 250 species. It has hairs and spines and is known for its halo of tiny pink or purple flowers that bloom in spring. The old lady cactus should be planted in a sandy potting mix and watered every other week.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Cacteae",
+        "Subtribe": "Cactinae",
+        "Genus": "Mammillaria"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "purple"
+  },
+  {
+    "name": "Star Cactus",
+    "scientificName": "Astrophytum asteria",
+    "commonNames": "Sand Dollar Cactus, Sea Urchin Cactus, Star Cactus, Star Peyote",
+    "place": "indoor",
+    "description": "Also known as sea urchin cactus or sand dollar cactus, the star cactus is identified by its round body that’s sectioned into eight slices. It is covered with white hairs and tiny white dots. In the spring it blooms a yellow flower. The star cactus only grows two to six inches in diameter, making it an ideal house plant.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Cacteae",
+        "Genus": "Astrophytum"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "yellow"
+  },
+  {
+    "name": "Easter Cactus",
+    "scientificName": "Hatiora gaertneri",
+    "commonNames": "Easter Cactus, Whitsun Cactus, Holiday Cactus",
+    "place": "indoor",
+    "description": "Native to Brazil, the easter cactus blooms in late winter and early spring. Its flowers vary from whites to oranges to lavenders. The plant’s spines are stacked on top of each other, giving it a unique shape.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Rhipsalideae",
+        "Genus": "Hatiora"
+      }
+    ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "white, pink, red, yallow"
+    "flowerColor": "white, pink, orange, light blue"
+  },
+  {
+    "name": "Christmas Cactus",
+    "scientificName": "Schlumbergera bridgesii",
+    "commonNames": "Christmas Cactus, Holiday Cactus",
+    "place": "indoor",
+    "description": "Often confused with the Thanksgiving cactus, the Christmas cactus blooms in late winter. It has vibrant red flowers and is a common holiday gift. The Christmas cactus does well indoors, in moderate home conditions. Avoid watering too much because this will cause the roots to rot. This plant can adapt to low light environments, but blooms excel with more light.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Genus": "Schlumbergera"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "red"
+  },
+  {
+    "name": "Ruby Ball",
+    "scientificName": "Gymnocalycium mihanovichii Hibotan",
+    "commonNames": "Ruby Ball, Red Cap Cactus, Red Hibotan, Hibotan, Moon Cactus ‘Hibotan’",
+    "place": "indoor",
+    "description": "Also known as chin cactus, the moon cactus varies in size, shape and color. A popular variety is the hibotan cactus. It originated in South America and comes in bright reds, pinks, yellows and oranges. These small plants thrive on window sills that get partial light.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Trichocereeae",
+        "Genus": "Gymnocalycium"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": ""
+  },
+  {
+    "name": " California Barrel Cactus",
+    "scientificName": "Ferocactus cylindraceus",
+    "commonNames": "California Barrel Cactus, Cliff Barrel Cactus, Compass Barrel Cactus, Compass Cactus, Desert Barrel Cactus, Golden-Spine Barrel Cactus, Spiny Barrel Cactus",
+    "place": "outdoor",
+    "description": "The barrel cactus is named after its barrel or circular shape. Ribs line the sides of the plant and spiky spines grow from them. Some popular varieties include the golden barrel, california barrel, fishhook cactus, blue barrel and colviller’s barrel. Flowers bloom in May and June, showing off red or yellow colors.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Cacteae",
+        "Genus": "Ferocactus"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "red, yellow"
+  },
+  {
+    "name": "Thanksgiving Cactus",
+    "scientificName": "Schlumbergera truncata",
+    "commonNames": "Thanksgiving Cactus, Holiday Cactus, Crab Cactus, Claw Cactus, Linkleaf, Yoke Cactus",
+    "place": "outdoor",
+    "description": "Also known as the crab cactus, the Thanksgiving cactus blooms around the time of the holiday. It continues to bloom into the winter months, needing cooler temperatures to flourish. This outdoor plant does well in cooler climates, but must be in a region that does not have frost.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Genus": "Schlumbergera"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "deep pink"
+  },
+  {
+    "name": "Queen Of The Night",
+    "scientificName": "Epiphyllum oxypetalum",
+    "commonNames": "Dutchman’s Pipe Cactus, Queen of the Night, Orchid Cactus, Jungle Cactus, Night Blooming Cactus, Night Blooming Cereus",
+    "place": "outdoor",
+    "description": "Also known as dutchman’s pipe cactus, queen of the night is an epiphyllum cactus that grows on trees. It’s native to Brazil and produces large white blooms. This cactus is named after its tendency to be a night-blooming plant. Using slightly acidic soil will encourage the queen of the night to bloom more frequently.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Hylocereeae",
+        "Genus": "Epiphyllum"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "white"
+  },
+  {
+    "name": "Prickly Pear Cactus",
+    "scientificName": "Opuntia sulphurea",
+    "commonNames": "Prickly Pear Cactus",
+    "place": "outdoor",
+    "description": "The prickly pear cactus is a genus that is very popular in drought-prone areas. Some common variations are the beavertail prickly pear and the Indian fig prickly pear. The prickly pear does well in backyards, but sheds its spines, so may not be for everyone. This cactus produces yellow, red or purple flowers.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Opuntioideae",
+        "Tribe": "Opuntieae",
+        "Genus": "Opuntia"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "yellow, red, light blue"
+  },
+  {
+    "name": "Cholla Cactus",
+    "scientificName": "Cylindropuntia fulgida",
+    "commonNames": "Jumping Cholla, Hanging Chain Cholla, Chain Fruit Cholla",
+    "place": "outdoor",
+    "description": "Native to the American Southwest, the cholla cactus has a round stem with sharp spines. There are more than 20 species in the plant family that come in a variety of sizes. They produce green or orange blooms. The cholla cactus doesn’t need much water, but requires ample light.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Opuntioideae",
+        "Tribe": "Cylindropuntieae",
+        "Genus": "Cylindropuntia"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "orange, green"
+  },
+  {
+    "name": "Totem Pole Cactus",
+    "scientificName": "Pachycereus schottii monstrosus",
+    "commonNames": "Totem Pole Cactus, Totem Pole, Totem Cactus, Monstrous Whisker Cactus",
+    "place": "outdoor",
+    "description": "The totem pole cactus gets its name from its tall stature, growing to be ten to twelve feet high. The totem pole cactus is textured with wrinkles. Although it thrives in light, the noon sun can burn the plant.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Opuntioideae",
+        "Tribe": "Cylindropuntieae",
+        "Genus": "Cylindropuntia"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": ""
   }
 ]
