@@ -15,7 +15,7 @@ module.exports = [
         calendar: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         part: {type: String, enum: ["leave","shoot","root","bark","wood","nuts","seed","fruit"],
         usage: "décoctions, tisanes, infusions, collyres, bains"
-  },
+  }
   {
     title: "Orange and Milk-Braised Pork Carnitas",
     level: "UltraPro Chef",
