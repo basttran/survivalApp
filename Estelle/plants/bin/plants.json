@@ -2,15 +2,48 @@
   {
     "name": "Bunny Ears Cactus",
     "scientificName": "Opuntia microdasys",
+    "commonNames": "Bunny Ears, Bunny Ears Cactus, Bunny Cactus, Polka Dot Cactus, Bunny-ears Prickly-pear, Angel’s Wings, Golden-Bristle, Golden-Bristle Cactus",
     "description": "Originally from Mexico, the bunny ears cactus is named after its appearance. It has two pads that are bunny ear shaped. They are covered with glochids or brown prickles and should be handled with care. The bunny ears cactus grows to two or three feet, making it the perfect house plant. It produces white flowers and purple fruits in the summer if exposed to enough light.",
+    "scientificClassification": [
+      { "Family": "Cactaceae" },
+      { "Subfamily": "Opuntioidea" },
+      { "Tribe": "Opuntieae" },
+      { "Genus": "Opuntia" }
+    ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "partial sunlight",
     "flowerColor": "white"
   },
   {
     "name": "Chin Cactus",
-    "scientificName": "(Gymnocalycium)",
-    "description": "Popularly known as the chin cactus, the gymnocalycium is a South American species of cactus. It’s name means “naked kalyx” in Greek which refers to the lack of hair or spines on the flower buds. Depending on the variety, some chin cacti seek shade while others thrive in sunlight.",
+    "scientificName": "Gymnocalycium mihanovichii",
+    "commonNames": "Chin Cactus, Plaid Cactus",
+    "description": "Popularly known as the chin cactus, the gymnocalycium is a South American species of cactus, originally from Paraguay. It’s name means “naked kalyx” in Greek which refers to the lack of hair or spines on the flower buds. Depending on the variety, some chin cacti seek shade while others thrive in sunlight.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Trichocereeae",
+        "Genus": "Gymnocalycium"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "white, pink, red, yallow"
+  },
+  {
+    "name": "Saguaro Cactus",
+    "scientificName": "Carnegiea gigantea",
+    "commonNames": "Saguaro, Saguaro Cactus, Sahuaro, Giant Cactus, Sage of the Desert",
+    "description": "The Saguaro cactus can grow to forty feet, but it grows slowly. This means it can be used as an indoor plant for years before you need to move it outdoors. It has a barrel-shaped body, giving it the classic cactus appearance. Native to the Sonoran Desert, this plant requires a lot of light. If kept as an indoor plant, be sure to place it in direct sunlight.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Echinocereeae",
+        "Genus": "Carnegiea"
+      }
+    ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "partial sunlight",
     "flowerColor": "white, pink, red, yallow"
