@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Bunny Ears Cactus",
+    "scientificName": "Opuntia microdasys",
+    "description": "Originally from Mexico, the bunny ears cactus is named after its appearance. It has two pads that are bunny ear shaped. They are covered with glochids or brown prickles and should be handled with care. The bunny ears cactus grows to two or three feet, making it the perfect house plant. It produces white flowers and purple fruits in the summer if exposed to enough light.",
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "white"
+  },
+  {
+    "name": "Chin Cactus",
+    "scientificName": "(Gymnocalycium)",
+    "description": "Popularly known as the chin cactus, the gymnocalycium is a South American species of cactus. It’s name means “naked kalyx” in Greek which refers to the lack of hair or spines on the flower buds. Depending on the variety, some chin cacti seek shade while others thrive in sunlight.",
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "white, pink, red, yallow"
+  }
+]
