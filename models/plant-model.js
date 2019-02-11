@@ -10,10 +10,13 @@ const plantSchema = new Schema(
     scientificName: { type: String, required: true, minlength: 4 }, //  "scientificName": "Opuntia microdasys",
     commonNames: [{ type: String, min: 0 }, { type: String, min: 0 }], // "commonNames": ["Bunny Ears", "Bunny Ears Cactus"],
     place: {
-      type: String,
+      type: Array,
       required: true,
-      enum: ["indoor", "outdoor", "indoor, outdoor"]
-    }, // "place": ["indoor"],
+      items: {
+        type: String,
+        enum: ["indoor", "outdoor"]
+      }
+    },
     description: {
       type: String,
       required: true,
@@ -23,7 +26,7 @@ const plantSchema = new Schema(
     scientificClassification: [
       {
         Family: { type: String, required: true },
-        Subfamily: { type: String, required: true },
+        Subfamily: { type: String},
         Tribe: { type: String },
         Genus: { type: String }
       }
@@ -44,7 +47,7 @@ const plantSchema = new Schema(
     level: {
       type: String,
       required: true,
-      minlength: 4,
+      // minlength: 4,
       enum: ["easy", "medium", "hard"]
     } //     "level": "easy"
   },

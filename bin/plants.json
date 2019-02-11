@@ -49,7 +49,8 @@
     "cold": "Not cold hardy",
     "propagation": "by grafting and offsets",
     "toxicity": "non-toxic to humans and animals",
-    "activelyGrows": "Summer"
+    "activelyGrows": "Summer",
+    "level": "easy" 
   },
   {
     "name": "Saguaro Cactus",
@@ -61,7 +62,7 @@
       "Giant Cactus",
       "Sage of the Desert"
     ],
-    "place": "indoor, outdoor",
+    "place": ["indoor", "outdoor"],
     "description": "The Saguaro cactus can grow to forty feet, but it grows slowly. This means it can be used as an indoor plant for years before you need to move it outdoors. It has a barrel-shaped body, giving it the classic cactus appearance. Native to the Sonoran Desert, this plant requires a lot of light. If kept as an indoor plant, be sure to place it in direct sunlight.",
     "scientificClassification": {
       "Family": "Cactaceae",
@@ -100,7 +101,7 @@
     "propagation": "by offsets",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "meadium"
+    "level": "medium"
   },
   {
     "name": "Star Cactus",
@@ -317,7 +318,7 @@
       "Hanging Chain Cholla",
       "Chain Fruit Cholla"
     ],
-    "place": ["outdoor", "indoor"],
+    "place": ["indoor", "outdoor"],
     "description": "Native to the American Southwest, the cholla cactus has a round stem with sharp spines. There are more than 20 species in the plant family that come in a variety of sizes. They produce green or orange blooms. The cholla cactus doesn’t need much water, but requires ample light.",
     "scientificClassification": {
       "Family": "Cactaceae",
@@ -538,7 +539,7 @@
     "propagation": "by leaves",
     "toxicity": "Toxic to animals",
     "activelyGrows": "Spring and Fall",
-    "level": "meadium"
+    "level": "medium"
   },
   {
     "name": "Pincushion Cactus",
