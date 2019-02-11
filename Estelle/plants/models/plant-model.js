@@ -6,16 +6,47 @@ const Schema = mongoose.Schema;
 const plantSchema = new Schema(
   {
     // document structure & rules defined here
-    title: { type: String, required: true },
-    author: { type: String, required: true },
-    rating: { type: Number, min: 0, max: 10 },
-    description: { type: String, required: true, minlength: 8 },
-    reviews: [
+    name: { type: String, required: true, minlength: 4 }, // "name": "Bunny Ears Cactus",
+    scientificName: { type: String, required: true, minlength: 4 }, //  "scientificName": "Opuntia microdasys",
+    commonNames: [{ type: String, min: 0 }, { type: String, min: 0 }], // "commonNames": ["Bunny Ears", "Bunny Ears Cactus"],
+    place: {
+      type: String,
+      required: true,
+      enum: ["indoor", "outdoor", "indoor, outdoor"]
+    }, // "place": ["indoor"],
+    description: {
+      type: String,
+      required: true,
+      minlength: 100,
+      maxlength: 1000
+    }, // "description": "Originally from Mexico, the bunny ears cactus",
+    scientificClassification: [
       {
-        userFullName: { type: String, default: "Anonymous" },
-        reviewText: { type: String, required: true, maxlength: 200 }
+        Family: { type: String, required: true },
+        Subfamily: { type: String, required: true },
+        Tribe: { type: String },
+        Genus: { type: String }
       }
-    ]
+    ], //   "scientificClassification": {"Family": "Cactaceae","Subfamily": "Opuntioidea","Tribe": "Opuntieae","Genus": "Opuntia"}
+    wateringNeeds: { type: String, required: true, minlength: 4 }, //  "wateringNeeds": "every 3-4 weeks",
+    sunlightNeeds: { type: String, required: true, minlength: 4 }, //  "sunlightNeeds": "partial sunlight",
+    flowerColor: { type: String }, //   "flowerColor": "white",
+    plantGrowsUp: [
+      {
+        tall: { type: String },
+        wide: { type: String }
+      }
+    ], //   "plantGrowsUp": { "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" },
+    cold: { type: String, required: true }, //     "cold": "Not cold hardy",
+    propagation: { type: String, required: true, minlength: 4 }, //     "propagation": "by cuttings",
+    toxicity: { type: String, required: true, minlength: 4 }, //     "toxicity": "non-toxic to humans and animals",
+    activelyGrows: { type: String, required: true, minlength: 4 }, //      "activelyGrows": "Spring and Fall",
+    level: {
+      type: String,
+      required: true,
+      minlength: 4,
+      enum: ["easy", "medium", "hard"]
+    } //     "level": "easy"
   },
   {
     // additional settings for the Schema class here
