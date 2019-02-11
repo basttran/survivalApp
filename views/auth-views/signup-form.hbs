@@ -5,19 +5,33 @@
 <form action="/process-signup" method="POST">
 
   <label>
-    Your Full Name (2 charcters or more):
-    <input type="text" name="fullName" placeholder="Leia Organa" required />
+    Your User Name (2 characters or more):
+    <input type="text" name="fullName" placeholder="Leia Organa" unique="true" required="true" />
   </label>
 
   <label>
-    Email (something@something.com):
-    <input type="email" name="email" placeholder="leia@resistance.com" required />
+    Your Email (something@something.com):
+    <input type="email" name="email" placeholder="leia@resistance.com" unique="true" required="true" />
   </label>
 
   <label>
-    Password (must contain a digit 0-9):
-    <input type="passowrd" name="originalPassword" placeholder="It's a secret" required />
+    Choose a Password (must contain a digit 0-9):
+    <input type="passowrd" name="originalPassword" placeholder="It's a secret" required="true" />
   </label>
 
   <button>Sign Up</button>
 </form>
+
+
+{{!-- const userSchema = new Schema(
+{
+username: { type: String },
+mail: { type: String },
+password: { type: String },
+profilePicUrl: { type: String },
+plants: { type: Array }
+},
+{
+timestamps: true
+}
+); --}}

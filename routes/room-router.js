@@ -2,57 +2,57 @@ const express = require("express");
 
 const router = express.Router();
 
-const Room = require("../models/room-model.js");
+const Plant = require("../models/plant-model.js");
 
-router.get("/room-add", (req, res, next) => {
+router.get("/plant-add", (req, res, next) => {
   if (req.user) {
-    res.render("room-views/room-form.hbs");
+    res.render("plant-views/plant-form.hbs");
   } else {
-    req.flash("error", "You have to be logged-in to add a room, PUNK.");
+    req.flash("error", "You have to be logged-in to add a plant, PUNK.");
     res.redirect("/login");
   }
 });
 
-router.post("/process-room", (req, res, next) => {
+router.post("/process-plant", (req, res, next) => {
   const { name, description, pictureUrl } = req.body;
 
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   const host = req.user._id;
 
-  Room.create({ name, description, pictureUrl, host })
+  Plant.create({ name, description, pictureUrl, host })
     .then(() => {
-      req.flash("success", "Room created successfully!");
-      res.redirect("/my-rooms");
+      req.flash("success", "Plant created successfully!");
+      res.redirect("/my-plants");
     })
     .catch(err => next(err));
 });
 
-router.get("/my-rooms", (req, res, next) => {
+router.get("/my-plants", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   if (!req.user) {
     // AUTHORIZATION: redirect to login if you are NOT logged-in
-    req.flash("error", "You must be logged-in to see your room, PUNK");
+    req.flash("error", "You must be logged-in to see your plant, PUNK");
     res.redirect("/login");
     // use return to STOP the function here if you are NOT logged-in
     return;
   }
-  // filter the rooms owned by the logged-in user
-  Room.find({ host: { $eq: req.user._id } })
+  // filter the plants owned by the logged-in user
+  Plant.find({ host: { $eq: req.user._id } })
     // sort by newest first
     .sort({ createdAt: -1 })
     // first 10 results
     .limit(10)
-    .then(roomResults => {
-      res.locals.roomArrray = roomResults;
-      res.render("room-views/room-list.hbs");
+    .then(plantResults => {
+      res.locals.plantArrray = plantResults;
+      res.render("plant-views/plant-list.hbs");
     })
     .catch(err => next(err));
 });
 
-// ADMINS ONLY: list all the rooms
-router.get("/admin/rooms", (req, res, next) => {
+// ADMINS ONLY: list all the plants
+router.get("/admin/plantss", (req, res, next) => {
   if (!req.user || req.user.role !== "admin") {
     // AUTHORIZATION: redirect to home page if you are NOT an ADMIN
     // (also if you are NOT logged-in)
@@ -61,11 +61,11 @@ router.get("/admin/rooms", (req, res, next) => {
     return;
   }
 
-  Room.find()
+  Plant.find()
     .sort({ createdAt: 1 })
-    .then(roomResults => {
-      res.locals.roomArray = roomResults;
-      res.render("room-views/admin-rooms.hbs");
+    .then(plantResults => {
+      res.locals.plantArray = plantResults;
+      res.render("plant-views/admin-plants.hbs");
     })
     .catch(err => next(err));
 });
