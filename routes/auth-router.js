@@ -10,16 +10,7 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/process-signup", (req, res, next) => {
-  const { userName, originalPassword } = req.body;
-
-  // if (!userName) {
-  //   // req.flash() sends a feedback message before a redirect
-  //   // (it's defined by the "connect-flash" npm package
-  //   req.flash("error", "Usernames can't be blank.");
-  //   // redirect to the SIGNUP PAGE if the password is BAD
-  //   res.redirect("/signup");
-  //   return;
-  // }
+  const { fullName, email, originalPassword } = req.body;
 
   // enforce password rules (can't be EMPTY and MUST have a digit)
   if (!originalPassword || !originalPassword.match(/[0-9]/)) {
@@ -33,7 +24,7 @@ router.post("/process-signup", (req, res, next) => {
 
   // encrypt the user's password before saving
   const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
-  User.create({ userName, encryptedPassword })
+  User.create({ fullName, email, encryptedPassword })
     .then(() => {
       // req.flash() sends a feedback message before a redirect
       // (it's defined by the "connect-flash" npm package)
@@ -49,18 +40,18 @@ router.get("/login", (req, res, next) => {
 });
 
 router.post("/process-login", (req, res, next) => {
-  const { userName, originalPassword } = req.body;
+  const { email, originalPassword } = req.body;
 
-  // validate the userName by searching the database for an account with that userName
-  User.findOne({ userName: { $eq: userName } })
+  // validate the email by searching the database for an account with that email
+  User.findOne({ email: { $eq: email } })
     .then(userDoc => {
       if (!userDoc) {
         // req.flash() sends a feedback message before a redirect
         // (it's defined bt the "connect-flash" npm package)
-        req.flash("error", "Username is incorrect.");
-        // redirect to LOGIN PAGE if result is NULL (no account with the userName)
+        req.flash("error", "Email is incorrect.");
+        // redirect to LOGIN PAGE if result is NULL (no account with the email)
         res.redirect("/login");
-        // use return to STOP the function here if the userName is BAD
+        // use return to STOP the function here if the email is BAD
         return;
       }
 
@@ -74,12 +65,30 @@ router.post("/process-login", (req, res, next) => {
         // use return to STOP the function here if the PASSWORD is BAD
         return;
       }
-      // userName & password are CORRECT!
-      // HERE WE ARE MISSING SOME CODE FOR REAL LOG IN
+      // email & password are CORRECT!
+      // if we MANUALLY managed the user session:
+      // req.session.userId = userDoc._id;
+
+      // instead we will use PASSPORT - an npm package for managing user sessions
+      // req.login() is a Passport method that calls serialize*user()
+      // (that saves the USER ID in the session which means we are logged-in)
+      req.logIn(userDoc, () =>{
+      // req.flash() sends a feedback message before a redirect
+      // (it's defined by the "connect-flash" npm package)
       req.flash("success", "Log in success!");
-      res.redirect("/");
+      res.redirect("/");  
+      })
+      
     })
     .catch(err => next(err));
 });
+
+router.get("/logout", (req, res, next) => {
+  // req.logOut(); is a Passport method that removes the USER ID from the session 
+  req.logOut();
+
+  req.flash("success", "Logged out successfully!")
+  res.redirect("/")
+})
 
 module.exports = router;

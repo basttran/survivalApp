@@ -11,7 +11,6 @@ const plantSchema = new Schema(
     commonNames: [{ type: String, min: 0 }, { type: String, min: 0 }], // "commonNames": ["Bunny Ears", "Bunny Ears Cactus"],
     place: {
       type: Array,
-      required: true,
       items: {
         type: String,
         enum: ["indoor", "outdoor"]
@@ -26,7 +25,7 @@ const plantSchema = new Schema(
     scientificClassification: [
       {
         Family: { type: String, required: true },
-        Subfamily: { type: String},
+        Subfamily: { type: String },
         Tribe: { type: String },
         Genus: { type: String }
       }
@@ -47,7 +46,7 @@ const plantSchema = new Schema(
     level: {
       type: String,
       required: true,
-      // minlength: 4,
+      minlength: 4,
       enum: ["easy", "medium", "hard"]
     } //     "level": "easy"
   },

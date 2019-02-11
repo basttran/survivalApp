@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{{!--
-<script type="text/javascript" src="https://raw.githubusercontent.com/thecreation/jquery-strength/master/examples/js/jquery.js"></script>
-<script type="text/javascript" src="https://raw.githubusercontent.com/thecreation/jquery-strength/master/examples/js/password_strength.js"></script>
-<script type="text/javascript" src="js.js"></script> --}}
-
-
 
 <head>
   <meta charset="UTF-8">
@@ -20,15 +14,21 @@
     <h1>{{title}}</h1>
     <nav>
       <a href="/">Home</a>
+      {{#if currentUser}}
+      <b>{{currentUser.email}}</b>
+      <a href="/my-rooms">My Rooms</a>
+      <a href="/logout">Log Out</a>
+      {{else}}
       <a href="/signup">Sign Up</a>
       <a href="/login">Log In</a>
+      {{/if}}
     </nav>
   </header>
 
   {{{body}}}
 
   <footer>
-    <p>Made with CAFFEINE @ Ironhack</p>
+    <p>Made with BACON @ Ironhack</p>
   </footer>
   <script src="/javascripts/script.js"></script>
 </body>

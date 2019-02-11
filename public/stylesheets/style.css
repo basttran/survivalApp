@@ -5,10 +5,19 @@ body {
 a {
   color: #00b7ff; }
 
-input:invalid {
-  border: 2px dashed red; }
+label {
+  display: block; }
 
-input:valid {
-  border: 2px solid green; }
+.error-message {
+  border: 3px solid;
+  border-radius: 3px;
+  color: tomato;
+  padding: 10px; }
+
+.success-message {
+  border: 3px solid;
+  border-radius: 3px;
+  color: chartreuse;
+  padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */
