@@ -149,3 +149,42 @@ const userSchema = new Schema({
   // duration: { type: Number, min: 0 }, // Type Number. Min value should be 0.
   // creator: { type: String }, // Type String
   // created: { type: Date, default: new Date() } // Type Date. By default today.
+
+
+  [
+    {
+      "username": "NancyB",
+      "mail": "flower@weeds.net",
+      "profilePicUrl": "www.example.com/nancyb.jpg",
+      "encryptedPassword": "$2b$10$Z5CI56S6kJar77tUE6HlGOwYSWoiBGNK85uEhPIWKO2HfaGABPN86", // pot8
+      "plants": []
+    },
+    {
+      "username": "Cooper",
+      "mail": "pop@interstellar.com",
+      "profilePicUrl": "www.example.com/cooper.jpg",
+      "encryptedPassword": "$2b$10$XMF7I9I.yJGcvNww.NXhpe8nhf5kjgiRZ6ndKMK1jk9Ox3Lu/7YWW", // corn1
+      "plants": []
+    },
+    {
+      "username": "PoisonIvy",
+      "mail": "nettles@gotham.org",
+      "profilePicUrl": "www.example.com/poisonivy.jpg",
+      "encryptedPassword": "$2b$10$ZDEKHtgKCxUaykfUmW782e/20R7Ugg8eS7Vritd/KUsV/.CT/xpai", // ortie9
+      "plants": []
+    },
+    {
+      "username": "beanstalk",
+      "mail": "jack@skyisthelimit.io",
+      "encryptedPassword": "$2b$10$GbYEHs.U69P9G614u7/duO5kvt0WrqcDHxXmc8qTd5H8Wdgrq8OEu", // haricot2
+      "profilePicUrl": "www.example.com/jack.jpg",
+      "plants": []
+    },
+    {
+      "username": "demeter",
+      "mail": "diane@pantheon.biz",
+      "encryptedPassword": "$2b$10$FitXvyiTOvUO4l4OtzxsDuOK5p7kl/wlwRZPBSm0QXyQnlfZJnXkC", // wild3
+      "profilePicUrl": "www.example.com/diane.jpg",
+      "plants": []
+    }
+  ]

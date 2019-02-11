@@ -6,7 +6,7 @@
 
   <label>
     Your User Name (2 characters or more):
-    <input type="text" name="fullName" placeholder="Leia Organa" unique="true" required="true" />
+    <input type="text" name="userName" placeholder="Leia Organa" unique="true" required="true" />
   </label>
 
   <label>
@@ -16,7 +16,7 @@
 
   <label>
     Choose a Password (must contain a digit 0-9):
-    <input type="passowrd" name="originalPassword" placeholder="It's a secret" required="true" />
+    <input type="password" name="originalPassword" placeholder="It's a secret" required="true" />
   </label>
 
   <button>Sign Up</button>
@@ -29,7 +29,7 @@ username: { type: String },
 mail: { type: String },
 password: { type: String },
 profilePicUrl: { type: String },
-plants: { type: Array }
+specimens: { type: Array }
 },
 {
 timestamps: true
