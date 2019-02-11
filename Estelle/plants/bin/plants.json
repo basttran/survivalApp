@@ -59,7 +59,12 @@
     ],
     "wateringNeeds": "once a month",
     "sunlightNeeds": "full sunlight",
-    "flowerColor": "white"
+    "flowerColor": "white",
+    "plantGrowsUp": [{ "tall": "40″ (12 m)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by grafting and offsets",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
   },
   {
     "name": "Old Lady Cactus",
@@ -78,7 +83,12 @@
     ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "full sunlight",
-    "flowerColor": "purple"
+    "flowerColor": "purple",
+    "plantGrowsUp": [{ "tall": "4″ (10 cm)", "wide": "2″ (5 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by offsets",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
   },
   {
     "name": "Star Cactus",
@@ -96,7 +106,12 @@
     ],
     "wateringNeeds": "once a month",
     "sunlightNeeds": "above average sunlight",
-    "flowerColor": "yellow"
+    "flowerColor": "yellow",
+    "plantGrowsUp": [{ "tall": "9″ (23 cm)", "wide": "12″ (30 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by offsets",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring"
   },
   {
     "name": "Easter Cactus",
@@ -114,7 +129,12 @@
     ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "white, pink, orange, light blue"
+    "flowerColor": "white, pink, orange, light blue",
+    "plantGrowsUp": [{ "tall": "12″ (30 cm)", "wide": "12″ (30 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
   },
   {
     "name": "Christmas Cactus",
@@ -131,7 +151,12 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "red"
+    "flowerColor": "red",
+    "plantGrowsUp": [{ "tall": "12″ (30 cm)", "wide": "12″ (30 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
   },
   {
     "name": "Ruby Ball",
@@ -149,10 +174,15 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": ""
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "12″ (30.5 cm)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by grafting and offsets",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
   },
   {
-    "name": " California Barrel Cactus",
+    "name": "California Barrel Cactus",
     "scientificName": "Ferocactus cylindraceus",
     "commonNames": "California Barrel Cactus, Cliff Barrel Cactus, Compass Barrel Cactus, Compass Cactus, Desert Barrel Cactus, Golden-Spine Barrel Cactus, Spiny Barrel Cactus",
     "place": "outdoor",
@@ -167,7 +197,12 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "red, yellow"
+    "flowerColor": "red, yellow",
+    "plantGrowsUp": [{ "tall": "13″ (35 cm)", "wide": "13″ (35 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Fall"
   },
   {
     "name": "Thanksgiving Cactus",
@@ -184,7 +219,12 @@
     ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "deep pink"
+    "flowerColor": "deep pink",
+    "plantGrowsUp": [{ "tall": "12″ (30 cm)", "wide": "12″ (30 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
   },
   {
     "name": "Queen Of The Night",
@@ -202,7 +242,12 @@
     ],
     "wateringNeeds": "once a week",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "white"
+    "flowerColor": "white",
+    "plantGrowsUp": [{ "tall": "12″ (30 cm)", "wide": "12″ (30 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
   },
   {
     "name": "Prickly Pear Cactus",
@@ -220,7 +265,12 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "above average sunlight",
-    "flowerColor": "yellow, red, light blue"
+    "flowerColor": "yellow, red, light blue",
+    "plantGrowsUp": [{ "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
   },
   {
     "name": "Cholla Cactus",
@@ -238,7 +288,12 @@
     ],
     "wateringNeeds": "once a month",
     "sunlightNeeds": "full sunlight",
-    "flowerColor": "orange, green"
+    "flowerColor": "orange, green",
+    "plantGrowsUp": [{ "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
   },
   {
     "name": "Totem Pole Cactus",
@@ -256,6 +311,150 @@
     ],
     "wateringNeeds": "once a month",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": ""
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "40″ (12 m)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by seedling",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
+  },
+  {
+    "name": "Donkey’s Tail",
+    "scientificName": "Sedum morganianum",
+    "commonNames": "Donkey’s Tail, Burro’s Tail, Lamb’s Tail, Horse’s Tail",
+    "place": "indoor",
+    "description": "Also known as the donkey tail plant, this succulent is one of the easiest plants to propagate and care for, which makes it a popular houseplant. The burro’s tail was given its name because of its ability to grow up to four inches long with a shape that resembles a tail. This species happens to be a cactus and although all cacti are succulents, not all succulents are cacti. This succulent grows best indoors, placed in a well-drained container, where its long stems can drape down off of the edges of the pot.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Sedeae",
+        "Subtribe": "Sedinae",
+        "Genus": "Sedum"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "48″ (120 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves or cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
+  },
+  {
+    "name": "Crown of Thorns",
+    "scientificName": "euphorbia milii",
+    "commonNames": "Crown of Thorns, Christ Plant, Christ Thorns, Siamese Lucky Plant",
+    "place": "indoor",
+    "description": "The crown of thorns is a great houseplant because it adjusts well to dry indoor environments and room temperatures. For the best care and results, place this succulent near a window where it can get about three to four hours of sunlight a day. The crown of thorns is very lenient when it comes to missed waterings, but make sure to only water the plant when its soil is completely dry. In Thailand there is a legend that the number of flowers that bloom on a crown of thorns predicts the future of the plant-keeper. So, make sure to take good care of this one!",
+    "scientificClassification": [
+      {
+        "Family": "Euphorbiaceae",
+        "Subfamily": "Euphorbioideae",
+        "Tribe": "Euphorbieae",
+        "Subtribe": "Euphorbiinae",
+        "Genus": "Euphorbia"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "variably red (pink, yellow or white)",
+    "plantGrowsUp": [{ "tall": "6′ (1.8 m)", "wide": "5′ (1.5 m)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
+  },
+  {
+    "name": "Flaming Katy",
+    "scientificName": "kalanchoe blossfeldiana",
+    "commonNames": "Flaming Katy, Christmas Kalanchoe, Florist Kalanchoe, Madagascar Widow’s Thrill",
+    "place": "indoor",
+    "description": "The flaming katy is a common houseplant that is native to Madagascar. It prefers temperatures from 60 to 85 degrees, and is extremely sensitive to the cold which is why it is best suited for indoors. The flaming katy grows best in clay pots that have holes at the bottom for drainage. They prefer well lit areas and will produce more buds and flowers when given eight to 10 hours of sun a day. In late autumn and early winter this succulent produces buds with four petals that can be an array of colors from dark reds to golds and whites. It looks great as a table centerpiece or a desk plant.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Kalanchoeae",
+        "Genus": "Kalanchoe"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "red, yellow, orange, pink, purple, white",
+    "plantGrowsUp": [{ "tall": "1,5′ (45 cm)", "wide": "5′ (1.5 m)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
+  },
+  {
+    "name": "Gollum Jade",
+    "scientificName": "crassula ovata",
+    "commonNames": "Gollum Jade, Trumpet Jade, Hobbit’s Pipe Jade, ET’s Fingers, Jade Plant, Jade Tree, Money Tree, Finger Jade, Succulent Spoon Jade",
+    "place": "indoor",
+    "description": "The jade plant is similar to a bonsai plant in the way that it grows and is maintained. It has a thick trunk with branches that jut out like a miniature tree. This succulent has thick, shiny, dark green leaves that grow into an oval shape. Some varieties of the jade plant develop a red color at the tip of the leaf. Once the plant matures and if the conditions are right, the jade plant can develop beautiful white or pink flowers that bloom in the shape of a star.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Crassuloideae",
+        "Genus": "Crassula"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "red, yellow, orange, pink, purple, white",
+    "plantGrowsUp": [{ "tall": "3′ (90 cm)", "wide": "2′ (30 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaf or stem cuttings",
+    "toxicity": "can be toxic",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Aloe Vera",
+    "scientificName": "aloe vera",
+    "commonNames": "Aloe Vera, Medicinal Aloe, Medicine Plant, Barbados Aloe, Burn Aloe, Burn Plant, First Aid Plant, Chinese Aloe, Indian Aloe, True Aloe, Bitter Aloe, Wand of Heaven, Miracle Plant, Savila",
+    "place": "indoor",
+    "description": "The jade plant is similar to a bonsai plant in the way that it grows and is maintained. It has a thick trunk with branches that jut out like a miniature tree. This succulent has thick, shiny, dark green leaves that grow into an oval shape. Some varieties of the jade plant develop a red color at the tip of the leaf. Once the plant matures and if the conditions are right, the jade plant can develop beautiful white or pink flowers that bloom in the shape of a star.",
+    "scientificClassification": [
+      {
+        "Family": "Asphodelaceae",
+        "Subfamily": "Asphodeloideae",
+        "Tribe": "Aloeae",
+        "Genus": "Aloe"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "red, yellow, orange, pink, purple, white",
+    "plantGrowsUp": [{ "tall": "4″ (61 cm)", "wide": "24″ (61 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by offsets",
+    "toxicity": "Generally non-toxic to humans",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Panda Plant",
+    "scientificName": "kalanchoe tomentosa",
+    "commonNames": "Panda Plant, Panda Bear Plant, Pussy Ears, Plush Plant",
+    "place": "indoor",
+    "description": "The panda plant is one of the most interesting types of indoor succulents because of its small and fuzzy leaves. The velvety appearance of its leaves and brownish red markings on its edges are what earned it the name of the panda plant. They can live for many years indoors and although this type of succulent can flower  in the right circumstances, it rarely does. Because of the panda plant’s small size and soft texture, it looks great in children’s rooms or in hanging planters.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Kalanchoeae",
+        "Genus": "Kalanchoe"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "red, yellow, orange, pink, purple, white",
+    "plantGrowsUp": [{ "tall": "4″ (61 cm)", "wide": "24″ (61 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by offsets",
+    "toxicity": "Generally non-toxic to humans",
+    "activelyGrows": "Spring and Fall"
   }
 ]
