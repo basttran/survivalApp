@@ -1,3 +1,6 @@
+import { WSAEDESTADDRREQ } from "constants";
+import { CLIENT_RENEG_LIMIT } from "tls";
+
 const plantSchema = new Schema({
 
 
@@ -45,11 +48,85 @@ const userSchema = new Schema({
 },
 {
   timestamps: true
-})
-;
+});
 
 
+[{
+  username: "NancyB",
+  mail: "flower@weeds.net",
+  password: "pot",
+  plants: {type: [Object]},
+  follows: { type: [Object]},
+  comments: { type: [Object]},
+  likes: { type: [Object]}
+},
+{
+  username: "Cooper",
+  mail: "pop@interstellar.com",
+  password: "corn",
+  plants: {type: [Object]},
+  follows: { type: [Object]},
+  comments: { type: [Object]},
+  likes: { type: [Object]}
+},
+{
+  username: "PoisonIvy",
+  mail: "nettles@gotham.org",
+  password: "ortie",
+  plants: {type: [Object]},
+  follows: { type: [Object]},
+  comments: { type: [Object]},
+  likes: { type: [Object]}
+},
+{
+  username: "beanstalk",
+  mail: "jack@skyisthelimit.io",
+  password: "haricot",
+  plants: {type: [Object]},
+  follows: { type: [Object]},
+  comments: { type: [Object]},
+  likes: { type: [Object]}
+},
+{
+  username: "demeter",
+  mail: "diane@pantheon.biz",
+  password: "wild",
+  plants: {type: [Object]},
+  follows: { type: [Object]},
+  comments: { type: [Object]},
+  likes: { type: [Object]}
+},]
 
+[{
+  username: "NancyB",
+  mail: "flower@weeds.net",
+  password: "pot",
+  plants: []
+},
+{
+  username: "Cooper",
+  mail: "pop@interstellar.com",
+  password: "corn",
+  plants: []
+},
+{
+  username: "PoisonIvy",
+  mail: "nettles@gotham.org",
+  password: "ortie",
+  plants: []
+},
+{
+  username: "beanstalk",
+  mail: "jack@skyisthelimit.io",
+  password: "haricot",
+  plants: []
+},
+{
+  username: "demeter",
+  mail: "diane@pantheon.biz",
+  password: "wild",
+  plants: []
+},]
 
 
 

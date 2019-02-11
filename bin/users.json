@@ -1,0 +1,37 @@
+[
+  {
+    "username": "NancyB",
+    "mail": "flower@weeds.net",
+    "profilePicUrl": "www.example.com/nancyb.jpg",
+    "password": "pot",
+    "plants": []
+  },
+  {
+    "username": "Cooper",
+    "mail": "pop@interstellar.com",
+    "profilePicUrl": "www.example.com/cooper.jpg",
+    "password": "corn",
+    "plants": []
+  },
+  {
+    "username": "PoisonIvy",
+    "mail": "nettles@gotham.org",
+    "profilePicUrl": "www.example.com/poisonivy.jpg",
+    "password": "ortie",
+    "plants": []
+  },
+  {
+    "username": "beanstalk",
+    "mail": "jack@skyisthelimit.io",
+    "password": "haricot",
+    "profilePicUrl": "www.example.com/jack.jpg",
+    "plants": []
+  },
+  {
+    "username": "demeter",
+    "mail": "diane@pantheon.biz",
+    "password": "wild",
+    "profilePicUrl": "www.example.com/diane.jpg",
+    "plants": []
+  }
+]
