@@ -22,18 +22,31 @@ const plantSchema = new Schema({
   caution: {type: [String]} // general precautions if relevant
 });
 
-const applicationSchema = new Schema({
+const commentSchema = new Schema({
+  parent:  {type: [Object]},
+  poster:  {type: [Object]},
   plant: {type: String},
   part: {type: String, enum: ["leave","shoot","root","bark","wood","nuts","seed","fruit"]},
   purpose: { type: String},
   procedure: {type: String},
+},
+{
+  timestamps: true
 });
 
-const user = new Schema({
+const userSchema = new Schema({
   username: {type: String},
   mail: {type: String},
-  comments: {type: Object}
-});
+  password: { type: String},
+  plants: {type: [Object]},
+  follows: { type: [Object]},
+  comments: { type: [Object]},
+  likes: { type: [Object]}
+},
+{
+  timestamps: true
+})
+;
 
 
 
