@@ -404,7 +404,7 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "partial sunlight",
-    "flowerColor": "red, yellow, orange, pink, purple, white",
+    "flowerColor": "",
     "plantGrowsUp": [{ "tall": "3′ (90 cm)", "wide": "2′ (30 cm)" }],
     "cold": "Not cold hardy",
     "propagation": "by leaf or stem cuttings",
@@ -427,7 +427,7 @@
     ],
     "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "full sunlight",
-    "flowerColor": "red, yellow, orange, pink, purple, white",
+    "flowerColor": "",
     "plantGrowsUp": [{ "tall": "4″ (61 cm)", "wide": "24″ (61 cm)" }],
     "cold": "Not cold hardy",
     "propagation": "by offsets",
@@ -449,12 +449,358 @@
       }
     ],
     "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "24″ (61 cm)", "wide": "24″ (61 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves",
+    "toxicity": "Toxic to animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Pincushion Cactus",
+    "scientificName": "mammillaria crinita",
+    "commonNames": "Pincushion Cactus",
+    "place": "indoor",
+    "description": "The pincushion plant is of the cactus variety and has pointy spikes covering its exterior. It is a native to Mexico, but has also been found in some southwest areas of the United States. This succulent belongs to the mammillaria family, which consists of over 250 species of cacti. The Latin word mammillaria means “nipple” and refers to the tube-like features that protrude out of its exterior. The pincushion is a miniature cactus that usually does not grow taller than six inches and produces vibrant blooms that add a  desert vibe to your home.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Cacteae",
+        "Subtribe": "Cactinae",
+        "Genus": "Mammillaria"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
     "sunlightNeeds": "full sunlight",
-    "flowerColor": "red, yellow, orange, pink, purple, white",
-    "plantGrowsUp": [{ "tall": "4″ (61 cm)", "wide": "24″ (61 cm)" }],
+    "flowerColor": "light yellow, white, pale magenta",
+    "plantGrowsUp": [{ "tall": "3.1″ (8 cm)", "wide": "3.1″ (8 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings",
+    "toxicity": "non-toxic to humans and animals",
+    "activelyGrows": "Summer"
+  },
+  {
+    "name": "Roseum",
+    "scientificName": "sedum spurium",
+    "commonNames": "Sedum spurium ‘John Creech’",
+    "place": "outdoor",
+    "description": "The roseum plant is a low-growing succulent that only gets to be about four to six inches tall. It is a fast grower that works great in containers or planters on a windowsill. In the summer, the roseum develops clusters of light-pink star flowers that can add a pop of color to your home decor. It can also add texture to a floral arrangement. This succulent prefers full sun to partial shade, so we recommend placing it on a windowsill that gets a decent amount of light.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Sedeae",
+        "Subtribe": "Sedinae",
+        "Genus": "Phedimus"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "pink",
+    "plantGrowsUp": [{ "tall": "6″ (13 cm)", "wide": "8″ (20 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves, cuttings, or seeds",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Snake Plant",
+    "scientificName": "ssansevieria trifasciata",
+    "commonNames": "Snake Plant, Mother-in-Law’s Tongue, Mother-in-Law’s Nose, Saint George’s Sword, African Bowstring Hemp",
+    "place": "indoor",
+    "description": "Native to West Africa, the snake plant is one of the easiest succulents to cultivate. It can be neglected for long periods of time and still maintain its fresh look. This plant has long, variegated leaves in different shades of green. It is one of the most tolerant types of indoor succulents and can survive in rooms with low light and little water. NASA research says  this plant can even improve the air quality in your home by removing toxins and pollutants while you sleep!",
+    "scientificClassification": [
+      {
+        "Family": "Asparagaceae",
+        "Subfamily": "Crassuloideae",
+        "Genus": "Sansevieria"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "48″ (120 cm)", "wide": "" }],
     "cold": "Not cold hardy",
     "propagation": "by offsets",
-    "toxicity": "Generally non-toxic to humans",
+    "toxicity": "Can be toxic to dogs and cats",
     "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Zebra Plant",
+    "scientificName": "haworthia fasciata",
+    "commonNames": "Zebra Plant, Zebra Haworthia",
+    "place": "indoor",
+    "description": "The zebra plant can grow between five and six inches tall and wide. It does not take up a lot of room and does not require much care, so it works well as a houseplant. The zebra plant gets its name from the white variegated stripes on its leaves. These striking leaves point out from its stem in different directions. This plant has shallow roots and is best grown in smaller pots. The zebra plant produces bright yellow, cone shaped flower heads that last about a week. They are dainty, slow-growing and have an eccentric appearance. They make great gifts and decor for a shelf or desk.",
+    "scientificClassification": [
+      {
+        "Family": "Xanthorrhoeaceae",
+        "Subfamily": "Asphodeloideae",
+        "Genus": "Haworthia"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "5″ (13 cm)", "wide": "8″ (20 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by offsets",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Gasteria baylissiana",
+    "scientificName": "Gasteria baylissiana",
+    "commonNames": "Suurberg Gasteria, Suurberg Ox-tongue, Lawyer’s Tongue",
+    "place": "indoor",
+    "description": "The Gasteria genus features low-growing, stemless succulents that make wonderful additions to a dish container grouping, as they are slow growing. Ox tongue plants like a half day of sun and weekly watering, so long as you don't let moisture accumulate between the leaves. For best success in growing gasteria, give it the light, water, temperature, soil, and fertilizer that it needs.",
+    "scientificClassification": [
+      {
+        "Family": "Xanthorrhoeaceae",
+        "Subfamily": "Asphodeloideae",
+        "Genus": "Gasteria"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "12″ (30.5 cm)", "wide": "12″ (30.5 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves, cuttings, and offsets",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Winter indoors"
+  },
+  {
+    "name": "Pinwheel Desert Rose",
+    "scientificName": "Aeonium ‘Sunburst’",
+    "commonNames": "Pinwheel Desert Rose",
+    "place": "indoor",
+    "description": "‘Sunburst’ is a branching, variegated succulent. Its leaves are white and green, with pink edges that turn red in full sun. Watch for white flowers in the summer. It is monocarpic, meaning that after it flowers, the main plant will die.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Sedeae",
+        "Subtribe": "Sedinae",
+        "Genus": "Aeonium"
+      }
+    ],
+    "wateringNeeds": "once a week",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "18″ (46 cm)", "wide": "24″ (61 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by stem cuttings",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Winter"
+  },
+  {
+    "name": "Coral Cactus",
+    "scientificName": "Rhipsalis cereuscula",
+    "commonNames": "Coral Cactus, Rice Cactus, Mistletoe Cactus",
+    "place": "indoor",
+    "description": "This shrubby cactus is perfect for indoor-growers! Its bright green stems are not pokey, but grow long and thin, spilling out over the edge of container gardens. The tips will turn reddish when touched with cold. Be careful where you place it indoors – too much sunlight can burn the leaves.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Rhipsalideae",
+        "Genus": "Rhipsalis"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "24″ (61 cm)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by stem cuttings",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
+  },
+  {
+    "name": "Ladyfinger Cactus",
+    "scientificName": "Mammillaria elongata",
+    "commonNames": "Ladyfinger Cactus",
+    "place": "indoor",
+    "description": "This cactus is perfect for the beginner’s succulent garden. Its tubes form dense green and orange clusters, with light yellow or pink flowers in the Spring.",
+    "scientificClassification": [
+      {
+        "Family": "Cactaceae",
+        "Subfamily": "Cactoideae",
+        "Tribe": "Cacteae",
+        "Subtribe": "Cactinae",
+        "Genus": "Mammillaria"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "8″ (20 cm)", "wide": "12″ (30.5 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by offsets",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Bear’s Paw",
+    "scientificName": "Cotyledon tomentosa",
+    "commonNames": "Bear’s Paw",
+    "place": "indoor",
+    "description": "It’s easy to see where this shrubby succulent gets its name! The thick, fuzzy leaves have 3 to 10 “teeth” at the end, similar to the paws of a bear. When “happily stressed,” the leaf tips turn a deep red.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Genus": "Cotyledon"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "12″ (30.5 cm)", "wide": "24″ (61 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by cuttings, leaves (difficult), and seeds",
+    "toxicity": "Can be toxic to pets and humans",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Paddle Plant",
+    "scientificName": "Kalanchoe luciae",
+    "commonNames": "Paddle Plant, Paddle Kalanchoe, Red Pancakes, Flapjack, Desert Cabbage",
+    "place": "outdoor",
+    "description": "Kalanchoe luciae has smooth flat leaves that blush a beautiful red with the right amount of sunlight. It is monocarpic, but easily propagates from offsets.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Kalanchoeae",
+        "Genus": "Kalanchoe"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "24″ (61 cm)", "wide": "36″ (91 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves, cuttings, and offsets",
+    "toxicity": "Can be toxic to animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Jelly Bean Plant",
+    "scientificName": "Sedum rubrotinctum",
+    "commonNames": "Jelly Bean Plant, Jelly Bean, Pork and Beans, Brown Beans, Christmas Cheer, Banana Cactus",
+    "place": "outdoor",
+    "description": "This fun succulent has bright green leaves whose tips turn a deep red when in full sun. It has a woody stem and displays yellow flowers in the Spring.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Sedeae",
+        "Subtribe": "Sedinae",
+        "Genus": "Sedum"
+      }
+    ],
+    "wateringNeeds": "every 3-4 weeks",
+    "sunlightNeeds": "fully sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "12″ (30 cm)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves and stem cuttings",
+    "toxicity": "Can be toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "String of Pearls",
+    "scientificName": "Curio rowleyanus",
+    "commonNames": "String of Pearls, String of Beads, String of Peas",
+    "place": "indoor",
+    "description": "This beautiful trailing succulent is easily propagated. It’s perfect for hanging baskets, and can be grown indoors if given proper sunlight. Be careful not to over-water.",
+    "scientificClassification": [
+      {
+        "Family": "Asteraceae",
+        "Subfamily": "Asteroideae",
+        "Tribe": "Senecioneae",
+        "Subtribe": "Senecioninae",
+        "Genus": "Curio"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "partial sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "3″ (7.6 cm)", "wide": "" }],
+    "cold": "Not cold hardy",
+    "propagation": "by seed or cuttings",
+    "toxicity": "Can be toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Crinkle Leaf Plant",
+    "scientificName": "Adromischus cristatus",
+    "commonNames": "Crinkle Leaf Plant, Key Lime Pie",
+    "place": "indoor",
+    "description": "This small plant has triangle-shaped leaves covered in tiny hairs. The end of the leaf forms a crinkle. It is easy to grow, making it perfect for beginners. Grows well indoors, making it great in the home or office.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Kalanchoeae",
+        "Genus": "Adromischus"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "18″ (45 cm)", "wide": "24″ (61 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves",
+    "toxicity": "Can be toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Houseleek",
+    "scientificName": "Sempervivum ‘Royanum’",
+    "commonNames": "Houseleek, Hen and Chickens",
+    "place": "outdoor",
+    "description": "This succulent is green with purple tips and is cold hardy! It is monocarpic, and perfect for beginners.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Subfamily": "Sedoideae",
+        "Tribe": "Sedeae",
+        "Subtribe": "Sedinae",
+        "Genus": "Sempervivum"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "above average sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "8″ (20 cm)", "wide": "5″ (12.5 cm)" }],
+    "cold": "Winter hardy",
+    "propagation": "by seeds and offsets",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Spring and Fall"
+  },
+  {
+    "name": "Graptoveria ‘Debbie’",
+    "scientificName": "Graptoveria ‘Debbie’",
+    "commonNames": "",
+    "place": "outdoor",
+    "description": "‘Debbie’ is an Echeveria hybrid whose rosette shows off a beautiful rose shape. The tips of the blueish-purple leaves turn pink when stressed. It works well in planters outdoors.",
+    "scientificClassification": [
+      {
+        "Family": "Crassulaceae",
+        "Genus": "Graptoveria"
+      }
+    ],
+    "wateringNeeds": "once a month",
+    "sunlightNeeds": "full sunlight",
+    "flowerColor": "",
+    "plantGrowsUp": [{ "tall": "8″ (20 cm)", "wide": "8″ (20 cm)" }],
+    "cold": "Not cold hardy",
+    "propagation": "by leaves, cuttings, seeds, and offsets",
+    "toxicity": "Generally non-toxic to humans and animals",
+    "activelyGrows": "Spring and Summer"
   }
 ]
