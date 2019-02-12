@@ -17,7 +17,7 @@ const passport = require("passport");
 require("./config/passport-setup.js");
 
 mongoose
-  .connect("mongodb://localhost/express-users", { useNewUrlParser: true })
+  .connect("mongodb://localhost/plants", { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -103,7 +103,7 @@ app.use("/", index);
 const auth = require("./routes/auth-router.js");
 app.use("/", auth);
 
-const plant = require("./routes/plant-router.js");
-app.use("/", plant);
+const specimen = require("./routes/specimen-router.js");
+app.use("/", specimen);
 
 module.exports = app;

@@ -10,7 +10,7 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/process-signup", (req, res, next) => {
-  const { fullName, email, originalPassword } = req.body;
+  const { userName, email, originalPassword } = req.body;
 
   // enforce password rules (can't be EMPTY and MUST have a digit)
   if (!originalPassword || !originalPassword.match(/[0-9]/)) {
@@ -24,7 +24,7 @@ router.post("/process-signup", (req, res, next) => {
 
   // encrypt the user's password before saving
   const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
-  User.create({ fullName, email, encryptedPassword })
+  User.create({ userName, email, encryptedPassword })
     .then(() => {
       // req.flash() sends a feedback message before a redirect
       // (it's defined by the "connect-flash" npm package)
@@ -72,23 +72,22 @@ router.post("/process-login", (req, res, next) => {
       // instead we will use PASSPORT - an npm package for managing user sessions
       // req.login() is a Passport method that calls serialize*user()
       // (that saves the USER ID in the session which means we are logged-in)
-      req.logIn(userDoc, () =>{
-      // req.flash() sends a feedback message before a redirect
-      // (it's defined by the "connect-flash" npm package)
-      req.flash("success", "Log in success!");
-      res.redirect("/");  
-      })
-      
+      req.logIn(userDoc, () => {
+        // req.flash() sends a feedback message before a redirect
+        // (it's defined by the "connect-flash" npm package)
+        req.flash("success", "Log in success!");
+        res.redirect("/");
+      });
     })
     .catch(err => next(err));
 });
 
 router.get("/logout", (req, res, next) => {
-  // req.logOut(); is a Passport method that removes the USER ID from the session 
+  // req.logOut(); is a Passport method that removes the USER ID from the session
   req.logOut();
 
-  req.flash("success", "Logged out successfully!")
-  res.redirect("/")
-})
+  req.flash("success", "Logged out successfully!");
+  res.redirect("/");
+});
 
 module.exports = router;

@@ -4,11 +4,12 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    username: { type: String },
-    mail: { type: String },
-    password: { type: String },
+    userName: { type: String },
+    email: { type: String, match: /^.+@.+\..+$/ },
+    // password: { type: String },
+    encryptedPassword: { type: String },
     profilePicUrl: { type: String },
-    plants: { type: Array }
+    specimens: { type: Array }
   },
   {
     timestamps: true
