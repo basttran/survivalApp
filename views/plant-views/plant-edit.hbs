@@ -1,25 +1,27 @@
 <h2>Edit a Plant</h2>
 
 <form action="/my-plants/{{plantItem._id}}/process-edit/" method="POST" enctype="multipart/form-data">
+
   <label>
-    Title:
-    <input type="text" name="title" value="{{plantItem.title}}" placeholder="Frankenstein" required />
+    Plant Name:
+    <input type="text" name="plantName" value="{{plantItem.plantName}}" placeholder="Frankenstein" required />
   </label>
 
   <label>
-    Author:
-    <input type="text" name="author" value="{{plantItem.author}}" placeholder="Mary Shelley" required />
-  </label>
-
-  <label>
-    Description (8 characters or more):
-    <input type="text" name="description" value="{{plantItem.description}}" placeholder="Blah blah blah ..." minlength="8"
+    Description:
+    <input type="text" name="plantDescription" value="{{plantItem.plantDescription}}" placeholder="Mary Shelley"
       required />
   </label>
 
   <label>
-    Rating (0-10, optional):
-    <input type="number" name="rating" value="{{plantItem.rating}}" placeholder="8" min="0" max="10" />
+    Species:
+    <input type="text" name="plantSpecies" value="{{plantItem.plantSpecies}}" placeholder="Blah blah blah ..."
+      minlength="8" required />
+  </label>
+
+  <label>
+    Picture:
+    <input type="file" name="pictureUpload" required />
   </label>
 
   <button>Save Changes</button>
