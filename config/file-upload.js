@@ -12,7 +12,7 @@ cloudinary.config({
 
 const storage = cloudinaryStorage({
   cloudinary,
-  folder: "specimen-pictures"
+  folder: "plant-pictures"
 
   // to upload things that are NOT images
   // params: {

@@ -1,6 +1,6 @@
 <h2>My Plants</h2>
 
-{{!-- displays flash messages since we redirect here from /process-plant --}}
+{{!-- displays flash messages since we redirect here from /process-specimen --}}
 
 {{> flash_messages}}
 
@@ -12,7 +12,6 @@
     <h3>{{this.plantName}}</h3>
     <p>{{this.plantDescription}}</p>
     <h4>{{this.plantSpecies}}</h4>
-    <img src="{{this.plantPicUrl}}" />
   </li>
   {{/each}}
 </ul>
