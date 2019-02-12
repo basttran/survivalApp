@@ -10,6 +10,8 @@
   {{#each plantArray}}
   <li>
     <h3>{{this.plantName}}</h3>
+    {{!-- <a href="plant-update/:{{this._id}}">Update this Plant</a> --}}
+    <a href="my-plants/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.plantDescription}}</p>
     <h4>{{this.plantSpecies}}</h4>
     <img src="{{this.plantPicUrl}}" />

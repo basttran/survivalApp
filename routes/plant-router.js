@@ -45,6 +45,31 @@ router.post(
   }
 );
 
+// delete a plant
+router.get("/my-plants/:plantId/delete", (req, res, next) => {
+  // res.json(req.body);
+  const { plantId } = req.params;
+
+  Plant.findByIdAndRemove(plantId)
+    .then(plantDoc => {
+      res.redirect("/my-plants");
+    })
+    // next(err) skips to the error handler in "bin/www" (error.hbs)
+    .catch(err => next(err));
+});
+
+// router.get("/book/:bookId/delete", (req, res, next) => {
+//   // res.json(req.body);
+//   const { bookId } = req.params;
+
+//   Book.findByIdAndRemove(bookId)
+//     .then(bookDoc => {
+//       res.redirect("/books");
+//     })
+//     // next(err) skips to the error handler in "bin/www" (error.hbs)
+//     .catch(err => next(err));
+// });
+
 router.get("/my-plants", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
