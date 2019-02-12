@@ -1,4 +1,4 @@
-<div>
+<div class="login">
 
 
     {{> flash_messages}}
@@ -6,24 +6,27 @@
 
     <form action="/process-login" method="POST">
 
-        <label>
-            Email:
-            <input type="email" name="email" placeholder="quira@solo.com" required="true" />
+        <label class="email">
+
+            <input type="email" name="email" placeholder="Email" required="true" />
         </label>
 
-        <label>
-            Password:
-            <input type="password" name="originalPassword" placeholder="It's a secret" required="true">
+        <label class="password">
+
+            <input type="password" name="originalPassword" placeholder="Password" required="true">
         </label>
-        <p class="passwordForgotten">Forgot password?</p>
+        <a class="passwordForgotten">Forgot password?</a>
         <button>Log In</button>
     </form>
 
-    <p class="needhelp">Need Help?</p>
+    <a href="/" class="needhelp">Need Help?</a>
 
-    <a href="/">See All Plants</a>
+    <a href="/" class="allspecimens">See All Plants</a>
 
-    <a href="/signup">Sign Up</a>
+    <a href="/signup">
+        <p class="noaccount"> Don't have an account?</p>
+        <p class="signup">Sign Up</p>
+    </a>
 
 </div>
 

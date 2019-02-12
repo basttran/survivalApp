@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 html {
-  height: 100%; }
+  height: 100%;
+  font-family: "Lato", sans-serif; }
 
 body {
   padding: 0;
   margin: 8%;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   height: 100%; }
 
 .section1 {
@@ -18,7 +19,8 @@ body {
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  background-color: aquamarine; }
+  align-items: center;
+  text-align: center; }
 
 label {
   display: block; }
@@ -55,13 +57,121 @@ img {
 h1 {
   margin: 0;
   padding: 2%;
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: #046425; }
+
+footer {
+  justify-content: space-around;
+  width: 100%; }
 
 .footer {
   bottom: 0;
   margin: 0;
   display: flex;
   justify-content: space-around; }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around; }
+
+.needhelp {
+  margin: 0; }
+
+input {
+  background-color: #a8db00;
+  border-radius: 40px;
+  height: 44px;
+  width: 80%;
+  border: none;
+  padding: 0;
+  color: #046425;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1em; }
+
+::placeholder {
+  background-color: #a8db00;
+  border-radius: 40px;
+  height: 44px;
+  width: 80%;
+  border: none;
+  padding: 0;
+  color: #046425;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1em; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 44%;
+  justify-content: space-around;
+  margin-top: 10%; }
+
+.passwordForgotten {
+  text-align: right;
+  color: #046425;
+  margin-top: -6px; }
+
+div.login {
+  width: 60%; }
+
+button {
+  background-color: #046425;
+  border-radius: 40px;
+  height: 44px;
+  width: 52%;
+  border: none;
+  color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 1.2em;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  letter-spacing: 0.06em; }
+
+.noaccount {
+  margin: 0;
+  font-size: 1.1em; }
+
+.allspecimens {
+  background-color: #a8db00;
+  border-radius: 40px;
+  height: 44px;
+  width: 80%;
+  border: none;
+  padding: 0;
+  color: #046425;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+a.allspecimens {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 0.1em; }
+
+a.needhelp {
+  text-decoration: none;
+  color: #a8db00;
+  font-size: 1.1em; }
+
+a {
+  text-decoration: none;
+  color: #a8db00; }
+
+a.sources,
+a.contact {
+  color: #046425; }
+
+.signup {
+  margin: 0;
+  font-size: 1.4em; }
 
 /*# sourceMappingURL=style.css.map */
