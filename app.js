@@ -103,7 +103,7 @@ app.use("/", index);
 const auth = require("./routes/auth-router.js");
 app.use("/", auth);
 
-const specimen = require("./routes/specimen-router.js");
-app.use("/", specimen);
+const plant = require("./routes/plant-router.js");
+app.use("/", plant);
 
 module.exports = app;

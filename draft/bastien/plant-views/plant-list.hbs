@@ -1,0 +1,17 @@
+<h2>My Plants</h2>
+
+{{!-- displays flash messages since we redirect here from /process-specimen --}}
+
+{{> flash_messages}}
+
+<a href="/plant-add">Add a Plant</a>
+
+<ul>
+  {{#each plantArray}}
+  <li>
+    <h3>{{this.plantName}}</h3>
+    <p>{{this.plantDescription}}</p>
+    <h4>{{this.plantSpecies}}</h4>
+  </li>
+  {{/each}}
+</ul>

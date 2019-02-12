@@ -1,0 +1,13 @@
+<h2>Admin Zone</h2>
+​
+<h3>Plant Management</h3>
+<ul>
+  {{#each plantArray}}
+  <li>
+    <h4>{{this.plantName}}</h4>
+    <p>{{this.plantDescription}}</p>
+    <h5><b>{{this.plantSpecies}}</b></h5>
+    <img src="{{this.plantPicUrl}}" />
+  </li>
+  {{/each}}
+</ul>
