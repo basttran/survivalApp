@@ -1,10 +1,38 @@
-<h2>Home page</h2>
+<div>
 
-{{> flash_messages}}
 
-{{#if currentUser}}
-<h3>Welcome back, {{currentUser.fullName}}</h3>
-{{else}}
-<p>Why don't you make an account?</p>
-<a href="/signup">Sign Up Today</a>
-{{/if}}
+    {{> flash_messages}}
+
+
+    <form action="/process-login" method="POST">
+
+        <label>
+            Email:
+            <input type="email" name="email" placeholder="quira@solo.com" required="true" />
+        </label>
+
+        <label>
+            Password:
+            <input type="password" name="originalPassword" placeholder="It's a secret" required="true">
+        </label>
+        <p class="passwordForgotten">Forgot password?</p>
+        <button>Log In</button>
+    </form>
+
+    <p class="needhelp">Need Help?</p>
+
+    <a href="/">See All Plants</a>
+
+    <a href="/signup">Sign Up</a>
+
+</div>
+
+
+{{!-- {{> flash_messages}}
+
+    {{#if currentUser}}
+    <h3>Welcome back, {{currentUser.userName}}</h3>
+    {{else}}
+    <p>Why don't you make an account?</p>
+    <a href="/signup">Sign Up Today</a>
+    {{/if}} --}}
