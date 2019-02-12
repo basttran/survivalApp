@@ -1,8 +1,10 @@
 const express = require("express");
 
+const Specimen = require("../models/specimen-model.js");
+const fileUploader = require("../config/file-upload.js");
+
 const router = express.Router();
 
-const Specimen = require("../models/specimen-model.js");
 
 router.get("/specimen-add", (req, res, next) => {
   if (req.user) {
@@ -13,14 +15,21 @@ router.get("/specimen-add", (req, res, next) => {
   }
 });
 
-router.post("/process-specimen", (req, res, next) => {
+router.post("/process-specimen", fileUploader.single("pictureUpload"), (req, res, next) => {
   const { specimenName, specimenDescription, specimenSpecies } = req.body;
 
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   const host = req.user._id;
 
-  Specimen.create({ specimenName, specimenDescription, specimenSpecies, host })
+      // multer puts all file info it got from the service into req.file
+      console.log("File upload is ALWAYS in req.file OR req.files", req.file);
+
+      // get part of the Cloudinary information
+      const specimenPicUrl = req.file.secure_url;
+  
+
+  Specimen.create({ specimenName, specimenDescription, specimenSpecies, specimenPicUrl, host })
     .then(() => {
       req.flash("success", "Specimen created successfully!");
       res.redirect("/my-specimens");

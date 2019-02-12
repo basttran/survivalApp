@@ -1,6 +1,6 @@
 <h2>Add a Plant</h2>
 
-<form action="/process-specimen" method="POST">
+<form action="/process-specimen" method="POST" enctype="multipart/form-data">
   <label>
     Specimen Name:
     <input type="text" , name="specimenName" placeholder="Pinhead" required />
@@ -15,6 +15,11 @@
   <label>
     Species:
     <input type="text" , name="specimenSpecies" placeholder="Carnegiea gigantea" required />
+  </label>
+
+    <label>
+    Picture:
+    <input type="file" name="pictureUpload" required />
   </label>
 
   <button>Save This Specimen</button>

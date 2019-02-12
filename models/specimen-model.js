@@ -7,6 +7,7 @@ const specimenSchema = new Schema(
     specimenName: { type: String },
     specimenDescription: { type: String },
     specimenSpecies: { type: String },
+    specimenPicUrl: { type: String, required: true, match: /^https?:\/\// },
     host: { type: String }
   },
   {
