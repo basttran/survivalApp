@@ -95,7 +95,7 @@ app.use((req, res, next) => {
 });
 
 // default value for title local
-app.locals.title = "Express Users";
+app.locals.title = "DAT.plant";
 
 const index = require("./routes/index");
 app.use("/", index);

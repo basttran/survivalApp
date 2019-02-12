@@ -5,6 +5,11 @@
 <form action="/process-signup" method="POST">
 
   <label>
+    Picture:
+    <input type="file" name="profilPicUpload" required />
+  </label>
+
+  <label>
     Your User Name (2 characters or more):
     <input type="text" name="userName" placeholder="Leia Organa" unique="true" required="true" />
   </label>

@@ -10,26 +10,30 @@
 </head>
 
 <body>
-  <header>
-    <h1>{{title}}</h1>
-    <nav>
+  <section class="section1">
+    <header>
+      <img class="logoApp">
+      <h1>{{title}}</h1>
+      {{!-- <nav>
       <a href="/">Home</a>
       {{#if currentUser}}
-      <b>{{currentUser.email}}</b>
-      <a href="/my-specimens">My Specimens</a>
+      <a href="/my-specimens">My Plants</a>
+      <a href="/my-wishlist">My Wishlist</a>
       <a href="/logout">Log Out</a>
       {{else}}
       <a href="/signup">Sign Up</a>
       <a href="/login">Log In</a>
       {{/if}}
-    </nav>
-  </header>
+    </nav> --}}
+    </header>
+    <section class="section2">
+      {{{body}}}
 
-  {{{body}}}
-
-  <footer>
-    <p>Made with BACON @ Ironhack</p>
-  </footer>
+      <footer>
+        <p class="footer"><a class="sources">Sources </a>| <a class="contact">Contact</a></p>
+      </footer>
+    </section>
+  </section>
   <script src="/javascripts/script.js"></script>
 </body>
 

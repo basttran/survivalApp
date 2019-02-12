@@ -1,10 +1,27 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+  height: 100%;
 }
 
-a {
-  color: #00b7ff;
+body {
+  padding: 0;
+  margin: 8%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.section2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  background-color: aquamarine;
 }
 
 label {
@@ -23,4 +40,38 @@ label {
   border-radius: 3px;
   color: chartreuse;
   padding: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logoApp {
+  background: url(../images/green.png);
+  width: 108px;
+  height: 152px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+img {
+  border: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 2%;
+  font-size: 1.4em;
+  color: #046425;
+}
+
+.footer {
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
 }
