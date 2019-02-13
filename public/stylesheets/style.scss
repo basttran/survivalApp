@@ -50,24 +50,19 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 20%;
 }
 
 .logoApp {
-  background: url(../images/green.png);
   width: 64px;
-  height: 94px;
+  height: 66px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-img {
-  border: none;
-}
-
 h1 {
   margin: 0;
-  padding-top: 2%;
   font-size: 1em;
   color: #046425;
 }
@@ -123,7 +118,7 @@ input {
 form {
   display: flex;
   flex-direction: column;
-  height: 54%;
+  height: 50%;
   justify-content: space-around;
 }
 

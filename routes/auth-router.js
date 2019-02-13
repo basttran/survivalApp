@@ -76,7 +76,7 @@ router.post("/process-login", (req, res, next) => {
         // req.flash() sends a feedback message before a redirect
         // (it's defined by the "connect-flash" npm package)
         req.flash("success", "Log in success!");
-        res.redirect("/plants"); // check this redirect, it should eventually lead to the user's page (default is "/")
+        res.redirect("/profile"); // check this redirect, it should eventually lead to the user's page (default is "/")
       });
     })
     .catch(err => next(err));

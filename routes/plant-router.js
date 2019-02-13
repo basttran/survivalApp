@@ -1,31 +1,8 @@
 const express = require("express");
 
-const Plant = require("../models/plant-model.js");
-const fileUploader = require("../config/file-upload.js");
-
 const router = express.Router();
 
-
-router.get("/plants", (req, res, next) => {
-  // whenever a user visits "/books"find all the books sorted by rating
-  Plant.find() // !!find only the user's ones!!
-    .sort() // irrelevant sort
-    .then(plantResults => {
-      // send the database query results to the HBS file as "bookArray"
-      res.locals.plantArray = plantResults;
-      res.render("plant-views/plant-list.hbs");
-    })
-    // next(err) skips to the error handler in "bin/www" (error.hbs)
-    .catch(err => next(err));
-});
-
-
-
-
-
-
-
-
+const Plant = require("../models/plant-model.js");
 
 router.get("/plant-add", (req, res, next) => {
   if (req.user) {
@@ -36,108 +13,27 @@ router.get("/plant-add", (req, res, next) => {
   }
 });
 
-router.get("/plants/:plantId/edit", (req, res, next) => {
-  // get the ID from the address (it's inside of req.params)
-  const { plantId } = req.params;
+router.post("/process-plant", (req, res, next) => {
+  const { name, description, pictureUrl } = req.body;
 
-  // find the plant in the DB using the ID from the address
-  Plant.findById(plantId)
-    .then(plantDoc => {
-      // send the database query result to the HBS file as "plantItem"
-      res.locals.plantItem = plantDoc;
-      res.render("plant-views/plant-edit.hbs");
+  // req.user comes from Passport's deserializeUser()
+  // (it's the document from the database of the logged-in user)
+  const host = req.user._id;
+
+  Plant.create({ name, description, pictureUrl, host })
+    .then(() => {
+      req.flash("success", "Plant created successfully!");
+      res.redirect("/my-plants");
     })
-    // next(err) skips to the error handler in "bin/www" (error.hbs)
     .catch(err => next(err));
 });
 
-router.post(
-  "/process-edit",
-  fileUploader.single("pictureUpload"),
-  (req, res, next) => {
-    const { plantName, plantDescription, plantSpecies } = req.body;
-    // req.user comes from Passport's deserializeUser()
-    // (it's the document from the database of the logged-in user)
-    const host = req.user._id;
-    // multer puts all file info it got from the service into req.file
-    console.log("File upload is ALWAYS in req.file OR req.files", req.file);
-    // get part of the Cloudinary information
-    const plantPicUrl = req.file.secure_url;
-    Plant.create({
-      plantName,
-      plantDescription,
-      plantSpecies,
-      plantPicUrl,
-      host
-    })
-      .then(() => {
-        req.flash("success", "Plant created successfully!");
-        res.redirect("/plants");
-      })
-      .catch(err => next(err));
-  }
-);
-
-// update a plant
-router.post(
-  "/plants/:plantId/process-edit",
-  fileUploader.single("pictureUpload"),
-  (req, res, next) => {
-    // res.json(req.body);
-    const { plantId } = req.params;
-    const { plantName, plantDescription, plantSpecies, host } = req.body;
-    console.log("File upload is ALWAYS in req.file OR req.files", req.file);
-
-    const plantPicUrl = req.file.secure_url;
-
-    Plant.findByIdAndUpdate(
-      plantId, // ID of the document we want to update
-      {
-        $set: { plantName, plantDescription, plantSpecies, plantPicUrl, host }
-      }, // changes to make to that document
-      { runValidators: true } // additional settings (enforce the rules)
-    )
-      .then(plantDoc => {
-        // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
-        // redirect ONLY to ADDRESSES - not HBS files
-        res.redirect("/plants");
-      })
-      // next(err) skips to the error handler in "bin/www" (error.hbs)
-      .catch(err => next(err));
-  }
-);
-
-// delete a plant
-router.get("/plants/:plantId/delete", (req, res, next) => {
-  // res.json(req.body);
-  const { plantId } = req.params;
-
-  Plant.findByIdAndRemove(plantId)
-    .then(plantDoc => {
-      res.redirect("/plants");
-    })
-    // next(err) skips to the error handler in "bin/www" (error.hbs)
-    .catch(err => next(err));
-});
-
-// router.get("/book/:bookId/delete", (req, res, next) => {
-//   // res.json(req.body);
-//   const { bookId } = req.params;
-
-//   Book.findByIdAndRemove(bookId)
-//     .then(bookDoc => {
-//       res.redirect("/books");
-//     })
-//     // next(err) skips to the error handler in "bin/www" (error.hbs)
-//     .catch(err => next(err));
-// });
-
-router.get("/plants", (req, res, next) => {
+router.get("/my-plants", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   if (!req.user) {
     // AUTHORIZATION: redirect to login if you are NOT logged-in
-    req.flash("error", "You must be logged-in to see your plants, PUNK");
+    req.flash("error", "You must be logged-in to see your plant, PUNK");
     res.redirect("/login");
     // use return to STOP the function here if you are NOT logged-in
     return;
@@ -149,15 +45,14 @@ router.get("/plants", (req, res, next) => {
     // first 10 results
     .limit(10)
     .then(plantResults => {
-      // res.json(plantResults);
-      res.locals.plantArray = plantResults;
+      res.locals.plantArrray = plantResults;
       res.render("plant-views/plant-list.hbs");
     })
     .catch(err => next(err));
 });
 
 // ADMINS ONLY: list all the plants
-router.get("/admin/plants", (req, res, next) => {
+router.get("/admin/plantss", (req, res, next) => {
   if (!req.user || req.user.role !== "admin") {
     // AUTHORIZATION: redirect to home page if you are NOT an ADMIN
     // (also if you are NOT logged-in)
@@ -170,7 +65,7 @@ router.get("/admin/plants", (req, res, next) => {
     .sort({ createdAt: 1 })
     .then(plantResults => {
       res.locals.plantArray = plantResults;
-      res.render("plant-views/plant-list.hbs");
+      res.render("plant-views/admin-plants.hbs");
     })
     .catch(err => next(err));
 });
