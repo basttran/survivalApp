@@ -2,26 +2,22 @@
 
 <h2>Sign Up</h2>
 
-<form action="/process-signup" method="POST">
+<form action="/process-signup" method="POST" class="processsignup">
 
   <label>
-    Picture:
-    <input type="file" name="profilPicUpload" required />
+    <input type="file" name="profilPicUpload" placeholder="Upload a picture" required />
   </label>
 
   <label>
-    Your User Name (2 characters or more):
-    <input type="text" name="userName" placeholder="Leia Organa" unique="true" required="true" />
+    <input type="text" name="userName" placeholder="Your User Name" unique="true" required="true" />
   </label>
 
   <label>
-    Your Email (something@something.com):
-    <input type="email" name="email" placeholder="leia@resistance.com" unique="true" required="true" />
+    <input type="email" name="email" placeholder="Your Email" unique="true" required="true" />
   </label>
 
   <label>
-    Choose a Password (must contain a digit 0-9):
-    <input type="password" name="originalPassword" placeholder="It's a secret" required="true" />
+    <input type="password" name="originalPassword" placeholder="Password (contain digit 0-9)" required="true" />
   </label>
 
   <button>Sign Up</button>
