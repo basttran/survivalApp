@@ -212,7 +212,7 @@ a.contact {
 .species-picture {
   width: 40%; }
 
-li {
+.species-li {
   list-style: none;
   float: left;
   display: flex;
