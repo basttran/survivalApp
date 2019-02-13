@@ -1,4 +1,4 @@
-<h2>Species</h2>
+<h2 class="species-title">Species</h2>
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
@@ -10,7 +10,7 @@
   {{#each speciesArray}}
   <li>
     <h3>{{this.name}}</h3>
-    <img src="{{this.speciesPicUrl}}" />
+    <img src="{{this.speciesPicUrl}}" class="species-picture" />
 
     <a href="wishlist/{{this._id}}/add">Add to wishlist</a>
     {{!-- <a href="wishlist/{{this._id}}/delete">Delete this Plant</a> --}}

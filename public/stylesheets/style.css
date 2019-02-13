@@ -183,7 +183,8 @@ a.contact {
 .sources-tittle,
 .contact-tittle,
 .signup-tittle,
-.passwordforgotten-tittle {
+.passwordforgotten-tittle,
+.species-title {
   padding-top: 3%;
   font-size: 1.8em;
   margin: 0;
@@ -207,5 +208,16 @@ a.contact {
 .sendme {
   width: 60%;
   margin-left: 20%; }
+
+.species-picture {
+  width: 40%; }
+
+li {
+  list-style: none; }
+
+ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=style.css.map */
