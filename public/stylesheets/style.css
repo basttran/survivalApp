@@ -218,14 +218,15 @@ li {
   float: left;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  align-content: center; }
 
 ul {
   padding: 0; }
 
 img.species-picture {
   width: 60%;
-  height: 90%; }
+  height: 80%; }
 
 h3 {
   font-size: 1em; }

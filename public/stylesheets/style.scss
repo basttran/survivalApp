@@ -253,6 +253,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
 }
 
 ul {
@@ -261,7 +262,7 @@ ul {
 
 img.species-picture {
   width: 60%;
-  height: 90%;
+  height: 80%;
 }
 
 h3 {
