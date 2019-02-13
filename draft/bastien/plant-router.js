@@ -23,12 +23,12 @@ router.post("/process-plant", (req, res, next) => {
   Plant.create({ plantName, plantDescription, plantPicUrl, host })
     .then(() => {
       req.flash("success", "Plant created successfully!");
-      res.redirect("/plants");
+      res.redirect("/plant");
     })
     .catch(err => next(err));
 });
 
-router.get("/plants", (req, res, next) => {
+router.get("/plant", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   if (!req.user) {
@@ -52,7 +52,7 @@ router.get("/plants", (req, res, next) => {
 });
 
 // ADMINS ONLY: list all the plants
-router.get("/admin/plantss", (req, res, next) => {
+router.get("/admin/plants", (req, res, next) => {
   if (!req.user || req.user.role !== "admin") {
     // AUTHORIZATION: redirect to home page if you are NOT an ADMIN
     // (also if you are NOT logged-in)

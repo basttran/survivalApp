@@ -5,28 +5,6 @@ const fileUploader = require("../config/file-upload.js");
 
 const router = express.Router();
 
-
-router.get("/plants", (req, res, next) => {
-  // whenever a user visits "/books"find all the books sorted by rating
-  Plant.find() // !!find only the user's ones!!
-    .sort() // irrelevant sort
-    .then(plantResults => {
-      // send the database query results to the HBS file as "bookArray"
-      res.locals.plantArray = plantResults;
-      res.render("plant-views/plant-list.hbs");
-    })
-    // next(err) skips to the error handler in "bin/www" (error.hbs)
-    .catch(err => next(err));
-});
-
-
-
-
-
-
-
-
-
 router.get("/plant-add", (req, res, next) => {
   if (req.user) {
     res.render("plant-views/plant-form.hbs");
@@ -36,7 +14,7 @@ router.get("/plant-add", (req, res, next) => {
   }
 });
 
-router.get("/plants/:plantId/edit", (req, res, next) => {
+router.get("/plant/:plantId/edit", (req, res, next) => {
   // get the ID from the address (it's inside of req.params)
   const { plantId } = req.params;
 
@@ -72,7 +50,7 @@ router.post(
     })
       .then(() => {
         req.flash("success", "Plant created successfully!");
-        res.redirect("/plants");
+        res.redirect("/plant");
       })
       .catch(err => next(err));
   }
@@ -80,27 +58,37 @@ router.post(
 
 // update a plant
 router.post(
-  "/plants/:plantId/process-edit",
+  "/plant/:plantId/process-edit",
   fileUploader.single("pictureUpload"),
   (req, res, next) => {
     // res.json(req.body);
     const { plantId } = req.params;
-    const { plantName, plantDescription, plantSpecies, host } = req.body;
+    const { plantName, plantDescription, plantSpecies } = req.body;
     console.log("File upload is ALWAYS in req.file OR req.files", req.file);
 
-    const plantPicUrl = req.file.secure_url;
+    var changes = {
+      plantName,
+      plantDescription,
+      plantSpecies,
+    };
+
+    let picture;
+    if (req.file) {
+      picture = req.file.secure_url;
+      changes.plantPicUrl = picture;
+    }
 
     Plant.findByIdAndUpdate(
       plantId, // ID of the document we want to update
       {
-        $set: { plantName, plantDescription, plantSpecies, plantPicUrl, host }
+        $set: changes
       }, // changes to make to that document
       { runValidators: true } // additional settings (enforce the rules)
     )
       .then(plantDoc => {
         // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
         // redirect ONLY to ADDRESSES - not HBS files
-        res.redirect("/plants");
+        res.redirect("/plant");
       })
       // next(err) skips to the error handler in "bin/www" (error.hbs)
       .catch(err => next(err));
@@ -108,13 +96,13 @@ router.post(
 );
 
 // delete a plant
-router.get("/plants/:plantId/delete", (req, res, next) => {
+router.get("/plant/:plantId/delete", (req, res, next) => {
   // res.json(req.body);
   const { plantId } = req.params;
 
   Plant.findByIdAndRemove(plantId)
     .then(plantDoc => {
-      res.redirect("/plants");
+      res.redirect("/plant");
     })
     // next(err) skips to the error handler in "bin/www" (error.hbs)
     .catch(err => next(err));
@@ -132,7 +120,7 @@ router.get("/plants/:plantId/delete", (req, res, next) => {
 //     .catch(err => next(err));
 // });
 
-router.get("/plants", (req, res, next) => {
+router.get("/plant", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   if (!req.user) {

@@ -57,7 +57,7 @@ const plantSchema = new Schema(
 );
 
 // use the schema to create the Plant model (it has the methods for db queries)
-// "Plant" model -> "plants" ollection
+// "Plant" model -> "plants" collection
 const Plant = mongoose.model("Plant", plantSchema);
 
 // share the "Plant" model with other parts of the app
