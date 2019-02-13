@@ -9,7 +9,9 @@
 <ul>
   {{#each speciesArray}}
   <li>
-    <h3>{{this.scientificName}}</h3>
+    <h3>{{this.name}}</h3>
+    <img src="{{this.speciesPicUrl}}" />
+
     <a href="wishlist/{{this._id}}/add">Add to wishlist</a>
     {{!-- <a href="wishlist/{{this._id}}/delete">Delete this Plant</a> --}}
     <p>{{this.level}}</p>

@@ -1,7 +1,7 @@
 [
   {
     "name": "Bunny Ears Cactus",
-    "speciesPicUrl": "(../public/images/plants/bunnyearscactus.jpg)",
+    "speciesPicUrl": ,
     "scientificName": "Opuntia microdasys",
     "commonNames": [
       "Bunny Ears",
@@ -86,7 +86,6 @@
   },
   {
     "name": "Old Lady Cactus",
-    "speciesPicUrl": "../images/plants/oldladycactus.jpg",
     "scientificName": "Mammillaria hahniana",
     "commonNames": ["Old Lady Cactus"],
     "place": ["indoor"],

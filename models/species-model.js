@@ -7,6 +7,7 @@ const speciesSchema = new Schema(
   {
     // document structure & rules defined here
     name: { type: String, required: true, minlength: 4 }, // "name": "Bunny Ears Cactus",
+    speciesPicUrl: { type: String }, //(../images/plants/bunnyearscactus.jpg)",
     scientificName: { type: String, required: true, minlength: 4 }, //  "scientificName": "Opuntia microdasys",
     commonNames: [{ type: String, min: 0 }, { type: String, min: 0 }], // "commonNames": ["Bunny Ears", "Bunny Ears Cactus"],
     place: {
