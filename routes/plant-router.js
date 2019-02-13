@@ -5,6 +5,28 @@ const fileUploader = require("../config/file-upload.js");
 
 const router = express.Router();
 
+
+router.get("/plants", (req, res, next) => {
+  // whenever a user visits "/books"find all the books sorted by rating
+  Plant.find() // !!find only the user's ones!!
+    .sort() // irrelevant sort
+    .then(plantResults => {
+      // send the database query results to the HBS file as "bookArray"
+      res.locals.plantArray = plantResults;
+      res.render("plant-views/plant-list.hbs");
+    })
+    // next(err) skips to the error handler in "bin/www" (error.hbs)
+    .catch(err => next(err));
+});
+
+
+
+
+
+
+
+
+
 router.get("/plant-add", (req, res, next) => {
   if (req.user) {
     res.render("plant-views/plant-form.hbs");
@@ -14,7 +36,7 @@ router.get("/plant-add", (req, res, next) => {
   }
 });
 
-router.get("/my-plants/:plantId/edit", (req, res, next) => {
+router.get("/plants/:plantId/edit", (req, res, next) => {
   // get the ID from the address (it's inside of req.params)
   const { plantId } = req.params;
 
@@ -30,7 +52,7 @@ router.get("/my-plants/:plantId/edit", (req, res, next) => {
 });
 
 router.post(
-  "/process-plant-edit",
+  "/process-edit",
   fileUploader.single("pictureUpload"),
   (req, res, next) => {
     const { plantName, plantDescription, plantSpecies } = req.body;
@@ -50,7 +72,7 @@ router.post(
     })
       .then(() => {
         req.flash("success", "Plant created successfully!");
-        res.redirect("/my-plants");
+        res.redirect("/plants");
       })
       .catch(err => next(err));
   }
@@ -58,7 +80,7 @@ router.post(
 
 // update a plant
 router.post(
-  "/my-plants/:plantId/process-edit",
+  "/plants/:plantId/process-edit",
   fileUploader.single("pictureUpload"),
   (req, res, next) => {
     // res.json(req.body);
@@ -78,7 +100,7 @@ router.post(
       .then(plantDoc => {
         // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
         // redirect ONLY to ADDRESSES - not HBS files
-        res.redirect("/my-plants");
+        res.redirect("/plants");
       })
       // next(err) skips to the error handler in "bin/www" (error.hbs)
       .catch(err => next(err));
@@ -86,13 +108,13 @@ router.post(
 );
 
 // delete a plant
-router.get("/my-plants/:plantId/delete", (req, res, next) => {
+router.get("/plants/:plantId/delete", (req, res, next) => {
   // res.json(req.body);
   const { plantId } = req.params;
 
   Plant.findByIdAndRemove(plantId)
     .then(plantDoc => {
-      res.redirect("/my-plants");
+      res.redirect("/plants");
     })
     // next(err) skips to the error handler in "bin/www" (error.hbs)
     .catch(err => next(err));
@@ -110,7 +132,7 @@ router.get("/my-plants/:plantId/delete", (req, res, next) => {
 //     .catch(err => next(err));
 // });
 
-router.get("/my-plants", (req, res, next) => {
+router.get("/plants", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   if (!req.user) {
