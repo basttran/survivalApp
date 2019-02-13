@@ -184,7 +184,8 @@ a.contact {
 .contact-tittle,
 .signup-tittle,
 .passwordforgotten-tittle,
-.species-title {
+.species-title,
+.profile-tittle {
   padding-top: 3%;
   font-size: 1.8em;
   margin: 0;
