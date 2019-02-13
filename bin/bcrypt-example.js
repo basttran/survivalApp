@@ -23,6 +23,6 @@ console.log(encryptedLong);
 // 1. Compare strings for log-in feature
 // 2. Compare strings for password cofirmation
 // bcrypt.compareSync();
-console.log(bcrypt.compareSync("coucou", encryptedCoucou)); // true
-console.log(bcrypt.compareSync("Coucou", encryptedCoucou)); // false
-console.log(bcrypt.compareSync("password", encryptedCoucou)); // false
+// console.log(bcrypt.compareSync("coucou", encryptedCoucou)); // true
+// console.log(bcrypt.compareSync("Coucou", encryptedCoucou)); // false
+// console.log(bcrypt.compareSync("password", encryptedCoucou)); // false
