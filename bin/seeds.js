@@ -6,19 +6,19 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 // Get the Celebrity model to do our databse query
-const User = require("../models/user-model.js");
+// const User = require("../models/user-model.js");
 
-const userData = require("./users.json");
+// const userData = require("./users.json");
 
-const Plant = require("../models/plant-model.js");
+const Species = require("../models/species-model.js");
 
-const plantData = require("./plants.json");
+const speciesData = require("./species.json");
 
 // !!! CONNECT TO THE SAME DATABASE AS app.js !!!
 // connects to MongoDB server with the DB name equal to the project name
 // (also has console.logs for successful and failed connections)
 mongoose
-  .connect("mongodb://localhost/survivalApp", { useNewUrlParser: true })
+  .connect("mongodb://localhost/plants", { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -28,18 +28,18 @@ mongoose
     console.error("Error connecting to mongo", err);
   });
 
-User.create(userData)
-  .then(userResults => {
-    console.log(`Inserted ${userResults.length} USERS!`);
-  })
-  .catch(err => {
-    console.log("Insert USERS FAILURE!!", err);
-  });
+// User.create(userData)
+//   .then(userResults => {
+//     console.log(`Inserted ${userResults.length} USERS!`);
+//   })
+//   .catch(err => {
+//     console.log("Insert USERS FAILURE!!", err);
+//   });
 
-Plant.create(plantData)
-  .then(plantResults => {
-    console.log(`Inserted ${plantResults.length} PLANTS!`);
+Species.create(speciesData)
+  .then(speciesResults => {
+    console.log(`Inserted ${speciesResults.length} SPECIES!`);
   })
   .catch(err => {
-    console.log("Insert PLANTS FAILURE!!", err);
+    console.log("Insert SPECIES FAILURE!!", err);
   });

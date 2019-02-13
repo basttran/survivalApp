@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-// create the Book schema using the Mongoose "Schema" class
-const plantSchema = new Schema(
+// create the Species schema using the Mongoose "Schema" class
+const speciesSchema = new Schema(
   {
     // document structure & rules defined here
     name: { type: String, required: true, minlength: 4 }, // "name": "Bunny Ears Cactus",
@@ -33,12 +33,12 @@ const plantSchema = new Schema(
     wateringNeeds: { type: String, required: true, minlength: 4 }, //  "wateringNeeds": "every 3-4 weeks",
     sunlightNeeds: { type: String, required: true, minlength: 4 }, //  "sunlightNeeds": "partial sunlight",
     flowerColor: { type: String }, //   "flowerColor": "white",
-    plantGrowsUp: [
+    speciesGrowsUp: [
       {
         tall: { type: String },
         wide: { type: String }
       }
-    ], //   "plantGrowsUp": { "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" },
+    ], //   "speciesGrowsUp": { "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" },
     cold: { type: String, required: true }, //     "cold": "Not cold hardy",
     propagation: { type: String, required: true, minlength: 4 }, //     "propagation": "by cuttings",
     toxicity: { type: String, required: true, minlength: 4 }, //     "toxicity": "non-toxic to humans and animals",
@@ -56,9 +56,9 @@ const plantSchema = new Schema(
   }
 );
 
-// use the schema to create the Plant model (it has the methods for db queries)
-// "Plant" model -> "plants" collection
-const Plant = mongoose.model("Plant", plantSchema);
+// use the schema to create the Species model (it has the methods for db queries)
+// "Species" model -> "species" collection
+const Species = mongoose.model("Species", speciesSchema);
 
-// share the "Plant" model with other parts of the app
-module.exports = Plant;
+// share the "Species" model with other parts of the app
+module.exports = Species;

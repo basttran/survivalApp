@@ -1,0 +1,19 @@
+<h2>Species</h2>
+
+{{!-- displays flash messages since we redirect here from /process-plant --}}
+
+{{> flash_messages}}
+
+{{!-- <a href="/plant-add">Add a Plant</a> --}}
+
+<ul>
+  {{#each speciesArray}}
+  <li>
+    <h3>{{this.scientificName}}</h3>
+    <a href="wishlist/{{this._id}}/add">Add to wishlist</a>
+    {{!-- <a href="wishlist/{{this._id}}/delete">Delete this Plant</a> --}}
+    <p>{{this.level}}</p>
+    <h4>{{this.speciesClassification.Family}}</h4>
+  </li>
+  {{/each}}
+</ul>

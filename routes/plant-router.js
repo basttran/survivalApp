@@ -125,7 +125,7 @@ router.get("/plant", (req, res, next) => {
   // (it's the document from the database of the logged-in user)
   if (!req.user) {
     // AUTHORIZATION: redirect to login if you are NOT logged-in
-    req.flash("error", "You must be logged-in to see your plant, PUNK");
+    req.flash("error", "You must be logged-in to see your plants, PUNK");
     res.redirect("/login");
     // use return to STOP the function here if you are NOT logged-in
     return;
@@ -137,7 +137,7 @@ router.get("/plant", (req, res, next) => {
     // first 10 results
     .limit(10)
     .then(plantResults => {
-      res.locals.plantArrray = plantResults;
+      res.locals.plantArray = plantResults;
       res.render("plant-views/plant-list.hbs");
     })
     .catch(err => next(err));
