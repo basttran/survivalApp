@@ -180,12 +180,13 @@ a.contact {
   line-height: 1.8em;
   margin: 4% 0; }
 
-.sources-tittle,
-.contact-tittle,
-.signup-tittle,
-.passwordforgotten-tittle,
+.sources-title,
+.contact-title,
+.signup-title,
+.passwordforgotten-title,
 .species-title,
-.profile-tittle {
+.profile-title,
+.add-plant-title {
   padding-top: 3%;
   font-size: 1.8em;
   margin: 0;
