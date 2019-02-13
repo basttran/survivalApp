@@ -1,0 +1,44 @@
+<h2>My profile</h2>
+
+{{#if currentUser}}
+<b>{{currentUser.email}}</b>
+{{/if}}
+
+
+
+<h3>My Plants</h3>
+
+{{!-- displays flash messages since we redirect here from /process-plant --}}
+
+{{> flash_messages}}
+
+<a href="/plant-add">Add a Plant</a>
+
+<ul>
+  {{#each plantArray}}
+  <li>
+    <h3>{{this.plantName}}</h3>
+    <a href="plant/{{this._id}}/edit">Update this Plant</a>
+    <a href="plant/{{this._id}}/delete">Delete this Plant</a>
+    <p>{{this.plantDescription}}</p>
+    <h4>{{this.plantSpecies}}</h4>
+    <img src="{{this.plantPicUrl}}" />
+  </li>
+  {{/each}}
+</ul>
+
+
+<h3>My Wishlist</h3>
+
+
+
+
+{{!-- <ul>
+  {{#each speciesArray}}
+  <li>
+    <h3>{{this.scientificName}}</h3>
+    <p>{{this.level}}</p>
+    <h4>{{this.speciesClassification.Family}}</h4>
+  </li>
+  {{/each}}
+</ul> --}}

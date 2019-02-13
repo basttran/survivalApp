@@ -106,4 +106,7 @@ app.use("/", auth);
 const plant = require("./routes/plant-router.js");
 app.use("/", plant);
 
+const species = require("./routes/species-router.js");
+app.use("/", species);
+
 module.exports = app;
