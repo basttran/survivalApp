@@ -1,6 +1,7 @@
 [
   {
     "name": "Bunny Ears Cactus",
+    "speciesPicUrl": "(../public/images/plants/bunnyearscactus.jpg)",
     "scientificName": "Opuntia microdasys",
     "commonNames": [
       "Bunny Ears",
@@ -28,7 +29,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Chin Cactus",
@@ -50,7 +52,8 @@
     "propagation": "by grafting and offsets",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Saguaro Cactus",
@@ -78,10 +81,12 @@
     "propagation": "by grafting and offsets",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Old Lady Cactus",
+    "speciesPicUrl": "../images/plants/oldladycactus.jpg",
     "scientificName": "Mammillaria hahniana",
     "commonNames": ["Old Lady Cactus"],
     "place": ["indoor"],
@@ -101,7 +106,8 @@
     "propagation": "by offsets",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Star Cactus",
@@ -128,7 +134,8 @@
     "propagation": "by offsets",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring",
-    "level": "hard"
+    "level": "hard",
+    "grade": "3"
   },
   {
     "name": "Easter Cactus",
@@ -150,7 +157,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Christmas Cactus",
@@ -171,7 +179,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Ruby Ball",
@@ -199,7 +208,8 @@
     "propagation": "by grafting and offsets",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "hard"
+    "level": "hard",
+    "grade": "3"
   },
   {
     "name": "California Barrel Cactus",
@@ -229,7 +239,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Thanksgiving Cactus",
@@ -257,7 +268,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Queen Of The Night",
@@ -286,7 +298,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Prickly Pear Cactus",
@@ -308,7 +321,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Cholla Cactus",
@@ -334,7 +348,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Totem Pole Cactus",
@@ -361,7 +376,8 @@
     "propagation": "by seedling",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Donkey’s Tail",
@@ -389,7 +405,8 @@
     "propagation": "by leaves or cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Crown of Thorns",
@@ -417,7 +434,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Flaming Katy",
@@ -444,7 +462,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Gollum Jade",
@@ -475,7 +494,8 @@
     "propagation": "by leaf or stem cuttings",
     "toxicity": "can be toxic",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Aloe Vera",
@@ -512,7 +532,8 @@
     "propagation": "by offsets",
     "toxicity": "Generally non-toxic to humans",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Panda Plant",
@@ -539,7 +560,8 @@
     "propagation": "by leaves",
     "toxicity": "Toxic to animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Pincushion Cactus",
@@ -562,7 +584,8 @@
     "propagation": "by cuttings",
     "toxicity": "non-toxic to humans and animals",
     "activelyGrows": "Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Roseum",
@@ -585,7 +608,8 @@
     "propagation": "by leaves, cuttings, or seeds",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Snake Plant",
@@ -612,7 +636,8 @@
     "propagation": "by offsets",
     "toxicity": "Can be toxic to dogs and cats",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Zebra Plant",
@@ -633,7 +658,8 @@
     "propagation": "by offsets",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Gasteria baylissiana",
@@ -658,7 +684,8 @@
     "propagation": "by leaves, cuttings, and offsets",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Winter indoors",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Pinwheel Desert Rose",
@@ -681,7 +708,8 @@
     "propagation": "by stem cuttings",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Winter",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Coral Cactus",
@@ -703,7 +731,8 @@
     "propagation": "by stem cuttings",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Ladyfinger Cactus",
@@ -726,7 +755,8 @@
     "propagation": "by offsets",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Bear’s Paw",
@@ -747,7 +777,8 @@
     "propagation": "by cuttings, leaves (difficult), and seeds",
     "toxicity": "Can be toxic to pets and humans",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Paddle Plant",
@@ -775,7 +806,8 @@
     "propagation": "by leaves, cuttings, and offsets",
     "toxicity": "Can be toxic to animals",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Jelly Bean Plant",
@@ -805,7 +837,8 @@
     "propagation": "by leaves and stem cuttings",
     "toxicity": "Can be toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "String of Pearls",
@@ -828,7 +861,8 @@
     "propagation": "by seed or cuttings",
     "toxicity": "Can be toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "medium"
+    "level": "medium",
+    "grade": "2"
   },
   {
     "name": "Crinkle Leaf Plant",
@@ -850,7 +884,8 @@
     "propagation": "by leaves",
     "toxicity": "Can be toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Houseleek",
@@ -873,7 +908,8 @@
     "propagation": "by seeds and offsets",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Spring and Fall",
-    "level": "easy"
+    "level": "easy",
+    "grade": "1"
   },
   {
     "name": "Graptoveria ‘Debbie’",
@@ -893,6 +929,7 @@
     "propagation": "by leaves, cuttings, seeds, and offsets",
     "toxicity": "Generally non-toxic to humans and animals",
     "activelyGrows": "Spring and Summer",
-    "level": "hard"
+    "level": "hard",
+    "grade": "3"
   }
 ]
