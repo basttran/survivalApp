@@ -144,7 +144,7 @@ router.get("/plant", (req, res, next) => {
 });
 
 // ADMINS ONLY: list all the plants
-router.get("/admin/plantss", (req, res, next) => {
+router.get("/admin/plants", (req, res, next) => {
   if (!req.user || req.user.role !== "admin") {
     // AUTHORIZATION: redirect to home page if you are NOT an ADMIN
     // (also if you are NOT logged-in)

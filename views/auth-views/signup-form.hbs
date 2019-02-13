@@ -1,14 +1,14 @@
 {{> flash_messages}}
 
 
-<form action="/process-signup" method="POST" class="processsignup">
-
-  {{!-- <label>
-    <input type="file" name="profilPicUpload" placeholder="Upload a picture" />
-  </label> --}}
+<form action="/process-signup" method="POST" class="processsignup" enctype="multipart/form-data">
 
   <label>
     <input type="text" name="userName" placeholder="Your User Name" unique="true" required="true" />
+  </label>
+
+  <label>
+    <input type="file" name="profilePicUrl" placeholder="Upload a picture" />
   </label>
 
   <label>

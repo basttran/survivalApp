@@ -1,6 +1,8 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 
+const fileUploader = require("../config/file-upload.js");
+
 const User = require("../models/user-model.js");
 
 const router = express.Router();
@@ -9,31 +11,40 @@ router.get("/signup", (req, res, next) => {
   res.render("auth-views/signup-form.hbs");
 });
 
-router.post("/process-signup", (req, res, next) => {
-  const { userName, email, originalPassword } = req.body;
+router.post(
+  "/process-signup",
+  fileUploader.single("profilePicUrl"),
+  (req, res, next) => {
+    const { userName, email, originalPassword } = req.body;
 
-  // enforce password rules (can't be EMPTY and MUST have a digit)
-  if (!originalPassword || !originalPassword.match(/[0-9]/)) {
-    // req.flash() sends a feedback message before a redirect
-    // (it's defined by the "connect-flash" npm package
-    req.flash("error", "Password can't be blank and must contain a number.");
-    // redirect to the SIGNUP PAGE if the password is BAD
-    res.redirect("/signup");
-    return;
-  }
-
-  // encrypt the user's password before saving
-  const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
-  User.create({ userName, email, encryptedPassword })
-    .then(() => {
+    // enforce password rules (can't be EMPTY and MUST have a digit)
+    if (!originalPassword || !originalPassword.match(/[0-9]/)) {
       // req.flash() sends a feedback message before a redirect
-      // (it's defined by the "connect-flash" npm package)
-      req.flash("success", "Sign up success!");
-      // redirect to the HOME PAGE if the sign up worked
-      res.redirect("/");
-    })
-    .catch(err => next(err));
-});
+      // (it's defined by the "connect-flash" npm package
+      req.flash("error", "Password can't be blank and must contain a number.");
+      // redirect to the SIGNUP PAGE if the password is BAD
+      res.redirect("/signup");
+      return;
+    }
+
+    // multer puts all file info it got from the service into req.file
+    console.log("File upload is ALWAYS in req.file OR req.files", req.file);
+    // get part of the Cloudinary information
+    const profilePicUrl = req.file.secure_url;
+
+    // encrypt the user's password before saving
+    const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
+    User.create({ userName, profilePicUrl, email, encryptedPassword })
+      .then(() => {
+        // req.flash() sends a feedback message before a redirect
+        // (it's defined by the "connect-flash" npm package)
+        req.flash("success", "Sign up success!");
+        // redirect to the HOME PAGE if the sign up worked
+        res.redirect("/");
+      })
+      .catch(err => next(err));
+  }
+);
 
 router.get("/login", (req, res, next) => {
   res.render("auth-views/login-form.hbs");
