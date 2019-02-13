@@ -2,6 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
+const fileUploader = require("../config/file-upload.js");
+
+const Plant = require("../models/plant-model.js");
+
 router.get("/plant-add", (req, res, next) => {
   if (req.user) {
     res.render("plant-views/plant-form.hbs");
