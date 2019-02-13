@@ -2,8 +2,6 @@ const express = require("express");
 
 const router = express.Router();
 
-const Plant = require("../models/plant-model.js");
-
 router.get("/plant-add", (req, res, next) => {
   if (req.user) {
     res.render("plant-views/plant-form.hbs");
@@ -13,22 +11,112 @@ router.get("/plant-add", (req, res, next) => {
   }
 });
 
-router.post("/process-plant", (req, res, next) => {
-  const { name, description, pictureUrl } = req.body;
+router.get("/plant/:plantId/edit", (req, res, next) => {
+  // get the ID from the address (it's inside of req.params)
+  const { plantId } = req.params;
 
-  // req.user comes from Passport's deserializeUser()
-  // (it's the document from the database of the logged-in user)
-  const host = req.user._id;
+  // find the plant in the DB using the ID from the address
+  Plant.findById(plantId)
+    .then(plantDoc => {
+      // send the database query result to the HBS file as "plantItem"
+      res.locals.plantItem = plantDoc;
+      res.render("plant-views/plant-edit.hbs");
+    })
+    // next(err) skips to the error handler in "bin/www" (error.hbs)
+    .catch(err => next(err));
+});
 
-  Plant.create({ name, description, pictureUrl, host })
-    .then(() => {
-      req.flash("success", "Plant created successfully!");
-      res.redirect("/my-plants");
+router.post(
+  "/process-edit",
+  fileUploader.single("pictureUpload"),
+  (req, res, next) => {
+    const { plantName, plantDescription, plantSpecies } = req.body;
+    // req.user comes from Passport's deserializeUser()
+    // (it's the document from the database of the logged-in user)
+    const host = req.user._id;
+    // multer puts all file info it got from the service into req.file
+    console.log("File upload is ALWAYS in req.file OR req.files", req.file);
+    // get part of the Cloudinary information
+    const plantPicUrl = req.file.secure_url;
+    Plant.create({
+      plantName,
+      plantDescription,
+      plantSpecies,
+      plantPicUrl,
+      host
+    })
+      .then(() => {
+        req.flash("success", "Plant created successfully!");
+        res.redirect("/plant");
+      })
+      .catch(err => next(err));
+  }
+);
+
+// update a plant
+router.post(
+  "/plant/:plantId/process-edit",
+  fileUploader.single("pictureUpload"),
+  (req, res, next) => {
+    // res.json(req.body);
+    const { plantId } = req.params;
+    const { plantName, plantDescription, plantSpecies } = req.body;
+    console.log("File upload is ALWAYS in req.file OR req.files", req.file);
+
+    var changes = {
+      plantName,
+      plantDescription,
+      plantSpecies
+    };
+
+    let picture;
+    if (req.file) {
+      picture = req.file.secure_url;
+      changes.plantPicUrl = picture;
+    }
+
+    Plant.findByIdAndUpdate(
+      plantId, // ID of the document we want to update
+      {
+        $set: changes
+      }, // changes to make to that document
+      { runValidators: true } // additional settings (enforce the rules)
+    )
+      .then(plantDoc => {
+        // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
+        // redirect ONLY to ADDRESSES - not HBS files
+        res.redirect("/plant");
+      })
+      // next(err) skips to the error handler in "bin/www" (error.hbs)
+      .catch(err => next(err));
+  }
+);
+
+// delete a plant
+router.get("/plant/:plantId/delete", (req, res, next) => {
+  // res.json(req.body);
+  const { plantId } = req.params;
+
+  Plant.findByIdAndRemove(plantId)
+    .then(plantDoc => {
+      res.redirect("/plant");
     })
     .catch(err => next(err));
 });
 
-router.get("/my-plants", (req, res, next) => {
+// router.get("/book/:bookId/delete", (req, res, next) => {
+//   // res.json(req.body);
+//   const { bookId } = req.params;
+
+//   Book.findByIdAndRemove(bookId)
+//     .then(bookDoc => {
+//       res.redirect("/books");
+//     })
+//     // next(err) skips to the error handler in "bin/www" (error.hbs)
+//     .catch(err => next(err));
+// });
+
+router.get("/plant", (req, res, next) => {
   // req.user comes from Passport's deserializeUser()
   // (it's the document from the database of the logged-in user)
   if (!req.user) {
