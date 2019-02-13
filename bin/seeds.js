@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 
-// Get the Celebrity model to do our databse query
+// Get the Celebrity model to do our database query
 const User = require("../models/user-model.js");
 
 const userData = require("./users.json");

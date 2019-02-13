@@ -90,4 +90,23 @@ router.get("/logout", (req, res, next) => {
   res.redirect("/");
 });
 
+router.get("/contact", (req, res, next) => {
+  res.render("extra-resources/contact.hbs");
+});
+
+router.get("/sources", (req, res, next) => {
+  res.render("extra-resources/sources.hbs");
+});
+
+router.get("/passwordforgotten", (req, res, next) => {
+  res.render("extra-resources/passwordforgotten.hbs");
+});
+
+// /passwordforgotten-email
+
+router.get("/profile", (req, res, next) => {
+  req.flash("success");
+  res.redirect("/user-model.js");
+});
+
 module.exports = router;
