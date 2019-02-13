@@ -1,7 +1,7 @@
 [
   {
     "name": "Bunny Ears Cactus",
-    "speciesPicUrl": "(../public/images/plants/bunnyearscactus.jpg)",
+    "speciesPicUrl": "../images/plants/bunnyearscactus.jpg",
     "scientificName": "Opuntia microdasys",
     "commonNames": [
       "Bunny Ears",
@@ -34,6 +34,7 @@
   },
   {
     "name": "Chin Cactus",
+    "speciesPicUrl": "../images/plants/chincactus.jpg",
     "scientificName": "Gymnocalycium mihanovichii",
     "commonNames": ["Chin Cactus", "Plaid Cactus"],
     "place": ["indoor"],
@@ -57,6 +58,7 @@
   },
   {
     "name": "Saguaro Cactus",
+    "speciesPicUrl": "../images/plants/saguarocactus.jpg",
     "scientificName": "Carnegiea gigantea",
     "commonNames": [
       "Saguaro",
@@ -111,6 +113,7 @@
   },
   {
     "name": "Star Cactus",
+    "speciesPicUrl": "../images/plants/starcactus.jpg",
     "scientificName": "Astrophytum asteria",
     "commonNames": [
       "Sand Dollar Cactus",
@@ -139,6 +142,7 @@
   },
   {
     "name": "Easter Cactus",
+    "speciesPicUrl": "../images/plants/eastercactus.jpg",
     "scientificName": "Hatiora gaertneri",
     "commonNames": ["Easter Cactus", "Whitsun Cactus", "Holiday Cactus"],
     "place": ["indoor"],
@@ -162,6 +166,7 @@
   },
   {
     "name": "Christmas Cactus",
+    "speciesPicUrl": "../images/plants/christmascactus.jpg",
     "scientificName": "Schlumbergera bridgesii",
     "commonNames": ["Christmas Cactus", "Holiday Cactus"],
     "place": ["indoor"],
@@ -184,6 +189,7 @@
   },
   {
     "name": "Ruby Ball",
+    "speciesPicUrl": "../images/plants/rubyballcactus.jpg",
     "scientificName": "Gymnocalycium mihanovichii Hibotan",
     "commonNames": [
       "Ruby Ball",
@@ -213,6 +219,7 @@
   },
   {
     "name": "California Barrel Cactus",
+    "speciesPicUrl": "../images/plants/californiabarrelcactus.jpg",
     "scientificName": "Ferocactus cylindraceus",
     "commonNames": [
       "California Barrel Cactus",
@@ -244,6 +251,7 @@
   },
   {
     "name": "Thanksgiving Cactus",
+    "speciesPicUrl": "../images/plants/thanksgivingcactus.jpg",
     "scientificName": "Schlumbergera truncata",
     "commonNames": [
       "Thanksgiving Cactus",
@@ -273,6 +281,7 @@
   },
   {
     "name": "Queen Of The Night",
+    "speciesPicUrl": "../images/plants/queenofthenightcactus.jpg",
     "scientificName": "Epiphyllum oxypetalum",
     "commonNames": [
       "Dutchman’s Pipe Cactus",
@@ -303,6 +312,7 @@
   },
   {
     "name": "Prickly Pear Cactus",
+    "speciesPicUrl": "../images/plants/pricklypearcactus.jpg",
     "scientificName": "Opuntia sulphurea",
     "commonNames": ["Prickly Pear Cactus"],
     "place": ["outdoor"],
@@ -326,6 +336,7 @@
   },
   {
     "name": "Cholla Cactus",
+    "speciesPicUrl": "../images/plants/chollacactus.jpg",
     "scientificName": "Cylindropuntia fulgida",
     "commonNames": [
       "Jumping Cholla",
@@ -353,6 +364,7 @@
   },
   {
     "name": "Totem Pole Cactus",
+    "speciesPicUrl": "../images/plants/totempolecactus.jpg",
     "scientificName": "Pachycereus schottii monstrosus",
     "commonNames": [
       "Totem Pole Cactus",
@@ -381,6 +393,7 @@
   },
   {
     "name": "Donkey’s Tail",
+    "speciesPicUrl": "../images/plants/donkeystail.jpg",
     "scientificName": "Sedum morganianum",
     "commonNames": [
       "Donkey’s Tail",
@@ -410,6 +423,7 @@
   },
   {
     "name": "Crown of Thorns",
+    "speciesPicUrl": "../images/plants/crownofthorns.jpg",
     "scientificName": "euphorbia milii",
     "commonNames": [
       "Crown of Thorns",
@@ -439,6 +453,7 @@
   },
   {
     "name": "Flaming Katy",
+    "speciesPicUrl": "../images/plants/flamingKaty.jpg",
     "scientificName": "kalanchoe blossfeldiana",
     "commonNames": [
       "Flaming Katy",
@@ -467,6 +482,7 @@
   },
   {
     "name": "Gollum Jade",
+    "speciesPicUrl": "../images/plants/gollumjade.jpg",
     "scientificName": "crassula ovata",
     "commonNames": [
       "Gollum Jade",
@@ -499,6 +515,7 @@
   },
   {
     "name": "Aloe Vera",
+    "speciesPicUrl": "../images/plants/aloeplant.jpg",
     "scientificName": "aloe vera",
     "commonNames": [
       "Aloe Vera",
@@ -537,6 +554,7 @@
   },
   {
     "name": "Panda Plant",
+    "speciesPicUrl": "../images/plants/pandaplant.jpg",
     "scientificName": "kalanchoe tomentosa",
     "commonNames": [
       "Panda Plant",
@@ -565,6 +583,7 @@
   },
   {
     "name": "Pincushion Cactus",
+    "speciesPicUrl": "../images/plants/pincushioncactus.jpg",
     "scientificName": "mammillaria crinita",
     "commonNames": ["Pincushion Cactus"],
     "place": ["indoor", "outdoor"],
@@ -589,6 +608,7 @@
   },
   {
     "name": "Roseum",
+    "speciesPicUrl": "../images/plants/roseum.jpg",
     "scientificName": "sedum spurium",
     "commonNames": ["Sedum spurium ‘John Creech’"],
     "place": ["outdoor"],
@@ -613,6 +633,7 @@
   },
   {
     "name": "Snake Plant",
+    "speciesPicUrl": "../images/plants/snakeplant.jpg",
     "scientificName": "ssansevieria trifasciata",
     "commonNames": [
       "Snake Plant",
@@ -641,6 +662,7 @@
   },
   {
     "name": "Zebra Plant",
+    "speciesPicUrl": "../images/plants/zebraplant.jpg",
     "scientificName": "haworthia fasciata",
     "commonNames": ["Zebra Plant", "Zebra Haworthia"],
     "place": ["indoor"],
@@ -663,6 +685,7 @@
   },
   {
     "name": "Gasteria baylissiana",
+    "speciesPicUrl": "../images/plants/gasteriabaylissiana.jpg",
     "scientificName": "Gasteria baylissiana",
     "commonNames": [
       "Suurberg Gasteria",
@@ -689,6 +712,7 @@
   },
   {
     "name": "Pinwheel Desert Rose",
+    "speciesPicUrl": "../images/plants/pinwheeldesertrose.jpg",
     "scientificName": "Aeonium ‘Sunburst’",
     "commonNames": ["Pinwheel Desert Rose"],
     "place": ["indoor", "outdoor"],
@@ -713,6 +737,7 @@
   },
   {
     "name": "Coral Cactus",
+    "speciesPicUrl": "../images/plants/coralcactuswhiteghost.jpg",
     "scientificName": "Rhipsalis cereuscula",
     "commonNames": ["Coral Cactus", "Rice Cactus", "Mistletoe Cactus"],
     "place": ["indoor"],
@@ -736,6 +761,7 @@
   },
   {
     "name": "Ladyfinger Cactus",
+    "speciesPicUrl": "../images/plants/ladyfingercactus.jpg",
     "scientificName": "Mammillaria elongata",
     "commonNames": ["Ladyfinger Cactus"],
     "place": ["indoor"],
@@ -760,6 +786,7 @@
   },
   {
     "name": "Bear’s Paw",
+    "speciesPicUrl": "../images/plants/bearspaw.jpg",
     "scientificName": "Cotyledon tomentosa",
     "commonNames": ["Bear’s Paw"],
     "place": ["indoor"],
@@ -782,6 +809,7 @@
   },
   {
     "name": "Paddle Plant",
+    "speciesPicUrl": "../images/plants/paddleplant.jpg",
     "scientificName": "Kalanchoe luciae",
     "commonNames": [
       "Paddle Plant",
@@ -811,6 +839,7 @@
   },
   {
     "name": "Jelly Bean Plant",
+    "speciesPicUrl": "../images/plants/jellybeanplant.jpg",
     "scientificName": "Sedum rubrotinctum",
     "commonNames": [
       "Jelly Bean Plant",
@@ -842,6 +871,7 @@
   },
   {
     "name": "String of Pearls",
+    "speciesPicUrl": "../images/plants/stringofpearls.jpg",
     "scientificName": "Curio rowleyanus",
     "commonNames": ["String of Pearls", "String of Beads", "String of Peas"],
     "place": ["indoor"],
@@ -866,6 +896,7 @@
   },
   {
     "name": "Crinkle Leaf Plant",
+    "speciesPicUrl": "../images/plants/crinkleleafplant.jpg",
     "scientificName": "Adromischus cristatus",
     "commonNames": ["Crinkle Leaf Plant", "Key Lime Pie"],
     "place": ["indoor"],
@@ -889,6 +920,7 @@
   },
   {
     "name": "Houseleek",
+    "speciesPicUrl": "../images/plants/houseleek.jpg",
     "scientificName": "Sempervivum ‘Royanum’",
     "commonNames": ["Houseleek", "Hen and Chickens"],
     "place": ["outdoor"],
@@ -913,6 +945,7 @@
   },
   {
     "name": "Graptoveria ‘Debbie’",
+    "speciesPicUrl": "../images/plants/graptoveriabledebbie.jpg",
     "scientificName": "Graptoveria ‘Debbie’",
     "commonNames": ["Graptoveria ‘Debbie’"],
     "place": ["outdoor"],
