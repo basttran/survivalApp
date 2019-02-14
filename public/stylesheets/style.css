@@ -180,11 +180,13 @@ a.contact {
   line-height: 1.8em;
   margin: 4% 0; }
 
-.sources-tittle,
-.contact-tittle,
-.signup-tittle,
-.passwordforgotten-tittle,
-.species-title {
+.sources-title,
+.contact-title,
+.signup-title,
+.passwordforgotten-title,
+.species-title,
+.profile-title,
+.add-plant-title {
   padding-top: 3%;
   font-size: 1.8em;
   margin: 0;
@@ -212,7 +214,7 @@ a.contact {
 .species-picture {
   width: 40%; }
 
-li {
+.species-li {
   list-style: none;
   float: left;
   display: flex;
@@ -228,5 +230,18 @@ img.species-picture {
 
 h3 {
   font-size: 1em; }
+
+.add-a-plant-form {
+  height: 60%; }
+
+.save-this-plant-button {
+  width: 61%;
+  border: none;
+  color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 1.2em;
+  margin-left: 20%;
+  margin-right: 20%; }
 
 /*# sourceMappingURL=style.css.map */
