@@ -6,7 +6,7 @@
 {{!-- <b>{{currentUser.email}}</b> --}}
 <img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
 
-<a href="/user-edit">Update my Profile</a>
+<a href="/user-edit" class="user-edit-link">Update my Profile</a>
 
 <span id="scroll1">
   <span></span>
@@ -25,13 +25,13 @@
 
 {{> flash_messages}}
 
-<a href="/plant-add">Add a Plant</a>
+<a href="/plant-add" class="add-a-plant">Add a Plant</a>
 
 <ul class="plant-array">
   {{#each plantArray}}
   <li>
     <h3 class="plant-name">{{this.plantName}}</h3>
-    {{!-- <a href="plant/{{this._id}}/edit">Update this Plant</a> --}}
+    <a href="plant/{{this._id}}/edit">Update this Plant</a>
     <a href="plant/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.plantDescription}}</p>
     <h4>{{this.plantSpecies}}</h4>
@@ -40,7 +40,7 @@
   {{/each}}
 </ul>
 
-<h3>My Wishlist</h3>
+<h3 class="my-plants-name">My Wishlist</h3>
 
 <ul>
   {{#each speciesArray}}

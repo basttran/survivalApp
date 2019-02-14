@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 html {
   height: 96%;
   font-family: "Lato", sans-serif; }
@@ -165,10 +165,7 @@ a.contact {
   font-size: 1.4em; }
 
 .processsignup {
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  justify-content: space-around; }
+  height: 70%; }
 
 .homesignup {
   margin-top: -12%; }
@@ -191,6 +188,14 @@ a.contact {
   font-size: 1.8em;
   margin: 0;
   color: #046425; }
+
+.my-plants-name {
+  font-size: 1.4em;
+  color: #046425;
+  text-decoration: underline;
+  border-radius: 40px;
+  width: 60%;
+  height: 30px; }
 
 .send-email {
   background-color: #a8db00;
@@ -291,20 +296,34 @@ h3 {
     transform: translateY(30px); } }
 
 .profile-name {
-  background-color: #a8db00;
+  color: #a8db00;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  padding-top: 4%;
+  font-weight: 900;
+  text-decoration: underline; }
+
+.plant-name {
+  color: #046425; }
+
+.upadte-profile-button {
+  height: 20%; }
+
+.user-edit-link {
+  padding-top: 4%; }
+
+.add-a-plant {
+  margin: 0;
   border-radius: 40px;
-  height: 34px;
-  width: 50%;
-  border: none;
+  background-color: #a8db00;
+  border: 1px solid #a8db00;
+  height: 38px;
+  width: 40%;
   padding: 0;
   color: #046425;
   padding-left: 10%;
   padding-right: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.plant-name {
-  color: #046425; }
+  font-size: 1.4em; }
 
 /*# sourceMappingURL=style.css.map */
