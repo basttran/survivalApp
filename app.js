@@ -12,13 +12,14 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
-const Species = require("./models/species-model.js");
+// const Typeahead = require("typeahead");
+// const Species = require("./models/species-model.js");
 
 // run the code inside the "passport-setup.js"
 require("./config/passport-setup.js");
 
 mongoose
-  .connect("mongodb://localhost/plants", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -66,7 +67,7 @@ app.use(
     saveUninitialized: true,
     resave: true,
     // should be a string that's different for every app
-    secret: "ca^khT8KYd,G69C7R9(;^atb?h>FTW6664pqEFUKs3",
+    secret: process.env.SESSION_SECRET,
     // store our session data inside our MongoDB using "connect-mongo" package
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
@@ -95,31 +96,31 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post("/search", (req, res, next) => {
-  let q = req.body.query;
-  let query = {
-    $or: [{ name: { $regex: q, $options: "i" } }]
-  };
-  let output = [];
+// app.post("/search", (req, res, next) => {
+//   let q = req.body.query;
+//   let query = {
+//     $or: [{ name: { $regex: q, $options: "i" } }]
+//   };
+//   let output = [];
 
-  Species.find({ name: { $eq: "Bunny Ears Cactus" } })
-    .limit(6)
-    .then(species => {
-      if (species && species.length && species.length > 0) {
-        species.forEach(species => {
-          let obj = {
-            id: species.name,
-            label: species.name
-          };
-          output.push(obj);
-        });
-      }
-      res.json(output);
-    })
-    .catch(err => {
-      res.sendStatus(404);
-    });
-});
+//   Species.find({ name: { $eq: "Bunny Ears Cactus" } })
+//     .limit(6)
+//     .then(species => {
+//       if (species && species.length && species.length > 0) {
+//         species.forEach(species => {
+//           let obj = {
+//             id: species.name,
+//             label: species.name
+//           };
+//           output.push(obj);
+//         });
+//       }
+//       res.json(output);
+//     })
+//     .catch(err => {
+//       res.sendStatus(404);
+//     });
+// });
 
 // function searchBar() {
 //   // Declare variables
