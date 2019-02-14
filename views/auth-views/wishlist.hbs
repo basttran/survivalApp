@@ -1,12 +1,24 @@
-<h2 class="species-title">Species</h2>
+<h2 class="wishlist-title">Species</h2>
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
 {{> flash_messages}}
+<ul>
+  {{#each currentUser.species}}
+  <li>{{this}}</li>
+  {{/each}}
+</ul>
+
+
+{{!-- <ul>
+  {{#each currentUser.userName}}
+  <li>{{ this.name }}</li>
+  {{/each}}
+</ul> --}}
 
 {{!-- <a href="/plant-add">Add a Plant</a> --}}
 
-<form method="POST" action="search">
+{{!-- <form method="POST" action="search">
   <input type="text" id="splist" name="q" placeholder="Search for names..">
 </form>
 
@@ -22,7 +34,7 @@
   <li><a href="#">Calvin</a></li>
   <li><a href="#">Christina</a></li>
   <li><a href="#">Cindy</a></li>
-</ul> --}}
+</ul> 
 
 <ul>
   {{#each speciesArray}}
@@ -30,11 +42,10 @@
     <a href="/species/{{this._id}}" <h3>{{this.name}}</h3></a>
     <img src="{{this.speciesPicUrl}}" class="species-picture" />
 
-    {{#if ../currentUser.userName}}
     <a href="wishlist/{{this._id}}/add">Add to wishlist</a>
-    {{/if}}
+    <a href="wishlist/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.level}}</p>
     <h4>{{this.speciesClassification.Family}}</h4>
   </li>
   {{/each}}
-</ul>
+</ul>--}}

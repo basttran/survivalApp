@@ -9,7 +9,7 @@ const userSchema = new Schema(
     // password: { type: String },
     encryptedPassword: { type: String },
     profilePicUrl: { type: String },
-    plants: { type: Array }
+    species: { type: Array }
   },
   {
     timestamps: true

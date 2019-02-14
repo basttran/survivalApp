@@ -6,18 +6,22 @@
 <p>Place: {{speciesItem.place}}</p>
 <p>Description: {{speciesItem.description}}</p>
 <p>Scientific Classification: {{#each speciesItem.scientificClassification}}</p>
-<div>
-  <p>Family: {{this.Family}}</p>
-  <p>Subfamily: {{this.Subfamily}}</p>
-  <p>Tribe: {{this.Tribe}}</p>
-  <p>Subtribe: {{this.Subtribe}}</p>
-  <p>Genus: {{this.Genus}}</p>
-</div>
+<ul>
+  <li>Family: {{this.Family}}</li>
+  <li>Subfamily: {{this.Subfamily}}</li>
+  <li>Tribe: {{this.Tribe}}</li>
+  <li>Genus: {{this.Genus}}</li>
+</ul>
 {{/each}}
 <p>Watering Needs: {{speciesItem.wateringNeeds}}</p>
 <p>Sunlight Needs: {{speciesItem.sunlightNeeds}}</p>
 <p>Flower Color: {{speciesItem.flowerColor}}</p>
-<p>Plant Grows Up: {{speciesItem.plantGrowsUp}}</p>
+<p>Plant Grows Up: {{#each speciesItem.plantGrowsUp}}</p>
+<ul>
+  <li>Tall: {{this.tall}}</li>
+  <li>Wide: {{this.wide}}</li>
+</ul>
+{{/each}}
 <p>Cold: {{speciesItem.cold}}</p>
 <p>Propagation: {{speciesItem.propagation}}</p>
 <p>Toxicity: {{speciesItem.toxicity}}</p>
