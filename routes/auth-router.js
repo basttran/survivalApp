@@ -7,7 +7,6 @@ const User = require("../models/user-model.js");
 const Plant = require("../models/plant-model.js");
 const Species = require("../models/species-model.js");
 
-
 const router = express.Router();
 
 router.get("/user-edit", (req, res, next) => {
@@ -28,11 +27,27 @@ router.get("/user-edit", (req, res, next) => {
 router.get("/profile", (req, res, next) => {
   // whenever a user visits "/books"find all the books sorted by rating
   console.log("COUCOU");
-  Plant.find({ host : { $eq: req.user._id }}) //req.user._id}})
+  Plant.find({ host: { $eq: req.user._id } }) //req.user._id}})
     .sort()
     .then(plantResults => {
       // send the database query results to the HBS file as "bookArray"
       res.locals.plantArray = plantResults;
+      let indicesArray = plantResults.map((onePlant, index) => {
+        if (index == 0) {
+          return (
+            `<li data-target="#carouselExampleIndicators" data-slide-to="` +
+            index +
+            `" class="active"></li>`
+          );
+        } else {
+          return (
+            `<li data-target="#carouselExampleIndicators" data-slide-to="` +
+            index +
+            `"></li>`
+          );
+        }
+      });
+      res.locals.plantIndices = indicesArray;
 
       Species.find()
         .sort({ grade: 1 })
@@ -42,13 +57,11 @@ router.get("/profile", (req, res, next) => {
           res.render("auth-views/user-profile.hbs");
         })
         // next(err) skips to the error handler in "bin/www" (error.hbs)
-      .catch(err => next(err));
-    // res.json(res.locals.plantArray);
+        .catch(err => next(err));
+      // res.json(res.locals.plantArray);
     })
     // next(err) skips to the error handler in "bin/www" (error.hbs)
     .catch(err => next(err));
-
-
 });
 
 // update the profile
@@ -65,7 +78,7 @@ router.post(
 
     var changes = {
       userName,
-      email,
+      email
     };
 
     let picture;
@@ -90,8 +103,6 @@ router.post(
       .catch(err => next(err));
   }
 );
-
-
 
 router.get("/signup", (req, res, next) => {
   res.render("auth-views/signup-form.hbs");

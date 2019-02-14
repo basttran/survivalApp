@@ -13,7 +13,7 @@ const flash = require("connect-flash");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
 // const Typeahead = require("typeahead");
-// const Species = require("./models/species-model.js");
+const Species = require("./models/species-model.js");
 
 // run the code inside the "passport-setup.js"
 require("./config/passport-setup.js");
@@ -141,6 +141,32 @@ app.use((req, res, next) => {
 //     }
 //   }
 // }
+
+/// TYPE AHEAD STUFF
+app.post("/search", (req, res) => {
+  let q = req.body.query;
+  let query = { name: { $regex: q, $options: "i" } };
+  let output = [];
+
+  Species.find(query)
+    .limit(6)
+    .then(sp => {
+      if (sp && sp.length && sp.length > 0) {
+        sp.forEach(species => {
+          let obj = {
+            id: species.name,
+            label: species.name
+          };
+          output.push(obj);
+        });
+      }
+      res.json(output);
+    })
+    .catch(err => {
+      res.sendStatus(404);
+    });
+});
+/// TYPE AHEAD STUFF
 
 // default value for title local
 app.locals.title = "DAT.plant";
