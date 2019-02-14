@@ -6,8 +6,8 @@ document.addEventListener(
   false
 );
 
-var ta = Typeahead(splist, {
-  source: function(query, result) {
-    result(["foo", "bar", "baz"]);
-  }
-});
+// var ta = Typeahead(splist, {
+//   source: function(query, result) {
+//     result(["foo", "bar", "baz"]);
+//   }
+// });
