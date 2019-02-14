@@ -376,9 +376,23 @@ h3 {
   border: 1px solid #a8db00;
   height: 38px;
   width: 40%;
-  padding: 0;
+  padding: 4px;
   color: #046425;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 1.4em;
+}
+
+.add-to-wishlist {
+  margin: 0;
+  border-radius: 40px;
+  background-color: #a8db00;
+  border: 1px solid #a8db00;
+  height: 38px;
+  width: 52%;
+  padding: 4px;
+  color: #046425;
+  padding-left: 6%;
+  padding-right: 6%;
   font-size: 1.4em;
 }
