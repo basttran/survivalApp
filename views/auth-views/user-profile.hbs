@@ -1,6 +1,8 @@
 <h2>My profile</h2>
 
 {{#if currentUser}}
+<h3>Hi {{currentUser.userName}}!</h3>
+
 <b>{{currentUser.email}}</b>
 <img src="{{currentUser.profilePicUrl}}" />
 
@@ -30,13 +32,9 @@
   {{/each}}
 </ul>
 
-
 <h3>My Wishlist</h3>
 
-
-
-
-{{!-- <ul>
+<ul>
   {{#each speciesArray}}
   <li>
     <h3>{{this.scientificName}}</h3>
@@ -44,4 +42,4 @@
     <h4>{{this.speciesClassification.Family}}</h4>
   </li>
   {{/each}}
-</ul> --}}
+</ul>

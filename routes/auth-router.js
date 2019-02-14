@@ -4,8 +4,94 @@ const bcrypt = require("bcrypt");
 const fileUploader = require("../config/file-upload.js");
 
 const User = require("../models/user-model.js");
+const Plant = require("../models/plant-model.js");
+const Species = require("../models/species-model.js");
+
 
 const router = express.Router();
+
+router.get("/user-edit", (req, res, next) => {
+  // get the ID from the address (it's inside of req.params)
+  const { userId } = req.user._id;
+
+  // find the plant in the DB using the ID from the address
+  User.findById(userId)
+    .then(userDoc => {
+      // send the database query result to the HBS file as "plantItem"
+      res.locals.userItem = userDoc;
+      res.render("auth-views/user-edit.hbs");
+    })
+    // next(err) skips to the error handler in "bin/www" (error.hbs)
+    .catch(err => next(err));
+});
+
+router.get("/profile", (req, res, next) => {
+  // whenever a user visits "/books"find all the books sorted by rating
+  console.log("COUCOU");
+  Plant.find({ host : { $eq: req.user._id }}) //req.user._id}})
+    .sort()
+    .then(plantResults => {
+      // send the database query results to the HBS file as "bookArray"
+      res.locals.plantArray = plantResults;
+
+      Species.find()
+        .sort()
+        .then(speciesResults => {
+          // send the database query results to the HBS file as "bookArray"
+          res.locals.speciesArray = speciesResults; // for now we only display all the species in the DB
+          res.render("auth-views/user-profile.hbs");
+        })
+        // next(err) skips to the error handler in "bin/www" (error.hbs)
+      .catch(err => next(err));
+    // res.json(res.locals.plantArray);
+    })
+    // next(err) skips to the error handler in "bin/www" (error.hbs)
+    .catch(err => next(err));
+
+
+});
+
+// update the profile
+router.post(
+  "/profile-edit",
+  fileUploader.single("profilePicUrl"),
+  (req, res, next) => {
+    // res.json(req.body);
+    // const { userId } = req.user._id
+    const { userName, email } = req.body;
+    console.log("File upload is ALWAYS in req.file OR req.files", req.file);
+    // console.log(userId);
+    // console.log(email);
+
+    var changes = {
+      userName,
+      email,
+    };
+
+    let picture;
+    if (req.file) {
+      picture = req.file.secure_url;
+      changes.profilePicUrl = picture;
+    }
+
+    User.findByIdAndUpdate(
+      req.user._id, // ID of the document we want to update
+      {
+        $set: changes
+      }, // changes to make to that document
+      { runValidators: true } // additional settings (enforce the rules)
+    )
+      .then(userDoc => {
+        // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
+        // redirect ONLY to ADDRESSES - not HBS files
+        res.redirect("/profile");
+      })
+      // next(err) skips to the error handler in "bin/www" (error.hbs)
+      .catch(err => next(err));
+  }
+);
+
+
 
 router.get("/signup", (req, res, next) => {
   res.render("auth-views/signup-form.hbs");
@@ -87,7 +173,7 @@ router.post("/process-login", (req, res, next) => {
         // req.flash() sends a feedback message before a redirect
         // (it's defined by the "connect-flash" npm package)
         req.flash("success", "Log in success!");
-        res.render("auth-views/user-profile.hbs"); // check this redirect, it should eventually lead to the user's page (default is "/")
+        res.redirect("/profile"); // check this redirect, it should eventually lead to the user's page (default is "/")
       });
     })
     .catch(err => next(err));
@@ -117,7 +203,7 @@ router.get("/passwordforgotten", (req, res, next) => {
 
 router.get("/profile", (req, res, next) => {
   req.flash("success");
-  res.redirect("/user-model.js");
+  res.redirect("/user-model.js"); // Strange ~^
 });
 
 module.exports = router;

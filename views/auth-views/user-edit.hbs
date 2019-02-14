@@ -1,0 +1,21 @@
+{{> flash_messages}}
+
+<h2>Edit my Profile</h2>
+
+<form action="/profile-edit" method="POST" class="processsignup" enctype="multipart/form-data">
+
+  <label>
+    <input type="file" name="profilePicUrl" placeholder="Upload a picture" />
+  </label>
+
+  <label>
+    <input type="text" name="userName" value="{{currentUser.userName}}" placeholder="Your User Name" unique="true"/>
+  </label>
+
+  <label>
+    <input type="email" name="email" value="{{currentUser.email}}" placeholder="Your Email" unique="true"/>
+  </label>
+
+  <button>Update my Profile</button>
+</form>
+

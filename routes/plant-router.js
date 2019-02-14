@@ -51,7 +51,7 @@ router.post(
     })
       .then(() => {
         req.flash("success", "Plant created successfully!");
-        res.redirect("/plant");
+        res.redirect("/profile");
       })
       .catch(err => next(err));
   }
@@ -89,7 +89,7 @@ router.post(
       .then(plantDoc => {
         // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
         // redirect ONLY to ADDRESSES - not HBS files
-        res.redirect("/plant");
+        res.redirect("/profile");
       })
       // next(err) skips to the error handler in "bin/www" (error.hbs)
       .catch(err => next(err));
