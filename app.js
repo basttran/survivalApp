@@ -6,12 +6,13 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
-const logger = require("morgan");
+// const logger = require("morgan");
 const path = require("path");
 const session = require("express-session");
 const flash = require("connect-flash");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
+const Typeahead = require("typeahead");
 const Species = require("./models/species-model.js");
 
 // run the code inside the "passport-setup.js"
@@ -95,31 +96,31 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post("/search", (req, res, next) => {
-  let q = req.body.query;
-  let query = {
-    $or: [{ name: { $regex: q, $options: "i" } }]
-  };
-  let output = [];
+// app.post("/search", (req, res, next) => {
+//   let q = req.body.query;
+//   let query = {
+//     $or: [{ name: { $regex: q, $options: "i" } }]
+//   };
+//   let output = [];
 
-  Species.find({ name: { $eq: "Bunny Ears Cactus" } })
-    .limit(6)
-    .then(species => {
-      if (species && species.length && species.length > 0) {
-        species.forEach(species => {
-          let obj = {
-            id: species.name,
-            label: species.name
-          };
-          output.push(obj);
-        });
-      }
-      res.json(output);
-    })
-    .catch(err => {
-      res.sendStatus(404);
-    });
-});
+//   Species.find({ name: { $eq: "Bunny Ears Cactus" } })
+//     .limit(6)
+//     .then(species => {
+//       if (species && species.length && species.length > 0) {
+//         species.forEach(species => {
+//           let obj = {
+//             id: species.name,
+//             label: species.name
+//           };
+//           output.push(obj);
+//         });
+//       }
+//       res.json(output);
+//     })
+//     .catch(err => {
+//       res.sendStatus(404);
+//     });
+// });
 
 // function searchBar() {
 //   // Declare variables
