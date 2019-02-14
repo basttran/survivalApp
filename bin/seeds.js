@@ -18,7 +18,7 @@ const speciesData = require("./species.json");
 // connects to MongoDB server with the DB name equal to the project name
 // (also has console.logs for successful and failed connections)
 mongoose
-  .connect("mongodb://localhost/plants", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`

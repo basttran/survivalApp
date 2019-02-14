@@ -6,20 +6,20 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
-// const logger = require("morgan");
+const logger = require("morgan");
 const path = require("path");
 const session = require("express-session");
 const flash = require("connect-flash");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
-const Typeahead = require("typeahead");
-const Species = require("./models/species-model.js");
+// const Typeahead = require("typeahead");
+// const Species = require("./models/species-model.js");
 
 // run the code inside the "passport-setup.js"
 require("./config/passport-setup.js");
 
 mongoose
-  .connect("mongodb://localhost/plants", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -67,7 +67,7 @@ app.use(
     saveUninitialized: true,
     resave: true,
     // should be a string that's different for every app
-    secret: "ca^khT8KYd,G69C7R9(;^atb?h>FTW6664pqEFUKs3",
+    secret: process.env.SESSION_SECRET,
     // store our session data inside our MongoDB using "connect-mongo" package
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
