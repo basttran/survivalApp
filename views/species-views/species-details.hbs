@@ -1,20 +1,28 @@
 <h2 class="species-title">{{speciesItem.name}}</h2>
 
-<img src="{{speciesItem.speciesPicUrl}}"></img>
-<p>{{speciesItem.scientificName}}</p>
-<p>{{speciesItem.commonNames}}</p>
-<p>{{speciesItem.place}}</p>
-<p>{{speciesItem.description}}</p>
-<p>{{speciesItem.scientificClassification}}</p>
-<p>{{speciesItem.wateringNeeds}}</p>
-<p>{{speciesItem.sunlightNeeds}}</p>
-<p>{{speciesItem.flowerColor}}</p>
-<p>{{speciesItem.plantGrowsUp}}</p>
-<p>{{speciesItem.cold}}</p>
-<p>{{speciesItem.propagation}}</p>
-<p>{{speciesItem.toxicity}}</p>
-<p>{{speciesItem.activelyGrows}}</p>
-<p>{{speciesItem.level}}</p>
+<img src="{{speciesItem.speciesPicUrl}}" class="species-picture" />
+<p>Scientific Name: {{speciesItem.scientificName}}</p>
+<p>Common Names: {{speciesItem.commonNames}}</p>
+<p>Place: {{speciesItem.place}}</p>
+<p>Description: {{speciesItem.description}}</p>
+<p>Scientific Classification: {{#each speciesItem.scientificClassification}}</p>
+<div>
+  <p>Family: {{this.Family}}</p>
+  <p>Subfamily: {{this.Subfamily}}</p>
+  <p>Tribe: {{this.Tribe}}</p>
+  <p>Subtribe: {{this.Subtribe}}</p>
+  <p>Genus: {{this.Genus}}</p>
+</div>
+{{/each}}
+<p>Watering Needs: {{speciesItem.wateringNeeds}}</p>
+<p>Sunlight Needs: {{speciesItem.sunlightNeeds}}</p>
+<p>Flower Color: {{speciesItem.flowerColor}}</p>
+<p>Plant Grows Up: {{speciesItem.plantGrowsUp}}</p>
+<p>Cold: {{speciesItem.cold}}</p>
+<p>Propagation: {{speciesItem.propagation}}</p>
+<p>Toxicity: {{speciesItem.toxicity}}</p>
+<p>Actively Grows: {{speciesItem.activelyGrows}}</p>
+<p>Level: {{speciesItem.level}}</p>
 
 
 

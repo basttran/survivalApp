@@ -37,6 +37,7 @@ router.get("/species/:speciesId", (req, res, next) => {
     .then(speciesDoc => {
       // send the database query results to the HBS file as "speciesItem"
       res.locals.speciesItem = speciesDoc;
+      // res.json(speciesDoc);
       res.render("species-views/species-details.hbs");
     })
     //

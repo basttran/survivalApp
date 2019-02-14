@@ -34,12 +34,12 @@ const speciesSchema = new Schema(
     wateringNeeds: { type: String, required: true, minlength: 4 }, //  "wateringNeeds": "every 3-4 weeks",
     sunlightNeeds: { type: String, required: true, minlength: 4 }, //  "sunlightNeeds": "partial sunlight",
     flowerColor: { type: String }, //   "flowerColor": "white",
-    speciesGrowsUp: [
+    plantGrowsUp: [
       {
         tall: { type: String },
         wide: { type: String }
       }
-    ], //   "speciesGrowsUp": { "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" },
+    ], //   "plantGrowsUp": { "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" },
     cold: { type: String, required: true }, //     "cold": "Not cold hardy",
     propagation: { type: String, required: true, minlength: 4 }, //     "propagation": "by cuttings",
     toxicity: { type: String, required: true, minlength: 4 }, //     "toxicity": "non-toxic to humans and animals",

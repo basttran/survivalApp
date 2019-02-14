@@ -1,17 +1,25 @@
 <h2 class="profile-title">My profile</h2>
 
 {{#if currentUser}}
-<h3>Hi {{currentUser.userName}}!</h3>
+<h3 class="profile-name">Hi {{currentUser.userName}}!</h3>
 
 {{!-- <b>{{currentUser.email}}</b> --}}
 <img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
 
 <a href="/user-edit">Update my Profile</a>
 
+<span id="scroll1">
+  <span></span>
+</span>
+
+<span id="scroll2">
+  <span></span>
+</span>
+
 {{/if}}
 
 
-<h3>My Plants</h3>
+<h3 class="my-plants-name">My Plants</h3>
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
@@ -19,10 +27,10 @@
 
 <a href="/plant-add">Add a Plant</a>
 
-<ul>
+<ul class="plant-array">
   {{#each plantArray}}
   <li>
-    <h3>{{this.plantName}}</h3>
+    <h3 class="plant-name">{{this.plantName}}</h3>
     {{!-- <a href="plant/{{this._id}}/edit">Update this Plant</a> --}}
     <a href="plant/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.plantDescription}}</p>
