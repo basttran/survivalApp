@@ -28,4 +28,19 @@ router.get("/species", (req, res, next) => {
     .catch(err => next(err));
 });
 
+router.get("/species/:speciesId", (req, res, next) => {
+  // res.send(req.params);
+  const { speciesId } = req.params;
+
+  // find the species in the database using the ID from the address
+  Species.findById(speciesId)
+    .then(speciesDoc => {
+      // send the database query results to the HBS file as "speciesItem"
+      res.locals.speciesItem = speciesDoc;
+      res.render("species-views/species-details.hbs");
+    })
+    //
+    .catch(err => next(err));
+});
+
 module.exports = router;
