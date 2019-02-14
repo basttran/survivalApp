@@ -49,7 +49,8 @@ const speciesSchema = new Schema(
       required: true,
       minlength: 4,
       enum: ["easy", "medium", "hard"]
-    } //     "level": "easy"
+    },
+    grade: Number //     "level": "easy"
   },
   {
     // additional settings for the Schema class here

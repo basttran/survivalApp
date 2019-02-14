@@ -4,7 +4,7 @@
 <h3>Hi {{currentUser.userName}}!</h3>
 
 <b>{{currentUser.email}}</b>
-<img src="{{currentUser.profilePicUrl}}" />
+<img src="{{currentUser.profilePicUrl}}"  class="species-picture"  />
 
 <a href="/user-edit">Update my Profile</a>
 
@@ -27,7 +27,7 @@
     <a href="plant/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.plantDescription}}</p>
     <h4>{{this.plantSpecies}}</h4>
-    <img src="{{this.plantPicUrl}}" />
+    <img src="{{this.plantPicUrl}}" class="species-picture" />
   </li>
   {{/each}}
 </ul>
@@ -40,6 +40,8 @@
     <h3>{{this.scientificName}}</h3>
     <p>{{this.level}}</p>
     <h4>{{this.speciesClassification.Family}}</h4>
+    <img src="{{this.speciesPicUrl}}"  class="species-picture" />
+
   </li>
   {{/each}}
 </ul>

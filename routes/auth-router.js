@@ -35,7 +35,7 @@ router.get("/profile", (req, res, next) => {
       res.locals.plantArray = plantResults;
 
       Species.find()
-        .sort()
+        .sort({ grade: 1 })
         .then(speciesResults => {
           // send the database query results to the HBS file as "bookArray"
           res.locals.speciesArray = speciesResults; // for now we only display all the species in the DB
