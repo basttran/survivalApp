@@ -103,7 +103,7 @@ router.get("/plant/:plantId/delete", (req, res, next) => {
 
   Plant.findByIdAndRemove(plantId)
     .then(plantDoc => {
-      res.redirect("/plant");
+      res.redirect("/profile");
     })
     .catch(err => next(err));
 });
