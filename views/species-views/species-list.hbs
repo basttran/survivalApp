@@ -6,10 +6,26 @@
 
 {{!-- <a href="/plant-add">Add a Plant</a> --}}
 
+<form method="POST" action="search">
+  <input type="text" id="q" name="q" placeholder="Search for names..">
+</form>
+
+{{!-- <ul id="myUL">
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul> --}}
+
 <ul>
   {{#each speciesArray}}
   <li class="species-li">
-    <h3>{{this.name}}</h3>
+    <a href="#" <h3>{{this.name}}</h3></a>
     <img src="{{this.speciesPicUrl}}" class="species-picture" />
 
     <a href="wishlist/{{this._id}}/add">Add to wishlist</a>

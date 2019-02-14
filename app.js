@@ -12,6 +12,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
+const Species = require("./models/species-model.js");
 
 // run the code inside the "passport-setup.js"
 require("./config/passport-setup.js");
@@ -93,6 +94,52 @@ app.use((req, res, next) => {
   // (you need this or your pages will stay loading forever)
   next();
 });
+
+app.post("/search", (req, res, next) => {
+  let q = req.body.query;
+  let query = {
+    $or: [{ name: { $regex: q, $options: "i" } }]
+  };
+  let output = [];
+
+  Species.find({ name: { $eq: "Bunny Ears Cactus" } })
+    .limit(6)
+    .then(species => {
+      if (species && species.length && species.length > 0) {
+        species.forEach(species => {
+          let obj = {
+            id: species.name,
+            label: species.name
+          };
+          output.push(obj);
+        });
+      }
+      res.json(output);
+    })
+    .catch(err => {
+      res.sendStatus(404);
+    });
+});
+
+// function searchBar() {
+//   // Declare variables
+//   var input, filter, ul, li, a, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   ul = document.getElementById("myUL");
+//   li = ul.getElementsByTagName("li");
+
+//   // Loop through all list items, and hide those who don't match the search query
+//   for (i = 0; i < li.length; i++) {
+//     a = li[i].getElementsByTagName("a")[0];
+//     txtValue = a.textContent || a.innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       li[i].style.display = "";
+//     } else {
+//       li[i].style.display = "none";
+//     }
+//   }
+// }
 
 // default value for title local
 app.locals.title = "DAT.plant";

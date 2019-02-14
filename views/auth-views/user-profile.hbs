@@ -3,8 +3,8 @@
 {{#if currentUser}}
 <h3>Hi {{currentUser.userName}}!</h3>
 
-<b>{{currentUser.email}}</b>
-<img src="{{currentUser.profilePicUrl}}"  class="species-picture"  />
+{{!-- <b>{{currentUser.email}}</b> --}}
+<img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
 
 <a href="/user-edit">Update my Profile</a>
 
@@ -40,7 +40,7 @@
     <h3>{{this.scientificName}}</h3>
     <p>{{this.level}}</p>
     <h4>{{this.speciesClassification.Family}}</h4>
-    <img src="{{this.speciesPicUrl}}"  class="species-picture" />
+    <img src="{{this.speciesPicUrl}}" class="species-picture" />
 
   </li>
   {{/each}}
