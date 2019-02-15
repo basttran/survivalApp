@@ -9,6 +9,9 @@ body {
   padding: 0;
   margin: 4%;
   height: 100%;
+  background-image: url(../images/fond2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .section1 {
@@ -124,7 +127,7 @@ form {
 
 .passwordForgotten {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 div.login {
@@ -156,9 +159,12 @@ a {
   color: #a8db00;
 }
 
-a.sources,
-a.contact {
+a.sources {
   color: #046425;
+}
+
+a.contact {
+  color: #a8db00;
 }
 
 .signup {
@@ -365,7 +371,8 @@ h3 {
 }
 
 .add-a-plant,
-.add-to-wishlist {
+.add-to-wishlist,
+.all-my-plants {
   border-radius: 40px;
   background-color: #a8db00;
   padding: 17px;

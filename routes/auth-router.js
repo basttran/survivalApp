@@ -50,8 +50,8 @@ router.get("/profile", (req, res, next) => {
       res.locals.plantIndices = indicesArray;
 
       Species.find({
-        '_id': { $in: req.user.species}
-    })
+        _id: { $in: req.user.species }
+      })
         .sort({ grade: 1 })
         .then(speciesResults => {
           // send the database query results to the HBS file as "bookArray"
@@ -210,6 +210,30 @@ router.get("/sources", (req, res, next) => {
 
 router.get("/passwordforgotten", (req, res, next) => {
   res.render("extra-resources/passwordforgotten.hbs");
+});
+
+router.get("/all-plants", (req, res, next) => {
+  if (!req.user) {
+    req.flash("error", "You have to be logged in to see your plants.");
+    res.redirect("/login");
+    return;
+  } else {
+    Plant.find({ host: { $eq: req.user._id } })
+      .then(plantDoc => {
+        res.locals.plantArray = plantDoc;
+        res.render("plant-views/plant-list.hbs");
+      })
+      .catch(err => next(err));
+  }
+  // Species.find({
+  //   _id: { $in: req.user.species }
+  // })
+  //   .then(speciesResults => {
+  //     console.log(req.user.species);
+  //     res.locals.speciesArray = speciesResults;
+  //     res.render("plant-views/plant-list.hbs");
+  //   })
+  //   .catch(err => next(err));
 });
 
 // /passwordforgotten-email

@@ -42,6 +42,7 @@ router.post(
     console.log("File upload is ALWAYS in req.file OR req.files", req.file);
     // get part of the Cloudinary information
     const plantPicUrl = req.file.secure_url;
+
     Plant.create({
       plantName,
       plantDescription,
