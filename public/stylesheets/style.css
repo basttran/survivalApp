@@ -1,18 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 html {
   height: 96%;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+}
 
 body {
   padding: 0;
   margin: 4%;
-  height: 100%; }
+  height: 100%;
+}
 
 .section1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; }
+  height: 100%;
+}
 
 .section2 {
   display: flex;
@@ -20,60 +23,71 @@ body {
   flex-direction: column;
   height: 100%;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+}
 
 label {
-  display: block; }
+  display: block;
+}
 
 .error-message {
   border: 3px solid;
   border-radius: 3px;
   color: tomato;
-  padding: 10px; }
+  padding: 10px;
+}
 
 .success-message {
   border: 3px solid;
   border-radius: 3px;
   color: chartreuse;
-  padding: 10px; }
+  padding: 10px;
+}
 
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 26%; }
+  height: 26%;
+}
 
 .logoApp {
   width: 64px;
   height: 66px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+}
 
 h1 {
   margin: 0;
   font-size: 1em;
-  color: #046425; }
+  color: #046425;
+}
 
 footer {
   justify-content: space-around;
-  width: 100%; }
+  width: 100%;
+}
 
 .footer {
   bottom: 0;
   margin: 0;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .login {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .needhelp {
-  margin: 0; }
+  margin: 0;
+}
 
 input {
   border-radius: 40px;
@@ -85,7 +99,8 @@ input {
   color: #046425;
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 ::placeholder {
   border-radius: 40px;
@@ -96,19 +111,24 @@ input {
   color: #046425;
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 form {
   flex-direction: column;
   height: 50%;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .passwordForgotten {
+  margin-top: -1%;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+}
 
 div.login {
-  width: 76%; }
+  width: 76%;
+}
 
 button {
   background-color: #046425;
@@ -122,39 +142,48 @@ button {
   font-size: 1.2em;
   margin-left: 25%;
   margin-right: 25%;
-  letter-spacing: 0.06em; }
+  letter-spacing: 0.06em;
+}
 
 .noaccount {
   margin: 0;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 a {
   text-decoration: none;
-  color: #a8db00; }
+  color: #a8db00;
+}
 
 a.sources,
 a.contact {
-  color: #046425; }
+  color: #046425;
+}
 
 .signup {
   margin: 0;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+}
 
 .processsignup {
-  margin-top: 18%; }
+  margin-top: 18%;
+}
 
 .signup-button {
-  margin-top: 10%; }
+  margin-top: 10%;
+}
 
 .homesignup {
-  margin-top: -12%; }
+  margin-top: -12%;
+}
 
 .websites-list {
   text-align: left;
   list-style: none;
   padding-left: 0;
   line-height: 1.8em;
-  margin: 4% 0; }
+  margin: 4% 0;
+}
 
 .sources-title,
 .contact-title,
@@ -162,20 +191,30 @@ a.contact {
 .passwordforgotten-title,
 .species-title,
 .profile-title,
-.add-plant-title {
+.add-plant-title,
+.wishlist-title {
   padding-top: 3%;
   font-size: 1.8em;
   margin: 0;
-  color: #046425; }
+  color: #046425;
+}
 
 .my-plants-name {
   font-size: 1.4em;
   color: #046425;
-  text-decoration: underline;
   border-radius: 40px;
   width: 60%;
   height: 30px;
-  margin-top: 2%; }
+  margin-top: 14%;
+}
+
+.login-button-first {
+  margin-top: 3%;
+}
+
+.always-green {
+  color: #046425;
+}
 
 .send-email {
   background-color: #a8db00;
@@ -190,11 +229,13 @@ a.contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -50%; }
+  margin-top: -50%;
+}
 
 .sendme {
   width: 60%;
-  margin-left: 20%; }
+  margin-left: 20%;
+}
 
 li.species-li {
   list-style: none;
@@ -202,28 +243,31 @@ li.species-li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2%; }
+  margin-top: 2%;
+}
 
 ul {
   padding: 0;
   list-style: none;
-  margin-top: 14%; }
-
-li {
-  padding: 10% 0; }
+  margin-top: 14%;
+}
 
 img.species-picture {
-  width: 70%; }
+  width: 70%;
+}
 
 img.carousel-picture {
-  height: 270px; }
+  height: 270px;
+}
 
 h3 {
   font-size: 1em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .add-a-plant-form {
-  height: 60%; }
+  height: 60%;
+}
 
 .save-this-plant-button {
   width: 61%;
@@ -234,21 +278,34 @@ h3 {
   font-size: 1.2em;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 4%; }
+  margin-top: 4%;
+}
+
+.my-profile-user-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16%;
+}
 
 .profile-picture {
-  width: 60%;
+  width: 16%;
   border-radius: 50%;
-  margin-top: 10%; }
+  margin-left: 6%;
+}
 
 .pastille {
   height: auto;
   width: 20%;
   border-radius: 50%;
-  margin-top: 10%; }
+  margin-top: 10%;
+}
 
 .user-edit-link {
-  margin: 4%; }
+  margin-left: 6%;
+  text-align: left;
+}
 
 #scroll1 {
   width: 4px;
@@ -258,14 +315,16 @@ h3 {
   bottom: 3%;
   right: 10%;
   z-index: 80;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 #scroll1 span {
   width: 100%;
   height: 20px;
   display: block;
   background-color: #046425;
-  animation: 2s linear 0s scrollto infinite; }
+  animation: 2s linear 0s scrollto infinite;
+}
 
 #scroll2 {
   width: 4px;
@@ -275,45 +334,65 @@ h3 {
   bottom: 3%;
   left: 10%;
   z-index: 80;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 #scroll2 span {
   width: 100%;
   height: 20px;
   display: block;
   background-color: #046425;
-  animation: 2s linear 0s scrollto infinite; }
+  animation: 2s linear 0s scrollto infinite;
+}
 
 @keyframes scrollto {
   0% {
-    transform: translateY(-20px); }
+    transform: translateY(-20px);
+  }
   70% {
-    opacity: 1; }
+    opacity: 1;
+  }
   80% {
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
     opacity: 0;
-    transform: translateY(30px); } }
+    transform: translateY(30px);
+  }
+}
 
 .profile-name {
   color: #a8db00;
   display: flex;
   align-items: center;
+  margin-left: 4%;
   font-size: 1.2em;
-  padding-top: 6%;
+  font-weight: 700;
+}
+
+.wishlist-name {
+  color: #a8db00;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-style: solid;
-  text-underline-position: under; }
+  text-underline-position: under;
+  margin-top: 6%;
+}
 
 .plant-name {
-  color: #046425; }
+  color: #046425;
+}
 
 .upadte-profile-button {
-  height: 20%; }
+  height: 20%;
+}
 
 .add-a-plant,
-.add-to-wishlist {
+.add-to-wishlist,
+.all-my-plants {
   border-radius: 40px;
   background-color: #a8db00;
   padding: 17px;
@@ -324,7 +403,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 4%; }
+  margin-top: 4%;
+}
 
 .all-specimens {
   border-radius: 40px;
@@ -336,7 +416,14 @@ h3 {
   margin-top: 4%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
 
 .allspecimens {
   border-radius: 40px;
@@ -346,19 +433,25 @@ h3 {
   padding-right: 6%;
   font-size: 1.4em;
   margin-top: 4%;
-  width: 60%; }
+  width: 60%;
+  margin-bottom: 6%;
+}
 
 .searchbar {
-  margin-top: 8%; }
+  margin-top: 8%;
+}
 
 .search-button {
-  margin-top: 4%; }
+  margin-top: 4%;
+}
 
 .carousel-picture,
 .my-carousel-images {
-  object-fit: cover; }
+  object-fit: cover;
+}
 
 .carousel {
-  margin-top: 4%; }
+  margin-top: 4%;
+}
 
 /*# sourceMappingURL=style.css.map */

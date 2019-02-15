@@ -5,7 +5,7 @@
 
 
     {{#if currentUser}}
-    <h3>Welcome back, <a href="/profile">{{currentUser.userName}}</a>!</h3>
+    <h3 class="always-green">Welcome back, <a href="/profile">{{currentUser.userName}}</a>!</h3>
     {{else}}
     <p></p>
     {{/if}}
@@ -21,7 +21,7 @@
             <input type="password" name="originalPassword" placeholder="Password" required="true">
         </label>
         <a href="/passwordforgotten" class="passwordForgotten">Forgot password?</a>
-        <button>Log In</button>
+        <button class="login-button-first">Log In</button>
     </form>
 
 

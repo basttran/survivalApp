@@ -7,7 +7,7 @@ const plantSchema = new Schema(
     plantName: { type: String },
     plantDescription: { type: String },
     plantSpecies: { type: String },
-    plantPicUrl: { type: String, required: true, match: /^https?:\/\// },
+    plantPicUrl: { type: String, match: /^https?:\/\// },
     host: { type: String }
   },
   {

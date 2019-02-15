@@ -123,6 +123,7 @@ form {
 }
 
 .passwordForgotten {
+  margin-top: -1%;
   display: flex;
   justify-content: flex-end;
 }
@@ -192,7 +193,8 @@ a.contact {
 .passwordforgotten-title,
 .species-title,
 .profile-title,
-.add-plant-title {
+.add-plant-title,
+.wishlist-title {
   padding-top: 3%;
   font-size: 1.8em;
   margin: 0;
@@ -202,11 +204,18 @@ a.contact {
 .my-plants-name {
   font-size: 1.4em;
   color: #046425;
-  text-decoration: underline;
   border-radius: 40px;
   width: 60%;
   height: 30px;
-  margin-top: 2%;
+  margin-top: 14%;
+}
+
+.login-button-first {
+  margin-top: 3%;
+}
+
+.always-green {
+  color: #046425;
 }
 
 .send-email {
@@ -245,9 +254,9 @@ ul {
   margin-top: 14%;
 }
 
-li {
-  padding: 10% 0;
-}
+// li {
+//   padding: 10% 0;
+// }
 
 img.species-picture {
   width: 70%;
@@ -278,10 +287,18 @@ h3 {
   margin-top: 4%;
 }
 
+.my-profile-user-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16%;
+}
+
 .profile-picture {
-  width: 60%;
+  width: 16%;
   border-radius: 50%;
-  margin-top: 10%;
+  margin-left: 6%;
 }
 
 .pastille {
@@ -292,7 +309,8 @@ h3 {
 }
 
 .user-edit-link {
-  margin: 4%;
+  margin-left: 6%;
+  text-align: left;
 }
 
 #scroll1 {
@@ -355,12 +373,21 @@ h3 {
   color: #a8db00;
   display: flex;
   align-items: center;
+  margin-left: 4%;
   font-size: 1.2em;
-  padding-top: 6%;
+  font-weight: 700;
+}
+
+.wishlist-name {
+  color: #a8db00;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-style: solid;
   text-underline-position: under;
+  margin-top: 6%;
 }
 
 .plant-name {
@@ -372,7 +399,8 @@ h3 {
 }
 
 .add-a-plant,
-.add-to-wishlist {
+.add-to-wishlist,
+.all-my-plants {
   border-radius: 40px;
   background-color: #a8db00;
   padding: 17px;
@@ -399,6 +427,12 @@ h3 {
   justify-content: center;
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
 .allspecimens {
   border-radius: 40px;
   background-color: #a8db00;
@@ -408,6 +442,7 @@ h3 {
   font-size: 1.4em;
   margin-top: 4%;
   width: 60%;
+  margin-bottom: 6%;
 }
 
 .searchbar {

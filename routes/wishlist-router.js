@@ -8,20 +8,20 @@ const Species = require("../models/species-model.js");
 
 router.get("/wishlist", (req, res, next) => {
   Species.find({
-    '_id': { $in: req.user.species}
-})
-          .then(speciesResults => {
-            res.locals.speciesArray = speciesResults;
-            res.render("auth-views/wishlist.hbs");
-          })
-          .catch(err => next(err));        
+    _id: { $in: req.user.species }
+  })
+    .then(speciesResults => {
+      res.locals.speciesArray = speciesResults;
+      res.render("auth-views/wishlist.hbs");
+    })
+    .catch(err => next(err));
 });
 
 // router.get("/wishlist/:speciesId/add", (req, res, next) => {
 //   // on ajoute la plante dont l'id est :speciesId à la wishlist
 //   const { speciesId } = req.params;
 //   Species.findById(speciesId)
-//     .then(species => {
+//     .then(species =>
 //       req.user.species.push(species); // we need to actually push to the userDoc
 //       // console.log(req.user);
 //     })
@@ -50,8 +50,4 @@ router.get("/wishlist/:speciesId/add", (req, res, next) => {
     .catch(err => next(err));
 });
 
-
 module.exports = router;
-
-
-

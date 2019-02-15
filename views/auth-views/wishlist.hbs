@@ -1,8 +1,8 @@
-<h2 class="wishlist-title">Species</h2>
+<h2 class="wishlist-title">Wishlist</h2>
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
-<h3 class="profile-name"><a href="/profile">{{currentUser.userName}}'s profile</a> : WISHLIST</h3>
+<h3 class="wishlist-name"><a href="/profile">Back to profile</a></h3>
 
 
 
@@ -11,13 +11,14 @@
   {{#each speciesArray}}
   <li>
     <div></div>
-      <a href="/species/{{this._id}}"><h3>{{this.name}}</h3></a>
-      <img src="{{this.speciesPicUrl}}" alt="{{this.scientificName}}" class="species-picture"/>
-      <p><u>Level:</u> <b>{{this.level}}</b></p>
-      <p><u>Family:</u> <i>{{this.scientificClassification.Family}}</i></p>
-      <p><u>Watering:</u> {{this.wateringNeeds}}</p>
-      <p><u>Sunlight:</u> {{this.sunlightNeeds}}</p>
-      <p><u>Flower:</u> {{this.flowerColor}}</p>
+    <a href="/species/{{this._id}}">
+      <h3>{{this.name}}</h3>
+    </a>
+    <img src="{{this.speciesPicUrl}}" alt="{{this.scientificName}}" class="species-picture" />
+    <p><u>Level:</u> <b>{{this.level}}</b></p>
+    <p><u>Watering:</u> {{this.wateringNeeds}}</p>
+    <p><u>Sunlight:</u> {{this.sunlightNeeds}}</p>
+    <p><u>Flower:</u> {{this.flowerColor}}</p>
     </div>
   </li>
   {{/each}}
