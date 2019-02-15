@@ -104,8 +104,8 @@ form {
   justify-content: space-around; }
 
 .passwordForgotten {
-  text-align: right;
-  margin-top: -3%; }
+  display: flex;
+  justify-content: flex-end; }
 
 div.login {
   width: 76%; }

@@ -123,8 +123,8 @@ form {
 }
 
 .passwordForgotten {
-  text-align: right;
-  margin-top: -3%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 div.login {
