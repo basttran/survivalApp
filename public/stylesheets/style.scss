@@ -254,8 +254,7 @@ img.species-picture {
 }
 
 img.carousel-picture {
-  height: 600px;
-  width: auto;
+  height: 270px;
 }
 
 h3 {
@@ -419,6 +418,11 @@ h3 {
   margin-top: 4%;
 }
 
-.nav-logout {
-  display: block;
+.carousel-picture,
+.my-carousel-images {
+  object-fit: cover;
+}
+
+.carousel {
+  margin-top: 4%;
 }

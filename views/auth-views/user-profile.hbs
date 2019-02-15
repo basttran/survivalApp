@@ -40,7 +40,7 @@
   <div class="carousel-inner">
     {{#each plantArray}}
     <div class="carousel-item {{#unless @index}} active {{/unless}} ">
-      <img class="d-block w-100 carousel-picture" src="{{this.plantPicUrl}}" alt="{{this.plantName}}" >
+      <img class="d-block w-100 carousel-picture" src="{{this.plantPicUrl}}" alt="{{this.plantName}}">
     </div>
     {{/each}}
   </div>
@@ -55,6 +55,8 @@
   </a>
 </div>
 
+<a href="/all-plants" class="all-my-plants">See all my Plants</a>
+
 <a href="/plant-add" class="add-a-plant">Add a Plant</a>
 
 
@@ -65,14 +67,15 @@
 <div id="speciesCarousel" class="carousel carousel-fade" data-ride="carousel" data-pause="hover">
   <ol class="carousel-indicators">
     {{#each speciesArray}}
-    <li data-target="#carouselExampleIndicators" data-slide-to="{{@index}}" {{#unless @index}} class="active" {{/unless}}></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="{{@index}}" {{#unless @index}} class="active"
+      {{/unless}}></li>
     {{/each}}
   </ol>
 
   <div class="carousel-inner">
     {{#each speciesArray}}
     <div class="carousel-item {{#unless @index}} active {{/unless}} ">
-      <img class="d-block w-100 carousel-picture" src="{{this.speciesPicUrl}}" alt="{{this.name}}" >
+      <img class="d-block w-100 carousel-picture my-carousel-images" src="{{this.speciesPicUrl}}" alt="{{this.name}}">
     </div>
     {{/each}}
   </div>
@@ -119,5 +122,5 @@
   {{/each}} --}}
 
 
-  <a href="/species" class="allspecimens">See All Plants</a>
+<a href="/species" class="allspecimens">See All Plants</a>
 </ul>
