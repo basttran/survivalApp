@@ -26,11 +26,13 @@ router.get("/wishlist", (req, res, next) => {
 // });
 
 router.get("/wishlist/:speciesId/add", (req, res, next) => {
+  // console.log("currentUser: "+res.locals.currentUser._id);
+  // const { wisherId } = ;
   const { speciesId } = req.params;
-  const { userId } = req.user.id;
-
+  // console.log("speciesId: "+speciesId);
+  // console.log("wisherId: "+wisherId);
   User.findByIdAndUpdate(
-    userId, // ID of the document we want to update
+    res.locals.currentUser._id, // ID of the document we want to update
     { $push: { species: speciesId } }, // changes to the document
     { runValidators: true } // additional settings (enforce the rules)
   )
