@@ -14,7 +14,7 @@
 <form action="/search-species" method="GET" id="species-ahead" class="searchbar">
   {{!-- <label>by Ingredients</label>
   <label>Ingredient 1</label> --}}
-  <input list="search-sp" type="text" name="search_query">
+  <input list="search-sp" type="text" name="search_query" placeholder="Find your plant..">
 
   <datalist id="search-sp">
     {{#each speciesArray}}
@@ -22,7 +22,7 @@
     {{/each}}
   </datalist>
 
-  <button>Shortlist species!</button>
+  <button class="search-button">Search</button>
 
 </form>
 
