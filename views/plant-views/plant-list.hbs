@@ -1,10 +1,10 @@
-<h2>My Plants</h2>
+<h2 class="add-plant-title">My Plants</h2>
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
 {{> flash_messages}}
 
-<a href="/plant-add">Add a Plant</a>
+<a href="/plant-add" class="all-my-plants">Add a Plant</a>
 
 <ul>
   {{#each plantArray}}
@@ -14,7 +14,7 @@
     <a href="plant/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.plantDescription}}</p>
     <h4>{{this.plantSpecies}}</h4>
-    <img src="{{this.plantPicUrl}}" />
+    <img src="{{this.plantPicUrl}}" class="species-picture" />
   </li>
   {{/each}}
 </ul>

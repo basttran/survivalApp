@@ -2,9 +2,11 @@
 
 {{#if currentUser}}
 <div class="my-profile-user-div">
-  <h3 class="profile-name">Hi {{currentUser.userName}}! </h3>
   <img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
-  <a href="/user-edit" class="user-edit-link">Update my Profile</a>
+  <div class="welcome">
+    <h3 class="profile-name">Hi {{currentUser.userName}}! </h3>
+    <a href="/user-edit" class="user-edit-link">Update my Profile</a>
+  </div>
 </div>
 
 {{!-- <b>{{currentUser.email}}</b> --}}
@@ -55,7 +57,7 @@
 
 
     <a href="/plant-add" class="add-a-plant">Add a Plant</a>
-    <a href="/all-plants" class="all-my-plants">See all my Plants</a>
+    <a href="/plant" class="all-my-plants">See all my Plants</a>
 
 
 
@@ -106,7 +108,7 @@
 // CODE DEPOT - ESTELLE? --}}
 
 
-        <a href="/wishlist" class="add-to-wishlist">See Full Wishlist</a>
+        <a href="/wishlist" class="add-to-wishlist">See Wishlist</a>
 
         {{!-- <ul>
   {{#each speciesArray}}

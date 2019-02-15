@@ -104,6 +104,7 @@ form {
   justify-content: space-around; }
 
 .passwordForgotten {
+  margin-top: -1%;
   display: flex;
   justify-content: flex-end; }
 
@@ -177,6 +178,12 @@ a.contact {
   height: 30px;
   margin-top: 14%; }
 
+.login-button-first {
+  margin-top: 3%; }
+
+.always-green {
+  color: #046425; }
+
 .send-email {
   background-color: #a8db00;
   border-radius: 40px;
@@ -208,9 +215,6 @@ ul {
   padding: 0;
   list-style: none;
   margin-top: 14%; }
-
-li {
-  padding: 10% 0; }
 
 img.species-picture {
   width: 70%; }
@@ -246,7 +250,7 @@ h3 {
 .profile-picture {
   width: 16%;
   border-radius: 50%;
-  margin-left: 4%; }
+  margin-left: 6%; }
 
 .pastille {
   height: auto;
@@ -255,8 +259,8 @@ h3 {
   margin-top: 10%; }
 
 .user-edit-link {
-  margin-left: 4%;
-  padding-top: 1%; }
+  margin-left: 6%;
+  text-align: left; }
 
 #scroll1 {
   width: 4px;
@@ -307,6 +311,7 @@ h3 {
   color: #a8db00;
   display: flex;
   align-items: center;
+  margin-left: 4%;
   font-size: 1.2em;
   font-weight: 700; }
 
@@ -354,6 +359,11 @@ h3 {
   align-items: center;
   justify-content: center; }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
+
 .allspecimens {
   border-radius: 40px;
   background-color: #a8db00;
@@ -362,7 +372,8 @@ h3 {
   padding-right: 6%;
   font-size: 1.4em;
   margin-top: 4%;
-  width: 60%; }
+  width: 60%;
+  margin-bottom: 6%; }
 
 .searchbar {
   margin-top: 8%; }

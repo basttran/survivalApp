@@ -123,6 +123,7 @@ form {
 }
 
 .passwordForgotten {
+  margin-top: -1%;
   display: flex;
   justify-content: flex-end;
 }
@@ -209,6 +210,14 @@ a.contact {
   margin-top: 14%;
 }
 
+.login-button-first {
+  margin-top: 3%;
+}
+
+.always-green {
+  color: #046425;
+}
+
 .send-email {
   background-color: #a8db00;
   border-radius: 40px;
@@ -245,9 +254,9 @@ ul {
   margin-top: 14%;
 }
 
-li {
-  padding: 10% 0;
-}
+// li {
+//   padding: 10% 0;
+// }
 
 img.species-picture {
   width: 70%;
@@ -289,7 +298,7 @@ h3 {
 .profile-picture {
   width: 16%;
   border-radius: 50%;
-  margin-left: 4%;
+  margin-left: 6%;
 }
 
 .pastille {
@@ -300,8 +309,8 @@ h3 {
 }
 
 .user-edit-link {
-  margin-left: 4%;
-  padding-top: 1%;
+  margin-left: 6%;
+  text-align: left;
 }
 
 #scroll1 {
@@ -364,6 +373,7 @@ h3 {
   color: #a8db00;
   display: flex;
   align-items: center;
+  margin-left: 4%;
   font-size: 1.2em;
   font-weight: 700;
 }
@@ -417,6 +427,12 @@ h3 {
   justify-content: center;
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
 .allspecimens {
   border-radius: 40px;
   background-color: #a8db00;
@@ -426,6 +442,7 @@ h3 {
   font-size: 1.4em;
   margin-top: 4%;
   width: 60%;
+  margin-bottom: 6%;
 }
 
 .searchbar {
