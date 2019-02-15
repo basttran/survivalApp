@@ -1,0 +1,66 @@
+<h2 class="species-title">{{speciesItem.name}}</h2>
+
+<img src="{{speciesItem.speciesPicUrl}}" class="species-picture" />
+<p>Scientific Name: {{speciesItem.scientificName}}</p>
+<p>Common Names: {{speciesItem.commonNames}}</p>
+<p>Place: {{speciesItem.place}}</p>
+<p>Description: {{speciesItem.description}}</p>
+<p>Scientific Classification: {{#each speciesItem.scientificClassification}}</p>
+<ul>
+  <li>Family: {{this.Family}}</li>
+  <li>Subfamily: {{this.Subfamily}}</li>
+  <li>Tribe: {{this.Tribe}}</li>
+  <li>Genus: {{this.Genus}}</li>
+</ul>
+{{/each}}
+<p>Watering Needs: {{speciesItem.wateringNeeds}}</p>
+<p>Sunlight Needs: {{speciesItem.sunlightNeeds}}</p>
+<p>Flower Color: {{speciesItem.flowerColor}}</p>
+<p>Plant Grows Up: {{#each speciesItem.plantGrowsUp}}</p>
+<ul>
+  <li>Tall: {{this.tall}}</li>
+  <li>Wide: {{this.wide}}</li>
+</ul>
+{{/each}}
+<p>Cold: {{speciesItem.cold}}</p>
+<p>Propagation: {{speciesItem.propagation}}</p>
+<p>Toxicity: {{speciesItem.toxicity}}</p>
+<p>Actively Grows: {{speciesItem.activelyGrows}}</p>
+<p>Level: {{speciesItem.level}}</p>
+
+
+
+{{!-- "name": "Bunny Ears Cactus",
+"speciesPicUrl": "../images/plants/bunnyearscactus.jpg",
+"scientificName": "Opuntia microdasys",
+"commonNames": [
+"Bunny Ears",
+"Bunny Ears Cactus",
+"Bunny Cactus",
+"Polka Dot Cactus",
+"Bunny-ears Prickly-pear",
+"Angel’s Wings",
+"Golden-Bristle",
+"Golden-Bristle Cactus"
+],
+"place": ["indoor"], 
+"description": "Originally from Mexico, the bunny ears cactus is named after its appearance. It has two pads that are
+bunny ear shaped. They are covered with glochids or brown prickles and should be handled with care. The bunny ears
+cactus grows to two or three feet, making it the perfect house plant. It produces white flowers and purple fruits in the
+summer if exposed to enough light.",
+"scientificClassification": {
+"Family": "Cactaceae",
+"Subfamily": "Opuntioidea",
+"Tribe": "Opuntieae",
+"Genus": "Opuntia"
+},
+"wateringNeeds": "every 3-4 weeks",
+"sunlightNeeds": "partial sunlight",
+"flowerColor": "white",
+"plantGrowsUp": { "tall": "24″ (61 cm)", "wide": "5′ (1.5 m)" },
+"cold": "Not cold hardy",
+"propagation": "by cuttings",
+"toxicity": "non-toxic to humans and animals",
+"activelyGrows": "Spring and Fall",
+"level": "easy",
+"grade": "1"--}}

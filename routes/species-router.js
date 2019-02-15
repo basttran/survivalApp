@@ -28,4 +28,41 @@ router.get("/species", (req, res, next) => {
     .catch(err => next(err));
 });
 
+router.get("/search-species", (req, res, next) => {
+  const { search_query } = req.query;
+  console.log(search_query);
+  var speciesList = [];
+
+  Species.find({ name: { $eq: search_query } })
+    .then(speciesResults => {
+      speciesResults.forEach(species => {
+        speciesList.push(species);
+      });
+      console.log(speciesResults);
+      if (!speciesResults) {
+        res.render("species-views/species-list.hbs");
+      } else {
+        res.locals.speciesArray = speciesList;
+        res.render("species-views/species-list.hbs");
+      }
+    })
+    .catch(err => next(err));
+});
+
+router.get("/species/:speciesId", (req, res, next) => {
+  // res.send(req.params);
+  const { speciesId } = req.params;
+
+  // find the species in the database using the ID from the address
+  Species.findById(speciesId)
+    .then(speciesDoc => {
+      // send the database query results to the HBS file as "speciesItem"
+      res.locals.speciesItem = speciesDoc;
+      // res.json(speciesDoc);
+      res.render("species-views/species-details.hbs");
+    })
+    //
+    .catch(err => next(err));
+});
+
 module.exports = router;

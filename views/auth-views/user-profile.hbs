@@ -1,29 +1,67 @@
 <h2 class="profile-title">My profile</h2>
 
 {{#if currentUser}}
-<h3>Hi {{currentUser.userName}}!</h3>
+<h3 class="profile-name">Hi {{currentUser.userName}}!</h3>
 
-<b>{{currentUser.email}}</b>
-<img src="{{currentUser.profilePicUrl}}"  class="species-picture"  />
+{{!-- <b>{{currentUser.email}}</b> --}}
+<img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
 
-<a href="/user-edit">Update my Profile</a>
+<a href="/user-edit" class="user-edit-link">Update my Profile</a>
+
+<span id="scroll1">
+  <span></span>
+</span>
+
+<span id="scroll2">
+  <span></span>
+</span>
 
 {{/if}}
 
 
-<h3>My Plants</h3>
+<h3 class="my-plants-name">My Plants</h3>
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
 {{> flash_messages}}
 
-<a href="/plant-add">Add a Plant</a>
+<a href="/plant-add" class="add-a-plant">Add a Plant</a>
 
-<ul>
+
+{{!-- // CODE BAST --}}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {{#each plantIndices}}
+    {{{this}}}
+    {{/each}}
+  </ol>
+
+  <div class="carousel-inner">
+    {{#each plantArray}}
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{this.plantPicUrl}}" alt="{{this.name}}">
+    </div>
+    {{/each}}
+  </div>
+  // @index
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{{!-- // CODE BAST --}}
+
+
+{{!-- // CODE DEPOT - ESTELLE?
+<ul class="plant-array">
   {{#each plantArray}}
   <li>
-    <h3>{{this.plantName}}</h3>
-    {{!-- <a href="plant/{{this._id}}/edit">Update this Plant</a> --}}
+    <h3 class="plant-name">{{this.plantName}}</h3>
+    <a href="plant/{{this._id}}/edit">Update this Plant</a>
     <a href="plant/{{this._id}}/delete">Delete this Plant</a>
     <p>{{this.plantDescription}}</p>
     <h4>{{this.plantSpecies}}</h4>
@@ -31,8 +69,11 @@
   </li>
   {{/each}}
 </ul>
+// CODE DEPOT - ESTELLE? --}}
 
-<h3>My Wishlist</h3>
+
+<h3 class="my-plants-name">My Wishlist</h3>
+<a href="/wishlist" class="add-to-wishlist">See Full Wishlist</a>
 
 <ul>
   {{#each speciesArray}}
@@ -40,8 +81,11 @@
     <h3>{{this.scientificName}}</h3>
     <p>{{this.level}}</p>
     <h4>{{this.speciesClassification.Family}}</h4>
-    <img src="{{this.speciesPicUrl}}"  class="species-picture" />
+    <img src="{{this.speciesPicUrl}}" class="species-picture" />
 
   </li>
   {{/each}}
+
+
+  <a href="/species" class="allspecimens">See All Plants</a>
 </ul>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 html {
   height: 96%;
   font-family: "Lato", sans-serif; }
@@ -165,10 +165,7 @@ a.contact {
   font-size: 1.4em; }
 
 .processsignup {
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  justify-content: space-around; }
+  height: 70%; }
 
 .homesignup {
   margin-top: -12%; }
@@ -192,6 +189,14 @@ a.contact {
   margin: 0;
   color: #046425; }
 
+.my-plants-name {
+  font-size: 1.4em;
+  color: #046425;
+  text-decoration: underline;
+  border-radius: 40px;
+  width: 60%;
+  height: 30px; }
+
 .send-email {
   background-color: #a8db00;
   border-radius: 40px;
@@ -211,9 +216,6 @@ a.contact {
   width: 60%;
   margin-left: 20%; }
 
-.species-picture {
-  width: 40%; }
-
 .species-li {
   list-style: none;
   float: left;
@@ -222,11 +224,11 @@ a.contact {
   align-items: center; }
 
 ul {
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 img.species-picture {
-  width: 60%;
-  height: 80%; }
+  width: 70%; }
 
 h3 {
   font-size: 1em; }
@@ -243,5 +245,98 @@ h3 {
   font-size: 1.2em;
   margin-left: 20%;
   margin-right: 20%; }
+
+.profile-picture {
+  width: 60%;
+  border-radius: 50%; }
+
+#scroll1 {
+  width: 4px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  bottom: 3%;
+  right: 10%;
+  z-index: 80;
+  overflow: hidden; }
+
+#scroll1 span {
+  width: 100%;
+  height: 20px;
+  display: block;
+  background-color: #046425;
+  animation: 2s linear 0s scrollto infinite; }
+
+#scroll2 {
+  width: 4px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  bottom: 3%;
+  left: 10%;
+  z-index: 80;
+  overflow: hidden; }
+
+#scroll2 span {
+  width: 100%;
+  height: 20px;
+  display: block;
+  background-color: #046425;
+  animation: 2s linear 0s scrollto infinite; }
+
+@keyframes scrollto {
+  0% {
+    transform: translateY(-20px); }
+  70% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    transform: translateY(30px); } }
+
+.profile-name {
+  color: #a8db00;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  padding-top: 4%;
+  font-weight: 900;
+  text-decoration: underline; }
+
+.plant-name {
+  color: #046425; }
+
+.upadte-profile-button {
+  height: 20%; }
+
+.user-edit-link {
+  padding-top: 4%; }
+
+.add-a-plant {
+  margin: 0;
+  border-radius: 40px;
+  background-color: #a8db00;
+  border: 1px solid #a8db00;
+  height: 38px;
+  width: 40%;
+  padding: 4px;
+  color: #046425;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 1.4em; }
+
+.add-to-wishlist {
+  margin: 0;
+  border-radius: 40px;
+  background-color: #a8db00;
+  border: 1px solid #a8db00;
+  height: 38px;
+  width: 52%;
+  padding: 4px;
+  color: #046425;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 1.4em; }
 
 /*# sourceMappingURL=style.css.map */

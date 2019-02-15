@@ -1,17 +1,36 @@
-{{> flash_messages}}
+<div class="login">
 
-<h2>Log In</h2>
 
-<form action="/process-login" method="POST">
+  {{> flash_messages}}
 
-  <label>
-    Email:
-    <input type="email" name="email" placeholder="quira@solo.com" required="true" />
-  </label>
 
-  <label>
-    Password:
-    <input type="password" name="originalPassword" placeholder="It's a secret" required="true">
-  </label>
-  <button>Log In</button>
-</form>
+  {{#if currentUser}}
+  <h3>Welcome back, {{currentUser.userName}}</h3>
+  {{else}}
+  {{/if}}
+  <form action="/process-login" method="POST">
+
+    <label class="email">
+
+      <input type="email" name="email" placeholder="Email" required="true" />
+    </label>
+
+    <label class="password">
+
+      <input type="password" name="originalPassword" placeholder="Password" required="true">
+    </label>
+    <a href="/passwordforgotten" class="passwordForgotten">Forgot password?</a>
+    <button>Log In</button>
+  </form>
+
+
+
+  <a href="/signup" class="homesignup">
+    <p class="noaccount">or</p>
+    <p class="signup">Sign Up</p>
+  </a>
+
+
+
+  <a href="/species" class="allspecimens">See All Plants</a>
+</div>
