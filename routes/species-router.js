@@ -33,7 +33,7 @@ router.get("/search-species", (req, res, next) => {
   console.log(search_query);
   var speciesList = [];
 
-  Species.find({ name: { $eq: search_query } })
+  Species.find({ name: { $regex: search_query } })
     .then(speciesResults => {
       speciesResults.forEach(species => {
         speciesList.push(species);
