@@ -18,6 +18,17 @@ body {
   height: 100%;
 }
 
+.backImage {
+  height: 100%;
+  background-image: url("../images/fond1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .section2 {
   display: flex;
   justify-content: space-between;
@@ -69,6 +80,7 @@ h1 {
 footer {
   justify-content: space-around;
   width: 100%;
+  padding: 10px 0;
 }
 
 .footer {
@@ -246,6 +258,10 @@ li.species-li {
   flex-direction: column;
   align-items: center;
   margin-top: 2%;
+  background-color: rgba(158, 202, 152, 0.192);
+  border-radius: 30px;
+  padding: 20px 0;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -460,4 +476,29 @@ h3 {
 
 .carousel {
   margin-top: 4%;
+}
+
+.plantName {
+  font-size: 25px !important;
+  margin-bottom: 10px;
+}
+
+.levelClass {
+  margin-top: 10px;
+}
+
+.detailsPage {
+  background-color: rgba(158, 202, 152, 0.192);
+  border-radius: 30px;
+  padding: 20px 5%;
+  margin-bottom: 20px;
+}
+
+.myUl {
+  margin-top: 0 !important;
+}
+
+.btn {
+  width: 100%;
+  margin: 0;
 }

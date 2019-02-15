@@ -1,36 +1,37 @@
-<h2 class="species-title">{{speciesItem.name}}</h2>
+<div class="detailsPage">
+  <h2 class="species-title plantName">{{speciesItem.name}}</h2>
 
-<img src="{{speciesItem.speciesPicUrl}}" class="species-picture" />
-<p>Scientific Name: {{speciesItem.scientificName}}</p>
-<p>Common Names: {{speciesItem.commonNames}}</p>
-<p>Place: {{speciesItem.place}}</p>
-<p>Description: {{speciesItem.description}}</p>
-<p>Scientific Classification: {{#each speciesItem.scientificClassification}}</p>
-<ul>
-  <li>Family: {{this.Family}}</li>
-  <li>Subfamily: {{this.Subfamily}}</li>
-  <li>Tribe: {{this.Tribe}}</li>
-  <li>Genus: {{this.Genus}}</li>
-</ul>
-{{/each}}
-<p>Watering Needs: {{speciesItem.wateringNeeds}}</p>
-<p>Sunlight Needs: {{speciesItem.sunlightNeeds}}</p>
-<p>Flower Color: {{speciesItem.flowerColor}}</p>
-<p>Plant Grows Up: {{#each speciesItem.plantGrowsUp}}</p>
-<ul>
-  <li>Tall: {{this.tall}}</li>
-  <li>Wide: {{this.wide}}</li>
-</ul>
-{{/each}}
-<p>Cold: {{speciesItem.cold}}</p>
-<p>Propagation: {{speciesItem.propagation}}</p>
-<p>Toxicity: {{speciesItem.toxicity}}</p>
-<p>Actively Grows: {{speciesItem.activelyGrows}}</p>
-<p>Level: {{speciesItem.level}}</p>
+  <img src="{{speciesItem.speciesPicUrl}}" class="species-picture" />
+  <p class="levelClass"><b>Scientific Name:</b> {{speciesItem.scientificName}}</p>
+  <p><b>Common Names: </b>{{speciesItem.commonNames}}</p>
+  <p><b>Place:</b> {{speciesItem.place}}</p>
+  <p><b>Description:</b> {{speciesItem.description}}</p>
+  <p><b>Scientific Classification: </b>{{#each speciesItem.scientificClassification}}</p>
+  <ul class="myUl">
+    <li><b>Family: </b>{{this.Family}}</li>
+    <li><b>Subfamily: </b>{{this.Subfamily}}</li>
+    <li><b>Tribe: </b>{{this.Tribe}}</li>
+    <li><b>Genus:</b> {{this.Genus}}</li>
+  </ul>
+  {{/each}}
+  <p><b>Watering Needs: </b>{{speciesItem.wateringNeeds}}</p>
+  <p><b>Sunlight Needs:</b> {{speciesItem.sunlightNeeds}}</p>
+  <p><b>Flower Color:</b> {{speciesItem.flowerColor}}</p>
+  <p><b>Plant Grows Up:</b> {{#each speciesItem.plantGrowsUp}}</p>
+  <ul class="myUl">
+    <li><b>Tall:</b> {{this.tall}}</li>
+    <li><b>Wide:</b> {{this.wide}}</li>
+  </ul>
+  {{/each}}
+  <p><b>Cold: </b>{{speciesItem.cold}}</p>
+  <p><b>Propagation: </b>{{speciesItem.propagation}}</p>
+  <p><b>Toxicity:</b> {{speciesItem.toxicity}}</p>
+  <p><b>Actively Grows: </b>{{speciesItem.activelyGrows}}</p>
+  <p><b>Level: </b>{{speciesItem.level}}</p>
 
 
 
-{{!-- "name": "Bunny Ears Cactus",
+  {{!-- "name": "Bunny Ears Cactus",
 "speciesPicUrl": "../images/plants/bunnyearscactus.jpg",
 "scientificName": "Opuntia microdasys",
 "commonNames": [
@@ -64,3 +65,5 @@ summer if exposed to enough light.",
 "activelyGrows": "Spring and Fall",
 "level": "easy",
 "grade": "1"--}}
+
+</div>

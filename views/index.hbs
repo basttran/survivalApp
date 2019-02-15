@@ -1,37 +1,41 @@
-<div class="login">
+<section class="backImage">
+
+    <div class="login">
 
 
-    {{> flash_messages}}
+        {{> flash_messages}}
 
 
-    {{#if currentUser}}
-    <h3 class="always-green">Welcome back, <a href="/profile">{{currentUser.userName}}</a>!</h3>
-    {{else}}
-    <p></p>
-    {{/if}}
-    <form action="/process-login" method="POST">
+        {{#if currentUser}}
+        <h3 class="always-green">Welcome back, <a href="/profile">{{currentUser.userName}}</a>!</h3>
+        {{else}}
+        <p></p>
+        {{/if}}
+        <form action="/process-login" method="POST">
 
-        <label class="email">
+            <label class="email">
 
-            <input type="email" name="email" placeholder="Email" required="true" />
-        </label>
+                <input type="email" name="email" placeholder="Email" required="true" />
+            </label>
 
-        <label class="password">
+            <label class="password">
 
-            <input type="password" name="originalPassword" placeholder="Password" required="true">
-        </label>
-        <a href="/passwordforgotten" class="passwordForgotten">Forgot password?</a>
-        <button class="login-button-first">Log In</button>
-    </form>
-
-
-
-    <a href="/signup" class="homesignup">
-        <p class="noaccount">or</p>
-        <p class="signup">Sign Up</p>
-    </a>
+                <input type="password" name="originalPassword" placeholder="Password" required="true">
+            </label>
+            <a href="/passwordforgotten" class="passwordForgotten">Forgot password?</a>
+            <button class="login-button-first">Log In</button>
+        </form>
 
 
 
-    <a href="/species" class="all-specimens">See All Plants</a>
-</div>
+        <a href="/signup" class="homesignup">
+            <p class="noaccount">or</p>
+            <p class="signup">Sign Up</p>
+        </a>
+
+
+
+        <a href="/species" class="all-specimens">See All Plants</a>
+    </div>
+
+</section>

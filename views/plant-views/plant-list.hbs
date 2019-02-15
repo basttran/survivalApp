@@ -8,12 +8,15 @@
 
 <ul>
   {{#each plantArray}}
-  <li>
-    <h3>{{this.plantName}}</h3>
-    <a href="plant/{{this._id}}/edit">Update this Plant</a>
-    <a href="plant/{{this._id}}/delete">Delete this Plant</a>
+  <li class="detailsPage">
+    <h1 class="plantName">{{this.plantName}}</h1>
+    <div class="btn-cotes row">
+      <div class="col-6"><a href="plant/{{this._id}}/edit"><button class="btn btn-success">Update</button></a></div>
+      <div class="col-6"><a href="plant/{{this._id}}/delete"><button class="btn btn-danger">Delete</button></a></div>
+    </div>
+    <hr>
     <p>{{this.plantDescription}}</p>
-    <h4>{{this.plantSpecies}}</h4>
+    <p><b>Species:</b> {{this.plantSpecies}}</p>
     <img src="{{this.plantPicUrl}}" class="species-picture" />
   </li>
   {{/each}}
