@@ -214,6 +214,10 @@ li {
 img.species-picture {
   width: 70%; }
 
+img.carousel-picture {
+  height: 600px;
+  width: auto; }
+
 h3 {
   font-size: 1em;
   margin-bottom: 0; }

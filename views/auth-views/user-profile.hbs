@@ -38,8 +38,8 @@
 
   <div class="carousel-inner">
     {{#each plantArray}}
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="{{this.plantPicUrl}}" alt="{{this.plantName}}">
+    <div class="carousel-item {{#unless @index}} active {{/unless}} ">
+      <img class="d-block w-100 carousel-picture" src="{{this.plantPicUrl}}" alt="{{this.plantName}}" >
     </div>
     {{/each}}
   </div>
