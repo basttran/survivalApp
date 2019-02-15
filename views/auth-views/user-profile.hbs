@@ -1,12 +1,15 @@
 <h2 class="profile-title">My profile</h2>
 
 {{#if currentUser}}
-<h3 class="profile-name">Hi {{currentUser.userName}}!</h3>
+<div class="my-profile-user-div">
+  <h3 class="profile-name">Hi {{currentUser.userName}}! </h3>
+  <img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
+  <a href="/user-edit" class="user-edit-link">Update my Profile</a>
+</div>
 
 {{!-- <b>{{currentUser.email}}</b> --}}
-<img src="{{currentUser.profilePicUrl}}" class="profile-picture" />
+{{!-- <img src="{{currentUser.profilePicUrl}}" class="profile-picture" /> --}}
 
-<a href="/user-edit" class="user-edit-link">Update my Profile</a>
 
 <span id="scroll1">
   <span></span>
@@ -22,78 +25,72 @@
 {{> flash_messages}}
 
 
-<h3 class="my-plants-name">My Plants</h3>
+<h3 class="my-plants-name">> My Plants <</h3>
+    {{!-- displays flash messages since we redirect here from /process-plant --}}
+    {{!-- remove de 'slide' class to block the animation --}} <div id="plantsCarousel" class="carousel carousel-fade"
+    data-ride="carousel" data-pause="hover">
+    <ol class="carousel-indicators">
+      {{#each plantIndices}}
+      {{{this}}}
+      {{/each}}
+    </ol>
 
-{{!-- displays flash messages since we redirect here from /process-plant --}}
-
-
-
-
-{{!-- remove de 'slide' class to block the animation --}}
-<div id="plantsCarousel" class="carousel carousel-fade" data-ride="carousel" data-pause="hover">
-  <ol class="carousel-indicators">
-    {{#each plantIndices}}
-    {{{this}}}
-    {{/each}}
-  </ol>
-
-  <div class="carousel-inner">
-    {{#each plantArray}}
-    <div class="carousel-item {{#unless @index}} active {{/unless}} ">
-      <img class="d-block w-100 carousel-picture" src="{{this.plantPicUrl}}" alt="{{this.plantName}}">
+    <div class="carousel-inner">
+      {{#each plantArray}}
+      <div class="carousel-item {{#unless @index}} active {{/unless}} ">
+        <img class="d-block w-100 carousel-picture" src="{{this.plantPicUrl}}" alt="{{this.plantName}}">
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
-  {{!// @index--}}
-  <a class="carousel-control-prev" href="#plantsCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#plantsCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-<a href="/plant-add" class="add-a-plant">Add a Plant</a>
-<a href="/all-plants" class="all-my-plants">See all my Plants</a>
-
-
-
-
-<h3 class="my-plants-name">My Wishlist</h3>
-
-
-<div id="speciesCarousel" class="carousel carousel-fade" data-ride="carousel" data-pause="hover">
-  <ol class="carousel-indicators">
-    {{#each speciesArray}}
-    <li data-target="#carouselExampleIndicators" data-slide-to="{{@index}}" {{#unless @index}} class="active"
-      {{/unless}}></li>
-    {{/each}}
-  </ol>
-
-  <div class="carousel-inner">
-    {{#each speciesArray}}
-    <div class="carousel-item {{#unless @index}} active {{/unless}} ">
-      <img class="d-block w-100 carousel-picture my-carousel-images" src="{{this.speciesPicUrl}}" alt="{{this.name}}">
+    {{!// @index--}}
+    <a class="carousel-control-prev" href="#plantsCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#plantsCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
     </div>
-    {{/each}}
-  </div>
-  {{!// @index--}}
-  <a class="carousel-control-prev" href="#speciesCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#speciesCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-{{!-- // CODE BAST --}}
 
 
-{{!-- // CODE DEPOT - ESTELLE?
+    <a href="/plant-add" class="add-a-plant">Add a Plant</a>
+    <a href="/all-plants" class="all-my-plants">See all my Plants</a>
+
+
+
+
+    <h3 class="my-plants-name">> My Wishlist <</h3> <div id="speciesCarousel" class="carousel carousel-fade"
+        data-ride="carousel" data-pause="hover">
+        <ol class="carousel-indicators">
+          {{#each speciesArray}}
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{@index}}" {{#unless @index}} class="active"
+            {{/unless}}></li>
+          {{/each}}
+        </ol>
+
+        <div class="carousel-inner">
+          {{#each speciesArray}}
+          <div class="carousel-item {{#unless @index}} active {{/unless}} ">
+            <img class="d-block w-100 carousel-picture my-carousel-images" src="{{this.speciesPicUrl}}"
+              alt="{{this.name}}">
+          </div>
+          {{/each}}
+        </div>
+        {{!// @index--}}
+        <a class="carousel-control-prev" href="#speciesCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#speciesCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        </div>
+        {{!-- // CODE BAST --}}
+
+
+        {{!-- // CODE DEPOT - ESTELLE?
 <ul class="plant-array">
   {{#each plantArray}}
   <li>
@@ -109,9 +106,9 @@
 // CODE DEPOT - ESTELLE? --}}
 
 
-<a href="/wishlist" class="add-to-wishlist">See Full Wishlist</a>
+        <a href="/wishlist" class="add-to-wishlist">See Full Wishlist</a>
 
-{{!-- <ul>
+        {{!-- <ul>
   {{#each speciesArray}}
   <li>
     <h3 class="species-array">{{this.scientificName}}</h3>
@@ -123,5 +120,5 @@
   {{/each}} --}}
 
 
-<a href="/species" class="allspecimens">See All Plants</a>
-</ul>
+        <a href="/species" class="allspecimens">See All Plants</a>
+        </ul>

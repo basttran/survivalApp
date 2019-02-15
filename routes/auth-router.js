@@ -18,6 +18,7 @@ router.get("/user-edit", (req, res, next) => {
     .then(userDoc => {
       // send the database query result to the HBS file as "plantItem"
       res.locals.userItem = userDoc;
+      res.locals.viewTitle = "Update my Profile";
       res.render("auth-views/user-edit.hbs");
     })
     // next(err) skips to the error handler in "bin/www" (error.hbs)
@@ -55,6 +56,7 @@ router.get("/profile", (req, res, next) => {
         .sort({ grade: 1 })
         .then(speciesResults => {
           // send the database query results to the HBS file as "bookArray"
+          res.locals.viewTitle = "My Profile";
           res.locals.speciesArray = speciesResults; // for now we only display all the species in the DB
           res.render("auth-views/user-profile.hbs");
         })
@@ -99,6 +101,7 @@ router.post(
       .then(userDoc => {
         // ALWAYS redirect if it's successful to avoid DUPLICATE DATE on refresh
         // redirect ONLY to ADDRESSES - not HBS files
+        res.locals.viewTitle = "MyProfile";
         res.redirect("/profile");
       })
       // next(err) skips to the error handler in "bin/www" (error.hbs)
@@ -120,6 +123,7 @@ router.post(
     if (!originalPassword || !originalPassword.match(/[0-9]/)) {
       // req.flash() sends a feedback message before a redirect
       // (it's defined by the "connect-flash" npm package
+      res.locals.viewTitle = "Sign Up";
       req.flash("error", "Password can't be blank and must contain a number.");
       // redirect to the SIGNUP PAGE if the password is BAD
       res.redirect("/signup");
@@ -139,6 +143,7 @@ router.post(
         // (it's defined by the "connect-flash" npm package)
         req.flash("success", "Sign up success!");
         // redirect to the HOME PAGE if the sign up worked
+        res.locals.viewTitle = "Home";
         res.redirect("/");
       })
       .catch(err => next(err));
@@ -171,6 +176,7 @@ router.post("/process-login", (req, res, next) => {
       if (!bcrypt.compareSync(originalPassword, encryptedPassword)) {
         req.flash("error", "Password is incorrect.");
         // redirect to LOGIN PAGE if the passwords don't match
+
         res.redirect("/login");
         // use return to STOP the function here if the PASSWORD is BAD
         return;
@@ -186,6 +192,7 @@ router.post("/process-login", (req, res, next) => {
         // req.flash() sends a feedback message before a redirect
         // (it's defined by the "connect-flash" npm package)
         req.flash("success", "Log in success!");
+        res.locals.viewTitle = "My Profile";
         res.redirect("/profile"); // check this redirect, it should eventually lead to the user's page (default is "/")
       });
     })
