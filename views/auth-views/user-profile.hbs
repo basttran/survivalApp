@@ -62,8 +62,8 @@
 
 
 
-    <h3 class="my-plants-name">> My Wishlist <</h3> <div id="speciesCarousel" class="carousel carousel-fade" data-ride="carousel"
-        data-pause="hover">
+    <h3 class="my-plants-name">> My Wishlist <</h3> <div id="speciesCarousel" class="carousel carousel-fade"
+        data-ride="carousel" data-pause="hover">
         <ol class="carousel-indicators">
           {{#each speciesArray}}
           <li data-target="#carouselExampleIndicators" data-slide-to="{{@index}}" {{#unless @index}} class="active"
@@ -74,7 +74,8 @@
         <div class="carousel-inner">
           {{#each speciesArray}}
           <div class="carousel-item {{#unless @index}} active {{/unless}} ">
-            <img class="d-block w-100 carousel-picture my-carousel-images" src="{{this.speciesPicUrl}}" alt="{{this.name}}">
+            <img class="d-block w-100 carousel-picture my-carousel-images" src="{{this.speciesPicUrl}}"
+              alt="{{this.name}}">
           </div>
           {{/each}}
         </div>
@@ -121,9 +122,5 @@
           {{/each}} --}}
 
 
-          <<<<<<< HEAD <a href="/species" class="allspecimens">See All Plants</a>
-        </ul>
-        =======
         <a href="/species" class="allspecimens">See All Plants</a>
         </ul>
-        >>>>>>> 99514d35a9e14bb8063873a932d7f478bf5a0605
