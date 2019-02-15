@@ -231,7 +231,8 @@ img.species-picture {
   width: 70%; }
 
 h3 {
-  font-size: 1em; }
+  font-size: 1em;
+  margin-bottom: 0; }
 
 .add-a-plant-form {
   height: 60%; }
