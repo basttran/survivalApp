@@ -242,6 +242,12 @@ h3 {
   border-radius: 50%;
   margin-top: 10%; }
 
+.pastille {
+  height: auto;
+  width: 20%;
+  border-radius: 50%;
+  margin-top: 10%; }
+
 .user-edit-link {
   margin: 4%; }
 
@@ -348,5 +354,8 @@ h3 {
 
 .search-button {
   margin-top: 4%; }
+
+.nav-logout {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */
