@@ -6,10 +6,25 @@
 
 {{!-- <a href="/plant-add">Add a Plant</a> --}}
 
-<form method="POST" action="search">
+{{!-- <form method="POST" action="search">
   <input type="text" id="splist" name="q" placeholder="Search for names..">
-</form>
+</form> --}}
 
+
+<form action="/search-species" method="GET" id="species-ahead">
+  {{!-- <label>by Ingredients</label>
+  <label>Ingredient 1</label> --}}
+  <input list="search-sp" type="text" name="search_query">
+
+  <datalist id="search-sp">
+    {{#each speciesArray}}
+    <option value="{{this.name}}"></option>
+    {{/each}}
+  </datalist>
+
+  <button>Find species!</button>
+
+</form>
 
 
 {{!-- <ul id="myUL">

@@ -32,6 +32,22 @@ router.get("/profile", (req, res, next) => {
     .then(plantResults => {
       // send the database query results to the HBS file as "bookArray"
       res.locals.plantArray = plantResults;
+      let indicesArray = plantResults.map((onePlant, index) => {
+        if (index == 0) {
+          return (
+            `<li data-target="#carouselExampleIndicators" data-slide-to="` +
+            index +
+            `" class="active"></li>`
+          );
+        } else {
+          return (
+            `<li data-target="#carouselExampleIndicators" data-slide-to="` +
+            index +
+            `"></li>`
+          );
+        }
+      });
+      res.locals.plantIndices = indicesArray;
 
       Species.find()
         .sort({ grade: 1 })

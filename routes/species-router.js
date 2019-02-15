@@ -28,6 +28,27 @@ router.get("/species", (req, res, next) => {
     .catch(err => next(err));
 });
 
+router.get("/search-species", (req, res, next) => {
+  const { search_query } = req.query;
+  console.log(search_query);
+  var speciesList = [];
+
+  Species.find({ name: { $eq: search_query } })
+    .then(speciesResults => {
+      speciesResults.forEach(species => {
+        speciesList.push(species);
+      });
+      console.log(speciesResults);
+      if (!speciesResults) {
+        res.render("species-views/species-list.hbs");
+      } else {
+        res.locals.speciesArray = speciesList;
+        res.render("species-views/species-list.hbs");
+      }
+    })
+    .catch(err => next(err));
+});
+
 router.get("/species/:speciesId", (req, res, next) => {
   // res.send(req.params);
   const { speciesId } = req.params;
