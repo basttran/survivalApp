@@ -230,6 +230,7 @@ a.contact {
   border-radius: 40px;
   width: 60%;
   height: 30px;
+  margin-top: 2%;
 }
 
 .send-email {
@@ -294,6 +295,11 @@ h3 {
 .profile-picture {
   width: 60%;
   border-radius: 50%;
+  margin-top: 10%;
+}
+
+.user-edit-link {
+  margin: 4%;
 }
 
 #scroll1 {
@@ -357,9 +363,11 @@ h3 {
   display: flex;
   align-items: center;
   font-size: 1.2em;
-  padding-top: 4%;
-  font-weight: 900;
+  padding-top: 6%;
+  font-weight: 700;
   text-decoration: underline;
+  text-decoration-style: solid;
+  text-underline-position: under;
 }
 
 .plant-name {
@@ -370,22 +378,18 @@ h3 {
   height: 20%;
 }
 
-.user-edit-link {
-  padding-top: 4%;
-}
-
 .add-a-plant {
-  margin: 0;
   border-radius: 40px;
   background-color: #a8db00;
-  border: 1px solid #a8db00;
-  height: 38px;
-  width: 40%;
-  padding: 4px;
+  padding: 17px;
   color: #046425;
   padding-left: 6%;
   padding-right: 6%;
   font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
 }
 
 .add-to-wishlist {
