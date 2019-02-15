@@ -151,30 +151,6 @@ button {
   font-size: 1em;
 }
 
-.allspecimens {
-  background-color: #a8db00;
-  border-radius: 40px;
-  height: 34px;
-  width: 77%;
-  border: none;
-  padding: 0;
-  color: #046425;
-  padding-left: 6%;
-  padding-right: 6%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-a.allspecimens {
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  margin-left: 12%;
-  margin-right: 12%;
-}
-
 a {
   text-decoration: none;
   color: #a8db00;
@@ -268,6 +244,10 @@ ul {
   margin-top: 14%;
 }
 
+li {
+  padding: 10% 0;
+}
+
 img.species-picture {
   width: 70%;
 }
@@ -290,6 +270,7 @@ h3 {
   font-size: 1.2em;
   margin-left: 20%;
   margin-right: 20%;
+  margin-top: 4%;
 }
 
 .profile-picture {
@@ -378,7 +359,8 @@ h3 {
   height: 20%;
 }
 
-.add-a-plant {
+.add-a-plant,
+.add-to-wishlist {
   border-radius: 40px;
   background-color: #a8db00;
   padding: 17px;
@@ -392,18 +374,15 @@ h3 {
   margin-top: 4%;
 }
 
-.add-to-wishlist {
-  margin: 0;
+.allspecimens {
   border-radius: 40px;
   background-color: #a8db00;
-  border: 1px solid #a8db00;
-  height: 38px;
-  width: 52%;
-  padding: 4px;
   color: #046425;
   padding-left: 6%;
   padding-right: 6%;
   font-size: 1.4em;
+  margin-top: 4%;
+  width: 60%;
 }
 
 .searchbar {
