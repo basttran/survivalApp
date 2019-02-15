@@ -254,10 +254,8 @@ img.species-picture {
 }
 
 img.carousel-picture {
-  height: 600px;
-  width: auto;
+  height: 270px;
 }
-
 
 h3 {
   font-size: 1em;
@@ -410,5 +408,14 @@ h3 {
 }
 
 .search-button {
+  margin-top: 4%;
+}
+
+.carousel-picture,
+.my-carousel-images {
+  object-fit: cover;
+}
+
+.carousel {
   margin-top: 4%;
 }

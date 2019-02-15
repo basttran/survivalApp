@@ -42,17 +42,17 @@
 <ul>
   {{#each speciesArray}}
   <li class="species-li">
-    <a href="/species/{{this._id}}"><h3>{{this.name}}</h3></a>
+    <a href="/species/{{this._id}}">
+      <h3>{{this.name}}</h3>
+    </a>
     <img src="{{this.speciesPicUrl}}" class="species-picture" />
-      <p>Level: <b>{{this.level}}</b></p>
-      <p>Family: <i>{{this.scientificClassification.Family}}</i></p>
-      <p>Watering: {{this.wateringNeeds}}</p>
-      <p>Sunlight: {{this.sunlightNeeds}}</p>
-      <p>Flower: {{this.flowerColor}}</p>
+    <p>Level: <b>{{this.level}}</b></p>
+    <p>Watering: {{this.wateringNeeds}}</p>
+    <p>Sunlight: {{this.sunlightNeeds}}</p>
+    <p>Flower: {{this.flowerColor}}</p>
     {{#if ../currentUser.userName}}
     <a href="wishlist/{{this._id}}/add">Add to wishlist</a>
     {{/if}}
-    <p>{{this.level}}</p>
     <h4>{{this.speciesClassification.Family}}</h4>
   </li>
   {{/each}}

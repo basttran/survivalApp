@@ -17,7 +17,7 @@ router.get("/species", (req, res, next) => {
   // filter the plants owned by the logged-in user
   Species.find()
     // sort by newest first
-    .sort({ level: -1 })
+    .sort({ grade: 1 })
     // first 10 results
     // .limit(10)
     .then(speciesResults => {
