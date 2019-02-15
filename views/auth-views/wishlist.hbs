@@ -2,10 +2,24 @@
 
 {{!-- displays flash messages since we redirect here from /process-plant --}}
 
+<h3 class="profile-name"><a href="/profile">{{currentUser.userName}}'s profile</a> : WISHLIST</h3>
+
+
+
 {{> flash_messages}}
 <ul>
-  {{#each currentUser.species}}
-  <li>{{this}}</li>
+  {{#each speciesArray}}
+  <li>
+    <div></div>
+      <a href="/species/{{this._id}}"><h3>{{this.name}}</h3></a>
+      <img src="{{this.speciesPicUrl}}" alt="{{this.scientificName}}" class="species-picture"/>
+      <p><u>Level:</u> <b>{{this.level}}</b></p>
+      <p><u>Family:</u> <i>{{this.scientificClassification.Family}}</i></p>
+      <p><u>Watering:</u> {{this.wateringNeeds}}</p>
+      <p><u>Sunlight:</u> {{this.sunlightNeeds}}</p>
+      <p><u>Flower:</u> {{this.flowerColor}}</p>
+    </div>
+  </li>
   {{/each}}
 </ul>
 

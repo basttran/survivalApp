@@ -196,12 +196,13 @@ a.contact {
   width: 60%;
   margin-left: 20%; }
 
-.species-li {
+li.species-li {
   list-style: none;
   float: left;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 2%; }
 
 ul {
   padding: 0;
@@ -319,6 +320,18 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-top: 4%; }
+
+.all-specimens {
+  border-radius: 40px;
+  background-color: #a8db00;
+  color: #046425;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 1.4em;
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .allspecimens {
   border-radius: 40px;

@@ -7,7 +7,14 @@ const User = require("../models/user-model.js");
 const Species = require("../models/species-model.js");
 
 router.get("/wishlist", (req, res, next) => {
-  res.render("auth-views/wishlist.hbs");
+  Species.find({
+    '_id': { $in: req.user.species}
+})
+          .then(speciesResults => {
+            res.locals.speciesArray = speciesResults;
+            res.render("auth-views/wishlist.hbs");
+          })
+          .catch(err => next(err));        
 });
 
 // router.get("/wishlist/:speciesId/add", (req, res, next) => {

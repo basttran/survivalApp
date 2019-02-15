@@ -49,7 +49,9 @@ router.get("/profile", (req, res, next) => {
       });
       res.locals.plantIndices = indicesArray;
 
-      Species.find()
+      Species.find({
+        '_id': { $in: req.user.species}
+    })
         .sort({ grade: 1 })
         .then(speciesResults => {
           // send the database query results to the HBS file as "bookArray"
