@@ -183,4 +183,7 @@ app.use("/", plant);
 const species = require("./routes/species-router.js");
 app.use("/", species);
 
+const wishlist = require("./routes/wishlist-router.js");
+app.use("/", wishlist);
+
 module.exports = app;
