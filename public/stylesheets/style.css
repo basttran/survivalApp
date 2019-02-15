@@ -80,7 +80,7 @@ input {
   background-color: rgba(168, 219, 0, 0.2);
   border: 1px solid #a8db00;
   height: 34px;
-  width: 80%;
+  width: 100%;
   padding: 0;
   color: #046425;
   padding-left: 10%;
@@ -99,14 +99,12 @@ input {
   font-size: 1em; }
 
 form {
-  display: flex;
   flex-direction: column;
   height: 50%;
   justify-content: space-around; }
 
 .passwordForgotten {
   text-align: right;
-  color: #046425;
   margin-top: -3%; }
 
 div.login {
@@ -134,12 +132,12 @@ button {
   background-color: #a8db00;
   border-radius: 40px;
   height: 34px;
-  width: 56%;
+  width: 77%;
   border: none;
   padding: 0;
   color: #046425;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 6%;
+  padding-right: 6%;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -225,7 +223,8 @@ a.contact {
 
 ul {
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  margin-top: 14%; }
 
 img.species-picture {
   width: 70%; }
@@ -339,5 +338,11 @@ h3 {
   padding-left: 6%;
   padding-right: 6%;
   font-size: 1.4em; }
+
+.searchbar {
+  margin-top: 8%; }
+
+.search-button {
+  margin-top: 4%; }
 
 /*# sourceMappingURL=style.css.map */

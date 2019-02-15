@@ -6,7 +6,7 @@
     {{> flash_messages}}
 
     {{#if currentUser}}
-    <h3>Welcome back, {{currentUser.userName}}</h3>
+    <h3>Welcome back, {{currentUser.userName}}!</h3>
     {{else}}
     {{/if}}
     <form action="/process-login" method="POST">
