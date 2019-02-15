@@ -135,7 +135,7 @@ button {
   background-color: #046425;
   border-radius: 40px;
   height: 34px;
-  width: 52%;
+  width: 50%;
   border: none;
   color: white;
   padding-left: 2%;
@@ -191,7 +191,11 @@ a.contact {
 }
 
 .processsignup {
-  height: 70%;
+  margin-top: 18%;
+}
+
+.signup-button {
+  margin-top: 10%;
 }
 
 .homesignup {
@@ -232,12 +236,12 @@ a.contact {
   background-color: #a8db00;
   border-radius: 40px;
   height: 34px;
-  width: 50%;
+  width: 60%;
   border: none;
   padding: 0;
   color: #046425;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 7%;
+  padding-right: 7%;
   display: flex;
   align-items: center;
   justify-content: center;

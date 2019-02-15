@@ -3,11 +3,11 @@
 
     {{> flash_messages}}
 
-    {{> flash_messages}}
 
     {{#if currentUser}}
-    <h3>Welcome back, {{currentUser.userName}}!</h3>
+    <h3>Welcome back, <a href="/profile">{{currentUser.userName}}</a>!</h3>
     {{else}}
+    <p></p>
     {{/if}}
     <form action="/process-login" method="POST">
 
